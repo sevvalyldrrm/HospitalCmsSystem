@@ -1,7 +1,7 @@
-﻿using Hospital.Application.CQRS.Commands.AdminCommands;
-using Hospital.Application.CQRS.Results.AdminResults;
-using Hospital.Application.Interfaces;
-using Hospital.Domain.Entities;
+﻿using HospitalCmsSystem.Application.CQRS.Commands.AdminCommands;
+using HospitalCmsSystem.Application.CQRS.Results.AdminResults;
+using HospitalCmsSystem.Application.Interfaces;
+using HospitalCmsSystem.Domain.Entities;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hospital.Application.CQRS.Handlers.AdminHandlers
+namespace HospitalCmsSystem.Application.CQRS.Handlers.AdminHandlers
 {
 	public class RemoveAdminCommandHandler : IRequestHandler<RemoveAdminCommand>
 	{

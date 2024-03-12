@@ -1,4 +1,4 @@
-﻿using Hospital.Domain.Entities.BaseEntities;
+﻿using HospitalCmsSystem.Domain.Entities.BaseEntities;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hospital.Domain.Entities
+namespace HospitalCmsSystem.Domain.Entities
 {
 	public class Appointment : BaseEntitiy
 	{

@@ -1,4 +1,4 @@
-﻿using Hospital.Domain.Entities;
+﻿using HospitalCmsSystem.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -7,7 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hospital.Persistence.Context
+namespace HospitalCmsSystem.Persistence.Context
 {
 	public class AppDbContext : DbContext
 	{

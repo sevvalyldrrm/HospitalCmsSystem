@@ -5,17 +5,23 @@ VisualStudioVersion = 17.8.34525.116
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Core", "Core", "{D57499E1-DBBD-4AC8-B7D9-24B28E47AE0F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital.Application", "Hospital.Application\Hospital.Application.csproj", "{66B71BDA-712F-4DB4-938C-C9C43AE713C7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalCmsSystem.Application", "Hospital.Application\HospitalCmsSystem.Application.csproj", "{66B71BDA-712F-4DB4-938C-C9C43AE713C7}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital.Domain", "Hospital.Domain\Hospital.Domain.csproj", "{E973C9CA-6373-405F-BFA3-949BC0D497AA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalCmsSystem.Domain", "Hospital.Domain\HospitalCmsSystem.Domain.csproj", "{E973C9CA-6373-405F-BFA3-949BC0D497AA}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Insfrastructre", "Insfrastructre", "{6CD4E5EF-5D9B-4C81-A204-6188F3F5BBCF}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital.Persistence", "Hospital.Persistence\Hospital.Persistence.csproj", "{4451DD57-D7CC-44EB-8FD2-C84BC8C56DB7}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalCmsSystem.Persistence", "Hospital.Persistence\HospitalCmsSystem.Persistence.csproj", "{4451DD57-D7CC-44EB-8FD2-C84BC8C56DB7}"
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{C45260A6-FA06-4E51-B043-4D616FC41059}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Hospital.WebApi", "Hospital.WebApi\Hospital.WebApi.csproj", "{14252AF3-9E56-4B9F-8F03-8737B192F7EB}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalCmsSystem.WebApi", "Hospital.WebApi\HospitalCmsSystem.WebApi.csproj", "{14252AF3-9E56-4B9F-8F03-8737B192F7EB}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontends", "Frontends", "{FF1C3CDC-17D2-42CE-9292-2E90831CC3FB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalCmsSystem.Dto", "Frontends\HospitalCmsSystem.Dto\HospitalCmsSystem.Dto.csproj", "{6220AB16-45BE-4B8C-971B-C97E3B1E46C3}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalCmsSystem.WebUI", "Frontends\HospitalCmsSystem.WebUI\HospitalCmsSystem.WebUI.csproj", "{B2DA4863-D67F-4A2D-AC0F-4C283AD4ED58}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -39,6 +45,14 @@ Global
 		{14252AF3-9E56-4B9F-8F03-8737B192F7EB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{14252AF3-9E56-4B9F-8F03-8737B192F7EB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{14252AF3-9E56-4B9F-8F03-8737B192F7EB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6220AB16-45BE-4B8C-971B-C97E3B1E46C3}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6220AB16-45BE-4B8C-971B-C97E3B1E46C3}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6220AB16-45BE-4B8C-971B-C97E3B1E46C3}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6220AB16-45BE-4B8C-971B-C97E3B1E46C3}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B2DA4863-D67F-4A2D-AC0F-4C283AD4ED58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B2DA4863-D67F-4A2D-AC0F-4C283AD4ED58}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B2DA4863-D67F-4A2D-AC0F-4C283AD4ED58}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B2DA4863-D67F-4A2D-AC0F-4C283AD4ED58}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -48,6 +62,8 @@ Global
 		{E973C9CA-6373-405F-BFA3-949BC0D497AA} = {D57499E1-DBBD-4AC8-B7D9-24B28E47AE0F}
 		{4451DD57-D7CC-44EB-8FD2-C84BC8C56DB7} = {6CD4E5EF-5D9B-4C81-A204-6188F3F5BBCF}
 		{14252AF3-9E56-4B9F-8F03-8737B192F7EB} = {C45260A6-FA06-4E51-B043-4D616FC41059}
+		{6220AB16-45BE-4B8C-971B-C97E3B1E46C3} = {FF1C3CDC-17D2-42CE-9292-2E90831CC3FB}
+		{B2DA4863-D67F-4A2D-AC0F-4C283AD4ED58} = {FF1C3CDC-17D2-42CE-9292-2E90831CC3FB}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E6173374-B5F7-40E7-84D8-97CF1FD26D46}

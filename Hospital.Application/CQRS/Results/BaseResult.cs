@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hospital.Application.CQRS.Results
+namespace HospitalCmsSystem.Application.CQRS.Results
 {
 	public class BaseResult
 	{

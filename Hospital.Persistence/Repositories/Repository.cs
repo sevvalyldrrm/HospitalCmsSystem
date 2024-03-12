@@ -1,14 +1,14 @@
 ﻿using Microsoft.EntityFrameworkCore;
-using Hospital.Persistence.Context;
+using HospitalCmsSystem.Persistence.Context;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Hospital.Application.Interfaces;
+using HospitalCmsSystem.Application.Interfaces;
 
 
-namespace Hospital.Persistence.Repositories
+namespace HospitalCmsSystem.Persistence.Repositories
 {
 	public class Repository<T> : IRepository<T> where T : class
 	{

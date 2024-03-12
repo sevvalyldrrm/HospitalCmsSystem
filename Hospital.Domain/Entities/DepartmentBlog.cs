@@ -5,10 +5,10 @@ using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using Hospital.Domain.Entities.BaseEntities;
+using HospitalCmsSystem.Domain.Entities.BaseEntities;
 
 
-namespace Hospital.Domain.Entities
+namespace HospitalCmsSystem.Domain.Entities
 {
 	public class DepartmentBlog : BaseEntitiy
 	{

@@ -1,6 +1,6 @@
 using Microsoft.AspNetCore.Mvc;
 
-namespace Hospital.WebApi.Controllers
+namespace HospitalCmsSystem.WebApi.Controllers
 {
 	[ApiController]
 	[Route("[controller]")]
