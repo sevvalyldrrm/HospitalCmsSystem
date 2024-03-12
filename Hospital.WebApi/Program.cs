@@ -1,4 +1,16 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
+using Microsoft.IdentityModel.Tokens;
+using System.Text;
+using HospitalCmsSystem.Application.Services;
+using HospitalCmsSystem.Application.Interfaces;
+using HospitalCmsSystem.Persistence.Repositories;
+using HospitalCmsSystem.Persistence.Context;
+
 var builder = WebApplication.CreateBuilder(args);
+
+builder.Services.AddApplicationService(builder.Configuration);
+builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddScoped<AppDbContext>();
 
 // Add services to the container.
 

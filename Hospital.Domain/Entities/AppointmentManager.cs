@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
+
 namespace HospitalCmsSystem.Domain.Entities
 {
     public class AppointmentManager : BaseEntitiy
@@ -25,12 +26,13 @@ namespace HospitalCmsSystem.Domain.Entities
 
         public ICollection<WorkingHour> WorkingHours { get; set; }
     }
+    public enum AppointmentStatus
+    {
+        Pending = 1,
+        Confirmed = 2,
+        Completed = 3,
+        Cancelled = 4
+    }
 }
 
-public enum AppointmentStatus
-{
-    Pending,
-    Confirmed,
-    Completed,
-    Cancelled
-}
+

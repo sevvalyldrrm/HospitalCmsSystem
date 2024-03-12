@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace HospitalCmsSystem.Application.CQRS.Handlers.AdminHandlers
 {
-	public class CreateAdminCommandHandler : IRequestHandler<CreateAdminCommand>
+	public class CreateAppointmentManagerCommandHandler : IRequestHandler<CreateAdminCommand>
 	{
 		private readonly IRepository<Admin> _repository;
 
-		public CreateAdminCommandHandler(IRepository<Admin> repository)
+		public CreateAppointmentManagerCommandHandler(IRepository<Admin> repository)
 		{
 			_repository = repository;
 		}
@@ -23,7 +23,8 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.AdminHandlers
 		{
 			await _repository.CreateAsync( new Admin()
 			{
-				GitHubAcc = request.GitHubAcc
+			 GitHubAcc=request.GitHubAcc,
+				
 			});
 		}
 	}

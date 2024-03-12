@@ -19,9 +19,14 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalCmsSystem.WebApi", 
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontends", "Frontends", "{FF1C3CDC-17D2-42CE-9292-2E90831CC3FB}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalCmsSystem.Dto", "Frontends\HospitalCmsSystem.Dto\HospitalCmsSystem.Dto.csproj", "{6220AB16-45BE-4B8C-971B-C97E3B1E46C3}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalCmsSystem.Dto", "Frontends\HospitalCmsSystem.Dto\HospitalCmsSystem.Dto.csproj", "{6220AB16-45BE-4B8C-971B-C97E3B1E46C3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalCmsSystem.WebUI", "Frontends\HospitalCmsSystem.WebUI\HospitalCmsSystem.WebUI.csproj", "{B2DA4863-D67F-4A2D-AC0F-4C283AD4ED58}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalCmsSystem.WebUI", "Frontends\HospitalCmsSystem.WebUI\HospitalCmsSystem.WebUI.csproj", "{B2DA4863-D67F-4A2D-AC0F-4C283AD4ED58}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ToDoList", "ToDoList", "{1726F146-AA1A-4C8A-AE07-FBDBDC330448}"
+	ProjectSection(SolutionItems) = preProject
+		klcuur.txt = klcuur.txt
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 
 namespace HospitalCmsSystem.Application.CQRS.Handlers.AdminHandlers
 {
-	public class GetAdminQueryHandler : IRequestHandler<GetAdminQuery, List<GetAdminQueryResult>>
+	public class GetAppointmentManagerQueryHandler : IRequestHandler<GetAdminQuery, List<GetAdminQueryResult>>
 	{
 		private readonly IRepository<Admin> _repository;
 
-		public GetAdminQueryHandler(IRepository<Admin> repository)
+		public GetAppointmentManagerQueryHandler(IRepository<Admin> repository)
 		{
 			_repository = repository;
 		}
@@ -24,9 +24,9 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.AdminHandlers
 		{
 			var values = await _repository.GetAllAsync();
 			return values.Select(x => new GetAdminQueryResult
-			{
-				GitHubAcc = x.GitHubAcc,
-				Id = x.Id
+            {
+                GitHubAcc = x.GitHubAcc,
+                Id = x.Id
 			}).ToList();
 		}
 	}
