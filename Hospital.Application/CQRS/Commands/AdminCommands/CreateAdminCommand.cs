@@ -5,10 +5,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hospital.Application.CQRS.Commands.AdminCommands
+namespace HospitalCmsSystem.Application.CQRS.Commands.AdminCommands
 {
 	public class CreateAdminCommand : IRequest
 	{
-		public string GitHubAcc { get; set; }
-	}
+        public string GitHubAcc { get; set; }
+    }
 }

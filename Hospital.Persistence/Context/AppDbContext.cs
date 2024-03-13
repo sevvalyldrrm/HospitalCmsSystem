@@ -1,4 +1,4 @@
-﻿using Hospital.Domain.Entities;
+﻿using HospitalCmsSystem.Domain.Entities;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using System;
@@ -7,13 +7,13 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hospital.Persistence.Context
+namespace HospitalCmsSystem.Persistence.Context
 {
 	public class AppDbContext : DbContext
 	{
 		protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
 		{
-			optionsBuilder.UseSqlServer("Data Source=DESKTOP-0LP7T25\\SQL2022;Initial Catalog=Hotelier;Persist Security Info=True;User ID=sa;Password=123;Trusted_Connection=True; TrustServerCertificate=Yes");
+			optionsBuilder.UseSqlServer("Data Source=DESKTOP-U5FQ7NA\\SQL2022;Initial Catalog=Hotelier;Persist Security Info=True;User ID=sa;Password=123;Trusted_Connection=True; TrustServerCertificate=Yes");
 		}
 
 		public DbSet<Appointment> Appointments { get; set; }

@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hospital.Domain.Entities.BaseEntities
+namespace HospitalCmsSystem.Domain.Entities.BaseEntities
 {
 	public class BaseEntitiy
 	{

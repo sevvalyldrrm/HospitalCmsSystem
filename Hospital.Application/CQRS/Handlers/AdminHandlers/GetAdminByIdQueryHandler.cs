@@ -1,7 +1,7 @@
-﻿using Hospital.Application.CQRS.Queries.AdminQueries;
-using Hospital.Application.CQRS.Results.AdminResults;
-using Hospital.Application.Interfaces;
-using Hospital.Domain.Entities;
+﻿using HospitalCmsSystem.Application.CQRS.Queries.AdminQueries;
+using HospitalCmsSystem.Application.CQRS.Results.AdminResults;
+using HospitalCmsSystem.Application.Interfaces;
+using HospitalCmsSystem.Domain.Entities;
 using MediatR;
 using System;
 using System.Collections.Generic;
@@ -9,7 +9,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Hospital.Application.CQRS.Handlers.AdminHandlers
+namespace HospitalCmsSystem.Application.CQRS.Handlers.AdminHandlers
 {
 	public class GetAdminByIdQueryHandler : IRequestHandler<GetAdminByIdQuery, GetAdminByIdQueryResult>
 	{
@@ -26,8 +26,8 @@ namespace Hospital.Application.CQRS.Handlers.AdminHandlers
 			return new GetAdminByIdQueryResult
 			{
 				Id = values.Id,
-				GitHubAcc = values.GitHubAcc,
-			};
+                GitHubAcc = values.GitHubAcc,
+            };
 
 		}
 	}
