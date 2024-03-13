@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace HospitalCmsSystem.Application.CQRS.Handlers.AdminHandlers
 {
-	public class CreateAppointmentManagerCommandHandler : IRequestHandler<CreateAdminCommand>
+	public class CreateAdminCommandHandler : IRequestHandler<CreateAdminCommand>
 	{
 		private readonly IRepository<Admin> _repository;
 
-		public CreateAppointmentManagerCommandHandler(IRepository<Admin> repository)
+		public CreateAdminCommandHandler(IRepository<Admin> repository)
 		{
 			_repository = repository;
 		}

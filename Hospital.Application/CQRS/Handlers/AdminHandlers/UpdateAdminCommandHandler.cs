@@ -12,11 +12,11 @@ using System.Xml.Linq;
 
 namespace HospitalCmsSystem.Application.CQRS.Handlers.AdminHandlers
 {
-    public class UpdateAppointmentManagerCommandHandler : IRequestHandler<UpdateAdminCommand>
+    public class UpdateAdminCommandHandler : IRequestHandler<UpdateAdminCommand>
     {
         private readonly IRepository<Admin> _repository;
 
-        public UpdateAppointmentManagerCommandHandler(IRepository<Admin> repository)
+        public UpdateAdminCommandHandler(IRepository<Admin> repository)
         {
             _repository = repository;
         }

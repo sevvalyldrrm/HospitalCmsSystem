@@ -18,7 +18,7 @@ namespace HospitalCmsSystem.WebApi.Controllers
         [HttpGet]
         public async Task<IActionResult> AdminList()
         {
-            var values = await _mediator.Send(new GetBlogCommentQuery());
+            var values = await _mediator.Send(new GetAdminQuery());
             return Ok(values);
         }
         [HttpGet("{id}")]
@@ -28,7 +28,7 @@ namespace HospitalCmsSystem.WebApi.Controllers
             return Ok(value);
         }
         [HttpPost]
-        public async Task<IActionResult> CreateAdmin(CreateBlogCommentCommand command)
+        public async Task<IActionResult> CreateAdmin(CreateAdminCommand command)
         {
             await _mediator.Send(command);
             return Ok("Admin başarıyla eklendi");
@@ -40,7 +40,7 @@ namespace HospitalCmsSystem.WebApi.Controllers
             return Ok("Admin başarıyla silindi");
         }
         [HttpPut]
-        public async Task<IActionResult> UpdateAdmin(UpdateBlogCommentCommand command)
+        public async Task<IActionResult> UpdateAdmin(UpdateAdminCommand command)
         {
             await _mediator.Send(command);
             return Ok("Admin başarıyla güncellendi");
