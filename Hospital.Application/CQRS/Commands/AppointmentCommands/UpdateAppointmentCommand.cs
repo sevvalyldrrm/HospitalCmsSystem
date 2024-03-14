@@ -12,9 +12,9 @@ namespace HospitalCmsSystem.Application.CQRS.Commands.AppointmentCommands
         public int Id { get; set; }
         public int DepartmentId { get; set; }
 
-        public string DoctorId { get; set; }
+        public int DoctorId { get; set; }
 
-        public string PatientId { get; set; }
+        public int PatientId { get; set; }
 
 
         public string Email { get; set; }
