@@ -19,12 +19,12 @@ namespace HospitalCmsSystem.Domain.Entities
 		public Department Department { get; set; }
 
 		[ForeignKey("DoctorId")]
-		public string DoctorId { get; set; }
+		public int DoctorId { get; set; }
 
 		public Doctor Doctor { get; set; }
 
         [ForeignKey("PatientId")]
-        public string PatientId { get; set; }
+        public int PatientId { get; set; }
 
         public Patient Patient { get; set; }
 
