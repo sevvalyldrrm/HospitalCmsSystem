@@ -12,8 +12,8 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HospitalCmsSystem.Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    [Migration("20240312193500_1001_firstcheck")]
-    partial class _1001_firstcheck
+    [Migration("20240314183327_1001_first")]
+    partial class _1001_first
     {
         /// <inheritdoc />
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -40,6 +40,33 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Admins");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            GitHubAcc = "GitHubUser1"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            GitHubAcc = "GitHubUser2"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            GitHubAcc = "GitHubUser3"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            GitHubAcc = "GitHubUser4"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            GitHubAcc = "GitHubUser5"
+                        });
                 });
 
             modelBuilder.Entity("HospitalCmsSystem.Domain.Entities.AppRole", b =>
@@ -62,6 +89,38 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("AppRole");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            CreatedAt = new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5117),
+                            UpdatedAt = new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5121)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            CreatedAt = new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5122),
+                            UpdatedAt = new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5122)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            CreatedAt = new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5123),
+                            UpdatedAt = new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5124)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            CreatedAt = new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5125),
+                            UpdatedAt = new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5125)
+                        },
+                        new
+                        {
+                            Id = 5,
+                            CreatedAt = new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5126),
+                            UpdatedAt = new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5126)
+                        });
                 });
 
             modelBuilder.Entity("HospitalCmsSystem.Domain.Entities.AppUser", b =>
@@ -98,6 +157,58 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("AppUser");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            City = "CityOne",
+                            CreatedAt = new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5164),
+                            FullName = "User One",
+                            ImagePath = "path/to/user1.jpg",
+                            IsActive = true,
+                            UpdatedAt = new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5164)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            City = "CityTwo",
+                            CreatedAt = new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5166),
+                            FullName = "User Two",
+                            ImagePath = "path/to/user2.jpg",
+                            IsActive = true,
+                            UpdatedAt = new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5166)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            City = "CityThree",
+                            CreatedAt = new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5167),
+                            FullName = "User Three",
+                            ImagePath = "path/to/user3.jpg",
+                            IsActive = true,
+                            UpdatedAt = new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5168)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            City = "CityFour",
+                            CreatedAt = new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5168),
+                            FullName = "User Four",
+                            ImagePath = "path/to/user4.jpg",
+                            IsActive = true,
+                            UpdatedAt = new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5169)
+                        },
+                        new
+                        {
+                            Id = 5,
+                            City = "CityFive",
+                            CreatedAt = new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5170),
+                            FullName = "User Five",
+                            ImagePath = "path/to/user5.jpg",
+                            IsActive = true,
+                            UpdatedAt = new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5170)
+                        });
                 });
 
             modelBuilder.Entity("HospitalCmsSystem.Domain.Entities.AppUserRole", b =>
@@ -121,6 +232,38 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     b.HasIndex("UserId");
 
                     b.ToTable("AppUserRole");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            RoleId = 1,
+                            UserId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            RoleId = 2,
+                            UserId = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            RoleId = 3,
+                            UserId = 3
+                        },
+                        new
+                        {
+                            Id = 4,
+                            RoleId = 4,
+                            UserId = 4
+                        },
+                        new
+                        {
+                            Id = 5,
+                            RoleId = 5,
+                            UserId = 5
+                        });
                 });
 
             modelBuilder.Entity("HospitalCmsSystem.Domain.Entities.Appointment", b =>
@@ -140,11 +283,7 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     b.Property<int>("DepartmentId")
                         .HasColumnType("int");
 
-                    b.Property<string>("DoctorId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("DoctorId1")
+                    b.Property<int>("DoctorId")
                         .HasColumnType("int");
 
                     b.Property<string>("Email")
@@ -159,11 +298,7 @@ namespace HospitalCmsSystem.Persistence.Migrations
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
 
-                    b.Property<string>("PatientId")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<int>("PatientId1")
+                    b.Property<int>("PatientId")
                         .HasColumnType("int");
 
                     b.Property<string>("Phone")
@@ -176,11 +311,78 @@ namespace HospitalCmsSystem.Persistence.Migrations
 
                     b.HasIndex("DepartmentId");
 
-                    b.HasIndex("DoctorId1");
+                    b.HasIndex("DoctorId");
 
-                    b.HasIndex("PatientId1");
+                    b.HasIndex("PatientId");
 
                     b.ToTable("Appointments");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AppointmentDate = new DateTime(2023, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AppointmentManagerId = 1,
+                            DepartmentId = 1,
+                            DoctorId = 1,
+                            Email = "patient1@example.com",
+                            FullName = "Patient One",
+                            Message = "Looking forward to the appointment",
+                            PatientId = 1,
+                            Phone = "1234567890"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AppointmentDate = new DateTime(2023, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AppointmentManagerId = 2,
+                            DepartmentId = 2,
+                            DoctorId = 2,
+                            Email = "patient2@example.com",
+                            FullName = "Patient Two",
+                            Message = "Please confirm the appointment time",
+                            PatientId = 2,
+                            Phone = "1234567891"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            AppointmentDate = new DateTime(2023, 3, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AppointmentManagerId = 3,
+                            DepartmentId = 3,
+                            DoctorId = 3,
+                            Email = "patient3@example.com",
+                            FullName = "Patient Three",
+                            Message = "I may need to reschedule",
+                            PatientId = 3,
+                            Phone = "1234567892"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            AppointmentDate = new DateTime(2023, 4, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AppointmentManagerId = 4,
+                            DepartmentId = 4,
+                            DoctorId = 4,
+                            Email = "patient4@example.com",
+                            FullName = "Patient Four",
+                            Message = "Looking for more information",
+                            PatientId = 4,
+                            Phone = "1234567893"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            AppointmentDate = new DateTime(2023, 5, 22, 0, 0, 0, 0, DateTimeKind.Unspecified),
+                            AppointmentManagerId = 5,
+                            DepartmentId = 5,
+                            DoctorId = 5,
+                            Email = "patient5@example.com",
+                            FullName = "Patient Five",
+                            Message = "Confirming the appointment details",
+                            PatientId = 5,
+                            Phone = "1234567894"
+                        });
                 });
 
             modelBuilder.Entity("HospitalCmsSystem.Domain.Entities.AppointmentManager", b =>
@@ -213,6 +415,53 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     b.HasIndex("PatientId");
 
                     b.ToTable("AppointmentManagers");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DoctorId = 1,
+                            EndingTime = new DateTime(2023, 1, 20, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            PatientId = 1,
+                            StartingTime = new DateTime(2023, 1, 20, 9, 0, 0, 0, DateTimeKind.Unspecified),
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DoctorId = 2,
+                            EndingTime = new DateTime(2023, 2, 20, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            PatientId = 2,
+                            StartingTime = new DateTime(2023, 2, 20, 9, 0, 0, 0, DateTimeKind.Unspecified),
+                            Status = 4
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DoctorId = 3,
+                            EndingTime = new DateTime(2023, 3, 20, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            PatientId = 3,
+                            StartingTime = new DateTime(2023, 3, 20, 9, 0, 0, 0, DateTimeKind.Unspecified),
+                            Status = 1
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DoctorId = 4,
+                            EndingTime = new DateTime(2023, 4, 20, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            PatientId = 4,
+                            StartingTime = new DateTime(2023, 4, 20, 9, 0, 0, 0, DateTimeKind.Unspecified),
+                            Status = 2
+                        },
+                        new
+                        {
+                            Id = 5,
+                            DoctorId = 5,
+                            EndingTime = new DateTime(2023, 5, 20, 10, 0, 0, 0, DateTimeKind.Unspecified),
+                            PatientId = 5,
+                            StartingTime = new DateTime(2023, 5, 20, 9, 0, 0, 0, DateTimeKind.Unspecified),
+                            Status = 3
+                        });
                 });
 
             modelBuilder.Entity("HospitalCmsSystem.Domain.Entities.Blog", b =>
@@ -244,6 +493,48 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     b.HasIndex("AppUserId");
 
                     b.ToTable("Blogs");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AppUserId = 1,
+                            Content = "This is the content of the first blog post.",
+                            Tag = "General",
+                            Title = "First Blog Title"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AppUserId = 2,
+                            Content = "This is the content of the second blog post.",
+                            Tag = "Health",
+                            Title = "Second Blog Title"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            AppUserId = 3,
+                            Content = "This is the content of the third blog post.",
+                            Tag = "Update",
+                            Title = "Third Blog Title"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            AppUserId = 4,
+                            Content = "This is the content of the fourth blog post.",
+                            Tag = "News",
+                            Title = "Fourth Blog Title"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            AppUserId = 5,
+                            Content = "This is the content of the fifth blog post.",
+                            Tag = "General",
+                            Title = "Fifth Blog Title"
+                        });
                 });
 
             modelBuilder.Entity("HospitalCmsSystem.Domain.Entities.BlogComment", b =>
@@ -274,6 +565,48 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     b.HasIndex("BlogId");
 
                     b.ToTable("BlogComments");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            AppUserId = 1,
+                            BlogId = 1,
+                            Comment = "Great article!",
+                            IsActive = true
+                        },
+                        new
+                        {
+                            Id = 2,
+                            AppUserId = 2,
+                            BlogId = 1,
+                            Comment = "Very informative, thanks!",
+                            IsActive = true
+                        },
+                        new
+                        {
+                            Id = 3,
+                            AppUserId = 3,
+                            BlogId = 2,
+                            Comment = "Thanks for sharing.",
+                            IsActive = true
+                        },
+                        new
+                        {
+                            Id = 4,
+                            AppUserId = 4,
+                            BlogId = 2,
+                            Comment = "Interesting read!",
+                            IsActive = true
+                        },
+                        new
+                        {
+                            Id = 5,
+                            AppUserId = 5,
+                            BlogId = 3,
+                            Comment = "Helpful article.",
+                            IsActive = true
+                        });
                 });
 
             modelBuilder.Entity("HospitalCmsSystem.Domain.Entities.BlogImage", b =>
@@ -297,6 +630,38 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     b.HasIndex("BlogId");
 
                     b.ToTable("BlogImages");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            BlogId = 1,
+                            ImagePath = "path/to/blog/image1.jpg"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            BlogId = 1,
+                            ImagePath = "path/to/blog/image2.jpg"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            BlogId = 2,
+                            ImagePath = "path/to/blog/image3.jpg"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            BlogId = 2,
+                            ImagePath = "path/to/blog/image4.jpg"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            BlogId = 3,
+                            ImagePath = "path/to/blog/image5.jpg"
+                        });
                 });
 
             modelBuilder.Entity("HospitalCmsSystem.Domain.Entities.Contact", b =>
@@ -330,6 +695,53 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Contacts");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Email = "john.doe@example.com",
+                            FullName = "John Doe",
+                            Message = "I have a question about...",
+                            Phone = "1234567890",
+                            Title = "Inquiry"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Email = "jane.doe@example.com",
+                            FullName = "Jane Doe",
+                            Message = "I need assistance with...",
+                            Phone = "0987654321",
+                            Title = "Support"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Email = "sam.smith@example.com",
+                            FullName = "Sam Smith",
+                            Message = "Here's what I think...",
+                            Phone = "1112223333",
+                            Title = "Feedback"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Email = "alex.johnson@example.com",
+                            FullName = "Alex Johnson",
+                            Message = "I want to schedule an appointment...",
+                            Phone = "4445556666",
+                            Title = "Booking"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Email = "patricia.williams@example.com",
+                            FullName = "Patricia Williams",
+                            Message = "I have a complaint about...",
+                            Phone = "7778889999",
+                            Title = "Complaint"
+                        });
                 });
 
             modelBuilder.Entity("HospitalCmsSystem.Domain.Entities.Department", b =>
@@ -359,6 +771,48 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     b.HasKey("Id");
 
                     b.ToTable("Departments");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DepartmentDetailsId = 1,
+                            Description = "Heart related specialties",
+                            ImagePath = "path/to/image1.jpg",
+                            Name = "Cardiology"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DepartmentDetailsId = 2,
+                            Description = "Brain and nerves specialties",
+                            ImagePath = "path/to/image2.jpg",
+                            Name = "Neurology"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DepartmentDetailsId = 3,
+                            Description = "Digestive system specialties",
+                            ImagePath = "path/to/image3.jpg",
+                            Name = "Gastroenterology"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DepartmentDetailsId = 4,
+                            Description = "Children's health specialties",
+                            ImagePath = "path/to/image4.jpg",
+                            Name = "Pediatrics"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            DepartmentDetailsId = 5,
+                            Description = "Bones and joints specialties",
+                            ImagePath = "path/to/image5.jpg",
+                            Name = "Orthopedics"
+                        });
                 });
 
             modelBuilder.Entity("HospitalCmsSystem.Domain.Entities.DepartmentBlog", b =>
@@ -382,6 +836,38 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     b.HasIndex("DepartmentId");
 
                     b.ToTable("DepartmentBlogs");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            BlogId = 1,
+                            DepartmentId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            BlogId = 2,
+                            DepartmentId = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            BlogId = 3,
+                            DepartmentId = 3
+                        },
+                        new
+                        {
+                            Id = 4,
+                            BlogId = 4,
+                            DepartmentId = 4
+                        },
+                        new
+                        {
+                            Id = 5,
+                            BlogId = 5,
+                            DepartmentId = 5
+                        });
                 });
 
             modelBuilder.Entity("HospitalCmsSystem.Domain.Entities.DepartmentDetail", b =>
@@ -467,6 +953,78 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("Doctors");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DepartmentId = 1,
+                            DocFacebook = "facebook.com/DocA",
+                            DocLinkedIn = "linkedin.com/DocA",
+                            DocPinterest = "pinterest.com/DocA",
+                            DocSkype = "skype.com/DocA",
+                            DocTitle = "Dr. A",
+                            DocX = "twitter.com/DocA",
+                            IntroductionId = 1,
+                            RoleId = 1,
+                            Speacialty = "Specialty A"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DepartmentId = 2,
+                            DocFacebook = "facebook.com/DocB",
+                            DocLinkedIn = "linkedin.com/DocB",
+                            DocPinterest = "pinterest.com/DocB",
+                            DocSkype = "skype.com/DocB",
+                            DocTitle = "Dr. B",
+                            DocX = "twitter.com/DocB",
+                            IntroductionId = 2,
+                            RoleId = 2,
+                            Speacialty = "Specialty B"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DepartmentId = 3,
+                            DocFacebook = "facebook.com/DocC",
+                            DocLinkedIn = "linkedin.com/DocC",
+                            DocPinterest = "pinterest.com/DocC",
+                            DocSkype = "skype.com/DocC",
+                            DocTitle = "Dr. C",
+                            DocX = "twitter.com/DocC",
+                            IntroductionId = 3,
+                            RoleId = 3,
+                            Speacialty = "Specialty C"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DepartmentId = 4,
+                            DocFacebook = "facebook.com/DocD",
+                            DocLinkedIn = "linkedin.com/DocD",
+                            DocPinterest = "pinterest.com/DocD",
+                            DocSkype = "skype.com/DocD",
+                            DocTitle = "Dr. D",
+                            DocX = "twitter.com/DocD",
+                            IntroductionId = 4,
+                            RoleId = 4,
+                            Speacialty = "Specialty D"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            DepartmentId = 5,
+                            DocFacebook = "facebook.com/DocE",
+                            DocLinkedIn = "linkedin.com/DocE",
+                            DocPinterest = "pinterest.com/DocE",
+                            DocSkype = "skype.com/DocE",
+                            DocTitle = "Dr. E",
+                            DocX = "twitter.com/DocE",
+                            IntroductionId = 5,
+                            RoleId = 5,
+                            Speacialty = "Specialty E"
+                        });
                 });
 
             modelBuilder.Entity("HospitalCmsSystem.Domain.Entities.DoctorPatient", b =>
@@ -490,6 +1048,38 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     b.HasIndex("PatientId");
 
                     b.ToTable("DoctorPatients");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DoctorId = 1,
+                            PatientId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DoctorId = 2,
+                            PatientId = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DoctorId = 3,
+                            PatientId = 3
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DoctorId = 4,
+                            PatientId = 4
+                        },
+                        new
+                        {
+                            Id = 5,
+                            DoctorId = 5,
+                            PatientId = 5
+                        });
                 });
 
             modelBuilder.Entity("HospitalCmsSystem.Domain.Entities.Education", b =>
@@ -525,6 +1115,48 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     b.HasIndex("IntroductionId");
 
                     b.ToTable("Educations");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DoctorId = 1,
+                            Explanation = "Bachelor's Degree in Medicine",
+                            University = "University A",
+                            Year = "2000-2004"
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DoctorId = 2,
+                            Explanation = "Bachelor's Degree in Neurology",
+                            University = "University B",
+                            Year = "2001-2005"
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DoctorId = 3,
+                            Explanation = "Bachelor's Degree in Gastroenterology",
+                            University = "University C",
+                            Year = "2002-2006"
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DoctorId = 4,
+                            Explanation = "Bachelor's Degree in Pediatrics",
+                            University = "University D",
+                            Year = "2003-2007"
+                        },
+                        new
+                        {
+                            Id = 5,
+                            DoctorId = 5,
+                            Explanation = "Bachelor's Degree in Orthopedics",
+                            University = "University E",
+                            Year = "2004-2008"
+                        });
                 });
 
             modelBuilder.Entity("HospitalCmsSystem.Domain.Entities.Introduction", b =>
@@ -557,6 +1189,48 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     b.HasIndex("WorkingHourId");
 
                     b.ToTable("Introductions");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Description = "Experienced Cardiologist",
+                            DoctorId = 1,
+                            MySkills = "Cardiology, Surgery",
+                            WorkingHourId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Description = "Expert in Neurology",
+                            DoctorId = 2,
+                            MySkills = "Neurology, Patient Care",
+                            WorkingHourId = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Description = "Gastroenterology Specialist",
+                            DoctorId = 3,
+                            MySkills = "Gastroenterology, Diagnostics",
+                            WorkingHourId = 3
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Description = "Pediatrics Department",
+                            DoctorId = 4,
+                            MySkills = "Pediatrics, Child Care",
+                            WorkingHourId = 4
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Description = "Orthopedics Surgeon",
+                            DoctorId = 5,
+                            MySkills = "Orthopedics, Joint Surgery",
+                            WorkingHourId = 5
+                        });
                 });
 
             modelBuilder.Entity("HospitalCmsSystem.Domain.Entities.Patient", b =>
@@ -582,6 +1256,43 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     b.HasIndex("RoleId");
 
                     b.ToTable("Patients");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            Diagnosis = "Condition A",
+                            IsDischarged = false,
+                            RoleId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            Diagnosis = "Condition B",
+                            IsDischarged = true,
+                            RoleId = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            Diagnosis = "Condition C",
+                            IsDischarged = false,
+                            RoleId = 3
+                        },
+                        new
+                        {
+                            Id = 4,
+                            Diagnosis = "Condition D",
+                            IsDischarged = true,
+                            RoleId = 4
+                        },
+                        new
+                        {
+                            Id = 5,
+                            Diagnosis = "Condition E",
+                            IsDischarged = false,
+                            RoleId = 5
+                        });
                 });
 
             modelBuilder.Entity("HospitalCmsSystem.Domain.Entities.Surgery", b =>
@@ -608,6 +1319,43 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     b.HasIndex("PatientId");
 
                     b.ToTable("Surgeries");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DepartmentId = 1,
+                            PatientId = 1,
+                            SurgeryDate = new DateTime(2023, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DepartmentId = 2,
+                            PatientId = 2,
+                            SurgeryDate = new DateTime(2023, 2, 15, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DepartmentId = 3,
+                            PatientId = 3,
+                            SurgeryDate = new DateTime(2023, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DepartmentId = 4,
+                            PatientId = 4,
+                            SurgeryDate = new DateTime(2023, 4, 15, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        },
+                        new
+                        {
+                            Id = 5,
+                            DepartmentId = 5,
+                            PatientId = 5,
+                            SurgeryDate = new DateTime(2023, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified)
+                        });
                 });
 
             modelBuilder.Entity("HospitalCmsSystem.Domain.Entities.SurgeryDoctor", b =>
@@ -631,6 +1379,38 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     b.HasIndex("SurgeryId");
 
                     b.ToTable("SurgeryDoctors");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DoctorId = 1,
+                            SurgeryId = 1
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DoctorId = 2,
+                            SurgeryId = 2
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DoctorId = 3,
+                            SurgeryId = 3
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DoctorId = 4,
+                            SurgeryId = 4
+                        },
+                        new
+                        {
+                            Id = 5,
+                            DoctorId = 5,
+                            SurgeryId = 5
+                        });
                 });
 
             modelBuilder.Entity("HospitalCmsSystem.Domain.Entities.WorkingHour", b =>
@@ -666,6 +1446,53 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     b.HasIndex("DoctorId");
 
                     b.ToTable("WorkingHours");
+
+                    b.HasData(
+                        new
+                        {
+                            Id = 1,
+                            DayOfWeek = 1,
+                            DoctorId = 1,
+                            EndTime = new TimeSpan(0, 17, 0, 0, 0),
+                            IsOffDay = false,
+                            StartTime = new TimeSpan(0, 9, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 2,
+                            DayOfWeek = 2,
+                            DoctorId = 2,
+                            EndTime = new TimeSpan(0, 18, 0, 0, 0),
+                            IsOffDay = false,
+                            StartTime = new TimeSpan(0, 10, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 3,
+                            DayOfWeek = 6,
+                            DoctorId = 3,
+                            EndTime = new TimeSpan(0, 19, 0, 0, 0),
+                            IsOffDay = false,
+                            StartTime = new TimeSpan(0, 11, 0, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 4,
+                            DayOfWeek = 0,
+                            DoctorId = 4,
+                            EndTime = new TimeSpan(0, 17, 30, 0, 0),
+                            IsOffDay = false,
+                            StartTime = new TimeSpan(0, 9, 30, 0, 0)
+                        },
+                        new
+                        {
+                            Id = 5,
+                            DayOfWeek = 4,
+                            DoctorId = 5,
+                            EndTime = new TimeSpan(0, 16, 0, 0, 0),
+                            IsOffDay = true,
+                            StartTime = new TimeSpan(0, 8, 0, 0, 0)
+                        });
                 });
 
             modelBuilder.Entity("HospitalCmsSystem.Domain.Entities.AppUserRole", b =>
@@ -703,13 +1530,13 @@ namespace HospitalCmsSystem.Persistence.Migrations
 
                     b.HasOne("HospitalCmsSystem.Domain.Entities.Doctor", "Doctor")
                         .WithMany("Appointments")
-                        .HasForeignKey("DoctorId1")
+                        .HasForeignKey("DoctorId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 
                     b.HasOne("HospitalCmsSystem.Domain.Entities.Patient", "Patient")
                         .WithMany("Appointments")
-                        .HasForeignKey("PatientId1")
+                        .HasForeignKey("PatientId")
                         .OnDelete(DeleteBehavior.Cascade)
                         .IsRequired();
 

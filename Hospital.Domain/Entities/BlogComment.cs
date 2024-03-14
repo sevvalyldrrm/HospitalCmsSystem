@@ -25,7 +25,7 @@ namespace HospitalCmsSystem.Domain.Entities
 		public bool IsActive { get; set; }
 
 		//[ForeignKey(nameof(Patient.Id))]
-		//public string PatientId { get; set; }
+		//public int PatientId { get; set; }
 
 		//public Patient Patient { get; set; }
 

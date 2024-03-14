@@ -3,10 +3,12 @@ using Microsoft.EntityFrameworkCore.Migrations;
 
 #nullable disable
 
+#pragma warning disable CA1814 // Prefer jagged arrays over multidimensional
+
 namespace HospitalCmsSystem.Persistence.Migrations
 {
     /// <inheritdoc />
-    public partial class _1001_firstcheck : Migration
+    public partial class _1001_first : Migration
     {
         /// <inheritdoc />
         protected override void Up(MigrationBuilder migrationBuilder)
@@ -109,7 +111,7 @@ namespace HospitalCmsSystem.Persistence.Migrations
                         column: x => x.RoleId,
                         principalTable: "AppRole",
                         principalColumn: "Id",
-                        onDelete: ReferentialAction.Cascade);
+                        onDelete: ReferentialAction.NoAction);
                 });
 
             migrationBuilder.CreateTable(
@@ -405,10 +407,8 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     Id = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
                     DepartmentId = table.Column<int>(type: "int", nullable: false),
-                    DoctorId = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    DoctorId1 = table.Column<int>(type: "int", nullable: false),
-                    PatientId = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    PatientId1 = table.Column<int>(type: "int", nullable: false),
+                    DoctorId = table.Column<int>(type: "int", nullable: false),
+                    PatientId = table.Column<int>(type: "int", nullable: false),
                     Email = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     FullName = table.Column<string>(type: "nvarchar(max)", nullable: false),
                     Phone = table.Column<string>(type: "nvarchar(max)", nullable: false),
@@ -432,14 +432,14 @@ namespace HospitalCmsSystem.Persistence.Migrations
                         principalColumn: "Id",
                         onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
-                        name: "FK_Appointments_Doctors_DoctorId1",
-                        column: x => x.DoctorId1,
+                        name: "FK_Appointments_Doctors_DoctorId",
+                        column: x => x.DoctorId,
                         principalTable: "Doctors",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.NoAction);
                     table.ForeignKey(
-                        name: "FK_Appointments_Patients_PatientId1",
-                        column: x => x.PatientId1,
+                        name: "FK_Appointments_Patients_PatientId",
+                        column: x => x.PatientId,
                         principalTable: "Patients",
                         principalColumn: "Id",
                         onDelete: ReferentialAction.NoAction);
@@ -530,15 +530,245 @@ namespace HospitalCmsSystem.Persistence.Migrations
                         principalColumn: "Id");
                 });
 
-            migrationBuilder.CreateIndex(
-                name: "IX_AppUserRole_RoleId",
-                table: "AppUserRole",
-                column: "RoleId");
+            migrationBuilder.InsertData(
+                table: "Admins",
+                columns: new[] { "Id", "GitHubAcc" },
+                values: new object[,]
+                {
+                    { 1, "GitHubUser1" },
+                    { 2, "GitHubUser2" },
+                    { 3, "GitHubUser3" },
+                    { 4, "GitHubUser4" },
+                    { 5, "GitHubUser5" }
+                });
 
-            migrationBuilder.CreateIndex(
-                name: "IX_AppUserRole_UserId",
+            migrationBuilder.InsertData(
+                table: "AppRole",
+                columns: new[] { "Id", "CreatedAt", "DeletedAt", "UpdatedAt" },
+                values: new object[,]
+                {
+                    { 1, new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5117), null, new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5121) },
+                    { 2, new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5122), null, new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5122) },
+                    { 3, new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5123), null, new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5124) },
+                    { 4, new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5125), null, new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5125) },
+                    { 5, new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5126), null, new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5126) }
+                });
+
+            migrationBuilder.InsertData(
+                table: "AppUser",
+                columns: new[] { "Id", "City", "CreatedAt", "DeletedAt", "FullName", "ImagePath", "IsActive", "UpdatedAt" },
+                values: new object[,]
+                {
+                    { 1, "CityOne", new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5164), null, "User One", "path/to/user1.jpg", true, new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5164) },
+                    { 2, "CityTwo", new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5166), null, "User Two", "path/to/user2.jpg", true, new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5166) },
+                    { 3, "CityThree", new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5167), null, "User Three", "path/to/user3.jpg", true, new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5168) },
+                    { 4, "CityFour", new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5168), null, "User Four", "path/to/user4.jpg", true, new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5169) },
+                    { 5, "CityFive", new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5170), null, "User Five", "path/to/user5.jpg", true, new DateTime(2024, 3, 14, 18, 33, 26, 526, DateTimeKind.Utc).AddTicks(5170) }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Contacts",
+                columns: new[] { "Id", "Email", "FullName", "Message", "Phone", "Title" },
+                values: new object[,]
+                {
+                    { 1, "john.doe@example.com", "John Doe", "I have a question about...", "1234567890", "Inquiry" },
+                    { 2, "jane.doe@example.com", "Jane Doe", "I need assistance with...", "0987654321", "Support" },
+                    { 3, "sam.smith@example.com", "Sam Smith", "Here's what I think...", "1112223333", "Feedback" },
+                    { 4, "alex.johnson@example.com", "Alex Johnson", "I want to schedule an appointment...", "4445556666", "Booking" },
+                    { 5, "patricia.williams@example.com", "Patricia Williams", "I have a complaint about...", "7778889999", "Complaint" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Departments",
+                columns: new[] { "Id", "DepartmentDetailsId", "Description", "ImagePath", "Name" },
+                values: new object[,]
+                {
+                    { 1, 1, "Heart related specialties", "path/to/image1.jpg", "Cardiology" },
+                    { 2, 2, "Brain and nerves specialties", "path/to/image2.jpg", "Neurology" },
+                    { 3, 3, "Digestive system specialties", "path/to/image3.jpg", "Gastroenterology" },
+                    { 4, 4, "Children's health specialties", "path/to/image4.jpg", "Pediatrics" },
+                    { 5, 5, "Bones and joints specialties", "path/to/image5.jpg", "Orthopedics" }
+                });
+
+            migrationBuilder.InsertData(
                 table: "AppUserRole",
-                column: "UserId");
+                columns: new[] { "Id", "RoleId", "UserId" },
+                values: new object[,]
+                {
+                    { 1, 1, 1 },
+                    { 2, 2, 2 },
+                    { 3, 3, 3 },
+                    { 4, 4, 4 },
+                    { 5, 5, 5 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Blogs",
+                columns: new[] { "Id", "AppUserId", "Content", "Tag", "Title" },
+                values: new object[,]
+                {
+                    { 1, 1, "This is the content of the first blog post.", "General", "First Blog Title" },
+                    { 2, 2, "This is the content of the second blog post.", "Health", "Second Blog Title" },
+                    { 3, 3, "This is the content of the third blog post.", "Update", "Third Blog Title" },
+                    { 4, 4, "This is the content of the fourth blog post.", "News", "Fourth Blog Title" },
+                    { 5, 5, "This is the content of the fifth blog post.", "General", "Fifth Blog Title" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Doctors",
+                columns: new[] { "Id", "DepartmentId", "DocFacebook", "DocLinkedIn", "DocPinterest", "DocSkype", "DocTitle", "DocX", "IntroductionId", "RoleId", "Speacialty" },
+                values: new object[,]
+                {
+                    { 1, 1, "facebook.com/DocA", "linkedin.com/DocA", "pinterest.com/DocA", "skype.com/DocA", "Dr. A", "twitter.com/DocA", 1, 1, "Specialty A" },
+                    { 2, 2, "facebook.com/DocB", "linkedin.com/DocB", "pinterest.com/DocB", "skype.com/DocB", "Dr. B", "twitter.com/DocB", 2, 2, "Specialty B" },
+                    { 3, 3, "facebook.com/DocC", "linkedin.com/DocC", "pinterest.com/DocC", "skype.com/DocC", "Dr. C", "twitter.com/DocC", 3, 3, "Specialty C" },
+                    { 4, 4, "facebook.com/DocD", "linkedin.com/DocD", "pinterest.com/DocD", "skype.com/DocD", "Dr. D", "twitter.com/DocD", 4, 4, "Specialty D" },
+                    { 5, 5, "facebook.com/DocE", "linkedin.com/DocE", "pinterest.com/DocE", "skype.com/DocE", "Dr. E", "twitter.com/DocE", 5, 5, "Specialty E" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Patients",
+                columns: new[] { "Id", "Diagnosis", "IsDischarged", "RoleId" },
+                values: new object[,]
+                {
+                    { 1, "Condition A", false, 1 },
+                    { 2, "Condition B", true, 2 },
+                    { 3, "Condition C", false, 3 },
+                    { 4, "Condition D", true, 4 },
+                    { 5, "Condition E", false, 5 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "AppointmentManagers",
+                columns: new[] { "Id", "DoctorId", "EndingTime", "PatientId", "StartingTime", "Status" },
+                values: new object[,]
+                {
+                    { 1, 1, new DateTime(2023, 1, 20, 10, 0, 0, 0, DateTimeKind.Unspecified), 1, new DateTime(2023, 1, 20, 9, 0, 0, 0, DateTimeKind.Unspecified), 1 },
+                    { 2, 2, new DateTime(2023, 2, 20, 10, 0, 0, 0, DateTimeKind.Unspecified), 2, new DateTime(2023, 2, 20, 9, 0, 0, 0, DateTimeKind.Unspecified), 4 },
+                    { 3, 3, new DateTime(2023, 3, 20, 10, 0, 0, 0, DateTimeKind.Unspecified), 3, new DateTime(2023, 3, 20, 9, 0, 0, 0, DateTimeKind.Unspecified), 1 },
+                    { 4, 4, new DateTime(2023, 4, 20, 10, 0, 0, 0, DateTimeKind.Unspecified), 4, new DateTime(2023, 4, 20, 9, 0, 0, 0, DateTimeKind.Unspecified), 2 },
+                    { 5, 5, new DateTime(2023, 5, 20, 10, 0, 0, 0, DateTimeKind.Unspecified), 5, new DateTime(2023, 5, 20, 9, 0, 0, 0, DateTimeKind.Unspecified), 3 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "BlogComments",
+                columns: new[] { "Id", "AppUserId", "BlogId", "Comment", "IsActive" },
+                values: new object[,]
+                {
+                    { 1, 1, 1, "Great article!", true },
+                    { 2, 2, 1, "Very informative, thanks!", true },
+                    { 3, 3, 2, "Thanks for sharing.", true },
+                    { 4, 4, 2, "Interesting read!", true },
+                    { 5, 5, 3, "Helpful article.", true }
+                });
+
+            migrationBuilder.InsertData(
+                table: "BlogImages",
+                columns: new[] { "Id", "BlogId", "ImagePath" },
+                values: new object[,]
+                {
+                    { 1, 1, "path/to/blog/image1.jpg" },
+                    { 2, 1, "path/to/blog/image2.jpg" },
+                    { 3, 2, "path/to/blog/image3.jpg" },
+                    { 4, 2, "path/to/blog/image4.jpg" },
+                    { 5, 3, "path/to/blog/image5.jpg" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "DepartmentBlogs",
+                columns: new[] { "Id", "BlogId", "DepartmentId" },
+                values: new object[,]
+                {
+                    { 1, 1, 1 },
+                    { 2, 2, 2 },
+                    { 3, 3, 3 },
+                    { 4, 4, 4 },
+                    { 5, 5, 5 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "DoctorPatients",
+                columns: new[] { "Id", "DoctorId", "PatientId" },
+                values: new object[,]
+                {
+                    { 1, 1, 1 },
+                    { 2, 2, 2 },
+                    { 3, 3, 3 },
+                    { 4, 4, 4 },
+                    { 5, 5, 5 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Educations",
+                columns: new[] { "Id", "DoctorId", "Explanation", "IntroductionId", "University", "Year" },
+                values: new object[,]
+                {
+                    { 1, 1, "Bachelor's Degree in Medicine", null, "University A", "2000-2004" },
+                    { 2, 2, "Bachelor's Degree in Neurology", null, "University B", "2001-2005" },
+                    { 3, 3, "Bachelor's Degree in Gastroenterology", null, "University C", "2002-2006" },
+                    { 4, 4, "Bachelor's Degree in Pediatrics", null, "University D", "2003-2007" },
+                    { 5, 5, "Bachelor's Degree in Orthopedics", null, "University E", "2004-2008" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Surgeries",
+                columns: new[] { "Id", "DepartmentId", "PatientId", "SurgeryDate" },
+                values: new object[,]
+                {
+                    { 1, 1, 1, new DateTime(2023, 1, 15, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 2, 2, 2, new DateTime(2023, 2, 15, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 3, 3, 3, new DateTime(2023, 3, 15, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 4, 4, 4, new DateTime(2023, 4, 15, 0, 0, 0, 0, DateTimeKind.Unspecified) },
+                    { 5, 5, 5, new DateTime(2023, 5, 15, 0, 0, 0, 0, DateTimeKind.Unspecified) }
+                });
+
+            migrationBuilder.InsertData(
+                table: "WorkingHours",
+                columns: new[] { "Id", "AppointmentManagerId", "DayOfWeek", "DoctorId", "EndTime", "IsOffDay", "StartTime" },
+                values: new object[,]
+                {
+                    { 1, null, 1, 1, new TimeSpan(0, 17, 0, 0, 0), false, new TimeSpan(0, 9, 0, 0, 0) },
+                    { 2, null, 2, 2, new TimeSpan(0, 18, 0, 0, 0), false, new TimeSpan(0, 10, 0, 0, 0) },
+                    { 3, null, 6, 3, new TimeSpan(0, 19, 0, 0, 0), false, new TimeSpan(0, 11, 0, 0, 0) },
+                    { 4, null, 0, 4, new TimeSpan(0, 17, 30, 0, 0), false, new TimeSpan(0, 9, 30, 0, 0) },
+                    { 5, null, 4, 5, new TimeSpan(0, 16, 0, 0, 0), true, new TimeSpan(0, 8, 0, 0, 0) }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Appointments",
+                columns: new[] { "Id", "AppointmentDate", "AppointmentManagerId", "DepartmentId", "DoctorId", "Email", "FullName", "Message", "PatientId", "Phone" },
+                values: new object[,]
+                {
+                    { 1, new DateTime(2023, 1, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), 1, 1, 1, "patient1@example.com", "Patient One", "Looking forward to the appointment", 1, "1234567890" },
+                    { 2, new DateTime(2023, 2, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), 2, 2, 2, "patient2@example.com", "Patient Two", "Please confirm the appointment time", 2, "1234567891" },
+                    { 3, new DateTime(2023, 3, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), 3, 3, 3, "patient3@example.com", "Patient Three", "I may need to reschedule", 3, "1234567892" },
+                    { 4, new DateTime(2023, 4, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), 4, 4, 4, "patient4@example.com", "Patient Four", "Looking for more information", 4, "1234567893" },
+                    { 5, new DateTime(2023, 5, 22, 0, 0, 0, 0, DateTimeKind.Unspecified), 5, 5, 5, "patient5@example.com", "Patient Five", "Confirming the appointment details", 5, "1234567894" }
+                });
+
+            migrationBuilder.InsertData(
+                table: "Introductions",
+                columns: new[] { "Id", "Description", "DoctorId", "MySkills", "WorkingHourId" },
+                values: new object[,]
+                {
+                    { 1, "Experienced Cardiologist", 1, "Cardiology, Surgery", 1 },
+                    { 2, "Expert in Neurology", 2, "Neurology, Patient Care", 2 },
+                    { 3, "Gastroenterology Specialist", 3, "Gastroenterology, Diagnostics", 3 },
+                    { 4, "Pediatrics Department", 4, "Pediatrics, Child Care", 4 },
+                    { 5, "Orthopedics Surgeon", 5, "Orthopedics, Joint Surgery", 5 }
+                });
+
+            migrationBuilder.InsertData(
+                table: "SurgeryDoctors",
+                columns: new[] { "Id", "DoctorId", "SurgeryId" },
+                values: new object[,]
+                {
+                    { 1, 1, 1 },
+                    { 2, 2, 2 },
+                    { 3, 3, 3 },
+                    { 4, 4, 4 },
+                    { 5, 5, 5 }
+                });
 
             migrationBuilder.CreateIndex(
                 name: "IX_AppointmentManagers_DoctorId",
@@ -561,14 +791,24 @@ namespace HospitalCmsSystem.Persistence.Migrations
                 column: "DepartmentId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Appointments_DoctorId1",
+                name: "IX_Appointments_DoctorId",
                 table: "Appointments",
-                column: "DoctorId1");
+                column: "DoctorId");
 
             migrationBuilder.CreateIndex(
-                name: "IX_Appointments_PatientId1",
+                name: "IX_Appointments_PatientId",
                 table: "Appointments",
-                column: "PatientId1");
+                column: "PatientId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AppUserRole_RoleId",
+                table: "AppUserRole",
+                column: "RoleId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_AppUserRole_UserId",
+                table: "AppUserRole",
+                column: "UserId");
 
             migrationBuilder.CreateIndex(
                 name: "IX_BlogComments_AppUserId",
@@ -690,10 +930,10 @@ namespace HospitalCmsSystem.Persistence.Migrations
                 name: "Admins");
 
             migrationBuilder.DropTable(
-                name: "AppUserRole");
+                name: "Appointments");
 
             migrationBuilder.DropTable(
-                name: "Appointments");
+                name: "AppUserRole");
 
             migrationBuilder.DropTable(
                 name: "BlogComments");
