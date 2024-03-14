@@ -16,4 +16,8 @@
     <ProjectReference Include="..\HospitalCmsSystem.Dto\HospitalCmsSystem.Dto.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Models\" />
+  </ItemGroup>
+
 </Project>

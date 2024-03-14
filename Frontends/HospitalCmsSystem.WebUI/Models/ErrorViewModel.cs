@@ -1,3 +1,4 @@
+
 namespace HospitalCmsSystem.WebUI.Models
 {
     public class ErrorViewModel

@@ -1,0 +1,6 @@
+identity kullanýlacak
+jwt eklencek - login iþlemi
+email sendler
+fake data eklencek
+api kontrol edilecek
+frontend düzenlenecek
