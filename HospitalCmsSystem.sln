@@ -26,6 +26,7 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ToDoList", "ToDoList", "{1726F146-AA1A-4C8A-AE07-FBDBDC330448}"
 	ProjectSection(SolutionItems) = preProject
 		klcuur.txt = klcuur.txt
+		syld.txt = syld.txt
 	EndProjectSection
 EndProject
 Global
