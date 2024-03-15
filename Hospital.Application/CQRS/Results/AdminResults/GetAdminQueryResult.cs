@@ -8,6 +8,7 @@ namespace HospitalCmsSystem.Application.CQRS.Results.AdminResults
 {
     public class GetAdminQueryResult : BaseResult
     {
+        public string Name { get; set; }
         public string GitHubAcc { get; set; }
     }
 }

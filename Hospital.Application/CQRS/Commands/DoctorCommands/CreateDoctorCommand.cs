@@ -9,6 +9,7 @@ namespace HospitalCmsSystem.Application.CQRS.Commands.DoctorCommands
 {
 	public class CreateDoctorCommand : IRequest
 	{
+        public string Name { get; set; }
         public string Speacialty { get; set; }
         public int DepartmentId { get; set; }
         public int RoleId { get; set; }

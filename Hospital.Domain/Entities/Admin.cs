@@ -9,6 +9,8 @@ namespace HospitalCmsSystem.Domain.Entities
 {
     public class Admin : BaseEntitiy
 	{
+        public string Name { get; set; }
+
         public string GitHubAcc { get; set; }
     }
 }

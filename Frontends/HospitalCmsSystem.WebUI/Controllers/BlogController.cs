@@ -2,7 +2,7 @@
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
-namespace Cms.Web.Mvc.Controllers
+namespace HospitalCmsSystem.WebUI.Controllers
 {
     public class BlogController : Controller
 	{
@@ -16,7 +16,7 @@ namespace Cms.Web.Mvc.Controllers
 		public async Task<IActionResult> Index()
 		{
 			var client = _httpClientFactory.CreateClient();
-			var responseMessage = await client.GetAsync("https://localhost:7038//api/Blogs");
+			var responseMessage = await client.GetAsync("https://localhost:7038/api/Blogs");
 			if (responseMessage.IsSuccessStatusCode)
 			{
 				var jsonData = await responseMessage.Content.ReadAsStringAsync();

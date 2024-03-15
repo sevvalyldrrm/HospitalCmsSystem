@@ -11,6 +11,7 @@ namespace HospitalCmsSystem.Application.CQRS.Commands.AdminCommands
 	public class UpdateAdminCommand : IRequest
 	{
 		public int Id { get; set; }
-		public string GitHubAcc { get; set; }
+        public string Name { get; set; }
+        public string GitHubAcc { get; set; }
 	}
 }

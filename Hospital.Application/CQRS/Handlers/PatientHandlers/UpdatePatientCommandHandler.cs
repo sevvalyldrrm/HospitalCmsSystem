@@ -27,6 +27,7 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.PatientHandlers
             values.Diagnosis = request.Diagnosis;
             values.IsDischarged = request.IsDischarged;
             values.RoleId = request.RoleId;
+            values.Name = request.Name;
             await _repository.UpdateAsync(values);
         }
     }

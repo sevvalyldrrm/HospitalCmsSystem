@@ -45,5 +45,12 @@ namespace HospitalCmsSystem.WebApi.Controllers
             await _mediator.Send(command);
             return Ok("Doctor başarıyla güncellendi");
         }
+
+        [HttpGet("GetDoctorsWithDepartment")]
+        public async Task<IActionResult> GetDoctorsWithDepartment()
+        {
+           var values =  await _mediator.Send(new GetDoctorsWithDepartmentQuery());
+            return Ok(values);
+        }
     }
 }

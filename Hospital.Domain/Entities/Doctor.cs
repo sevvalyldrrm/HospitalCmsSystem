@@ -10,6 +10,8 @@ namespace HospitalCmsSystem.Domain.Entities
 {
 	public class Doctor : BaseEntitiy
 	{
+        public string Name { get; set; }
+
 		public string Speacialty { get; set; }
 
         public ICollection<DoctorPatient> DoctorPatients { get; set; }

@@ -1,5 +1,7 @@
+using HospitalCmsSystem.Dto.Blog;
 using HospitalCmsSystem.WebUI.Models;
 using Microsoft.AspNetCore.Mvc;
+using Newtonsoft.Json;
 using System.Diagnostics;
 
 namespace HospitalCmsSystem.WebUI.Controllers
@@ -7,16 +9,16 @@ namespace HospitalCmsSystem.WebUI.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
-
         public HomeController(ILogger<HomeController> logger)
         {
             _logger = logger;
-        }
+		}
 
-        public IActionResult Index()
+
+		public IActionResult Index()
         {
-            return View();
-        }
+			return View();
+		}
 
         public IActionResult Privacy()
         {

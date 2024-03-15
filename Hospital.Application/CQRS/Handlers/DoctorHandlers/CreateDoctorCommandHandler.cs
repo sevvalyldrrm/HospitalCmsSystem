@@ -23,6 +23,7 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.DoctorHandlers
 		{
 			await _repository.CreateAsync( new Doctor()
 			{
+				Name = request.Name,
 				Speacialty=request.Speacialty,
                 DepartmentId=request.DepartmentId,
                 RoleId=request.RoleId,

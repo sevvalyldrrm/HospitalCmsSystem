@@ -24,6 +24,7 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.AdminHandlers
 			await _repository.CreateAsync( new Admin()
 			{
 			 GitHubAcc=request.GitHubAcc,
+			 Name=request.Name,
 				
 			});
 		}

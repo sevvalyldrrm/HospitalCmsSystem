@@ -15,7 +15,7 @@ namespace HospitalCmsSystem.Persistence.Context
 		{
 
 			optionsBuilder.UseSqlServer("Data Source=DESKTOP-0LP7T25\\SQL2022;Initial Catalog=HospitalCmsSystem;Persist Security Info=True;User ID=sa;Password=123;Trusted_Connection=True; TrustServerCertificate=Yes");
-=======
+
 			//optionsBuilder.UseSqlServer("Data Source=DESKTOP-U5FQ7NA\\SQL2022;Initial Catalog=HospitalCmsSystem;Persist Security Info=True;User ID=sa;Password=123;Trusted_Connection=True; TrustServerCertificate=Yes");
 		}
 		public AppDbContext() { }
@@ -68,11 +68,11 @@ namespace HospitalCmsSystem.Persistence.Context
 
             // Admin
             modelBuilder.Entity<Admin>().HasData(
-                new { Id = 1, GitHubAcc = "GitHubUser1" },
-                new { Id = 2, GitHubAcc = "GitHubUser2" },
-                new { Id = 3, GitHubAcc = "GitHubUser3" },
-                new { Id = 4, GitHubAcc = "GitHubUser4" },
-                new { Id = 5, GitHubAcc = "GitHubUser5" }
+                new { Id = 1, Name= "Ahmet", GitHubAcc = "GitHubUser1" },
+                new { Id = 2, Name = "Mehmet", GitHubAcc = "GitHubUser2" },
+                new { Id = 5, Name = "Hıdır", GitHubAcc = "GitHubUser5" },
+                new { Id = 3, Name = "Şevval", GitHubAcc = "GitHubUser3" },
+                new { Id = 4, Name = "Uğur", GitHubAcc = "GitHubUser4" }
             );
 
             // AppRole
@@ -103,11 +103,11 @@ namespace HospitalCmsSystem.Persistence.Context
 
             // Patients
             modelBuilder.Entity<Patient>().HasData(
-                new { Id = 1, Diagnosis = "Condition A", IsDischarged = false, RoleId = 1 },
-                new { Id = 2, Diagnosis = "Condition B", IsDischarged = true, RoleId = 2 },
-                new { Id = 3, Diagnosis = "Condition C", IsDischarged = false, RoleId = 3 },
-                new { Id = 4, Diagnosis = "Condition D", IsDischarged = true, RoleId = 4 },
-                new { Id = 5, Diagnosis = "Condition E", IsDischarged = false, RoleId = 5 }
+                new { Id = 1, Name="A", Diagnosis = "Condition A", IsDischarged = false, RoleId = 1 },
+                new { Id = 2, Name = "B", Diagnosis = "Condition B", IsDischarged = true, RoleId = 2 },
+                new { Id = 3, Name = "C", Diagnosis = "Condition C", IsDischarged = false, RoleId = 3 },
+                new { Id = 4, Name = "D", Diagnosis = "Condition D", IsDischarged = true, RoleId = 4 },
+                new { Id = 5, Name = "E", Diagnosis = "Condition E", IsDischarged = false, RoleId = 5 }
             );
 
             // AppUserRole
@@ -165,11 +165,11 @@ namespace HospitalCmsSystem.Persistence.Context
 
             // Doctors
             modelBuilder.Entity<Doctor>().HasData(
-                new { Id = 1, Speacialty = "Specialty A", DepartmentId = 1, RoleId = 1, IntroductionId = 1, DocFacebook = "facebook.com/DocA", DocX = "twitter.com/DocA", DocPinterest = "pinterest.com/DocA", DocSkype = "skype.com/DocA", DocLinkedIn = "linkedin.com/DocA", DocTitle = "Dr. A" },
-                new { Id = 2, Speacialty = "Specialty B", DepartmentId = 2, RoleId = 2, IntroductionId = 2, DocFacebook = "facebook.com/DocB", DocX = "twitter.com/DocB", DocPinterest = "pinterest.com/DocB", DocSkype = "skype.com/DocB", DocLinkedIn = "linkedin.com/DocB", DocTitle = "Dr. B" },
-                new { Id = 3, Speacialty = "Specialty C", DepartmentId = 3, RoleId = 3, IntroductionId = 3, DocFacebook = "facebook.com/DocC", DocX = "twitter.com/DocC", DocPinterest = "pinterest.com/DocC", DocSkype = "skype.com/DocC", DocLinkedIn = "linkedin.com/DocC", DocTitle = "Dr. C" },
-                new { Id = 4, Speacialty = "Specialty D", DepartmentId = 4, RoleId = 4, IntroductionId = 4, DocFacebook = "facebook.com/DocD", DocX = "twitter.com/DocD", DocPinterest = "pinterest.com/DocD", DocSkype = "skype.com/DocD", DocLinkedIn = "linkedin.com/DocD", DocTitle = "Dr. D" },
-                new { Id = 5, Speacialty = "Specialty E", DepartmentId = 5, RoleId = 5, IntroductionId = 5, DocFacebook = "facebook.com/DocE", DocX = "twitter.com/DocE", DocPinterest = "pinterest.com/DocE", DocSkype = "skype.com/DocE", DocLinkedIn = "linkedin.com/DocE", DocTitle = "Dr. E" }
+                new { Id = 1, Name="Ahmet", Speacialty = "Specialty A", DepartmentId = 1, RoleId = 1, IntroductionId = 1, DocFacebook = "facebook.com/DocA", DocX = "twitter.com/DocA", DocPinterest = "pinterest.com/DocA", DocSkype = "skype.com/DocA", DocLinkedIn = "linkedin.com/DocA", DocTitle = "Dr. A" },
+                new { Id = 2, Name = "Şevval", Speacialty = "Specialty B", DepartmentId = 2, RoleId = 2, IntroductionId = 2, DocFacebook = "facebook.com/DocB", DocX = "twitter.com/DocB", DocPinterest = "pinterest.com/DocB", DocSkype = "skype.com/DocB", DocLinkedIn = "linkedin.com/DocB", DocTitle = "Dr. B" },
+                new { Id = 3, Name = "Mehmet", Speacialty = "Specialty C", DepartmentId = 3, RoleId = 3, IntroductionId = 3, DocFacebook = "facebook.com/DocC", DocX = "twitter.com/DocC", DocPinterest = "pinterest.com/DocC", DocSkype = "skype.com/DocC", DocLinkedIn = "linkedin.com/DocC", DocTitle = "Dr. C" },
+                new { Id = 4, Name = "Uğur", Speacialty = "Specialty D", DepartmentId = 4, RoleId = 4, IntroductionId = 4, DocFacebook = "facebook.com/DocD", DocX = "twitter.com/DocD", DocPinterest = "pinterest.com/DocD", DocSkype = "skype.com/DocD", DocLinkedIn = "linkedin.com/DocD", DocTitle = "Dr. D" },
+                new { Id = 5, Name = "Hıdır", Speacialty = "Specialty E", DepartmentId = 5, RoleId = 5, IntroductionId = 5, DocFacebook = "facebook.com/DocE", DocX = "twitter.com/DocE", DocPinterest = "pinterest.com/DocE", DocSkype = "skype.com/DocE", DocLinkedIn = "linkedin.com/DocE", DocTitle = "Dr. E" }
             );
             // Surgeries
             modelBuilder.Entity<Surgery>().HasData(

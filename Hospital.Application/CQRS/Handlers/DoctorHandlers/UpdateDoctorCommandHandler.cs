@@ -34,6 +34,7 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.DoctorHandlers
             values.DocSkype = request.DocSkype;
             values.DocLinkedIn = request.DocLinkedIn;
             values.DocTitle = request.DocTitle;
+            values.Name  = request.Name;
             await _repository.UpdateAsync(values);
         }
     }

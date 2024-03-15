@@ -5,11 +5,14 @@ using HospitalCmsSystem.Application.Services;
 using HospitalCmsSystem.Application.Interfaces;
 using HospitalCmsSystem.Persistence.Repositories;
 using HospitalCmsSystem.Persistence.Context;
+using HospitalCmsSystem.Application.Interfaces.DoctorInterfaces;
+using HospitalCmsSystem.Persistence.Repositories.Doctor;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddApplicationService(builder.Configuration);
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+builder.Services.AddScoped<IDoctorRepository, DoctorRepository>();
 builder.Services.AddScoped<AppDbContext>();
 
 // Add services to the container.

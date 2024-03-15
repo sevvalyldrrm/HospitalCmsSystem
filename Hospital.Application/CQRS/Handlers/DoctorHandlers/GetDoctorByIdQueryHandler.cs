@@ -26,6 +26,7 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.DoctorHandlers
 			return new GetDoctorByIdQueryResult
 			{
 				Id = values.Id,
+				Name = values.Name,
                 Speacialty = values.Speacialty,
                 DepartmentId = values.DepartmentId,
                 RoleId = values.RoleId,
