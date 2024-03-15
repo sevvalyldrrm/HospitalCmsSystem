@@ -1,5 +1,41 @@
 ﻿@model List<HospitalCmsSystem.Dto.Doctor.ResultDoctorsWithDepartmentDto>
 
+<style>
+    .btn-group {
+        display: flex;
+        justify-content: center; /* Butonları ortala */
+        background: #f8f9fa; /* Butonların arka plan rengi */
+        border-radius: .25rem; /* Köşeleri yuvarlatma */
+        padding: 5px; /* Grup etrafında biraz boşluk */
+    }
+
+        .btn-group .btn {
+            border: none; /* Buton arasındaki sınırları kaldırır */
+            flex-grow: 1; /* Butonları esnet */
+            margin: 0 5px; /* Her buton arasında boşluk bırak */
+            background-color: white; /* Butonların arka plan rengi */
+            color: #333; /* Buton metni rengi */
+            text-align: center; /* Metni ortala */
+            padding: 10px 20px; /* İç boşluk */
+            cursor: pointer; /* İmleç stilini belirle */
+            transition: background-color 0.3s ease; /* Renk değişim animasyonu */
+            box-shadow: none; /* Kutu gölgesini kaldır */
+            border-radius: .25rem; /* Butonları yuvarlat */
+        }
+
+    .btn-check:checked + .btn {
+        background-color: #dc3545; /* Seçili butonun arka plan rengi */
+        color: white; /* Seçili butonun metin rengi */
+    }
+
+    /* Özelleştirilmiş radio butonları için stil */
+    .btn-check {
+        position: absolute;
+        clip: rect(0, 0, 0, 0); /* Butonu görünmez yap */
+        pointer-events: none; /* Fare etkileşimini devre dışı bırak */
+    }
+</style>
+
 <section class="page-title bg-1">
     <div class="overlay"></div>
     <div class="container">
@@ -9,11 +45,6 @@
                     <span class="text-white">All Doctors</span>
                     <h1 class="text-capitalize mb-5 text-lg">Specalized doctors</h1>
 
-                    <!-- <ul class="list-inline breadcumb-nav">
-                      <li class="list-inline-item"><a href="index.html" class="text-white">Home</a></li>
-                      <li class="list-inline-item"><span class="text-white">/</span></li>
-                      <li class="list-inline-item"><a href="#" class="text-white-50">All Doctors</a></li>
-                    </ul> -->
                 </div>
             </div>
         </div>
@@ -21,63 +52,59 @@
 </section>
 
 
-<!-- portfolio -->
-<section class="section doctors">
+<<section class="section doctors">
     <div class="container">
-        <div class="row justify-content-center">
-            <div class="col-lg-6 text-center">
-                <div class="section-title">
-                    <h2>Doctors</h2>
-                    <div class="divider mx-auto my-4"></div>
-                    <p>We provide a wide range of creative services adipisicing elit. Autem maxime rem modi eaque, voluptate. Beatae officiis neque </p>
-                </div>
+        <!-- Department Buttons -->
+        <div class="row">
+            <div class="btn-group" role="group">
+                <input type="radio" class="btn-check" name="shuffle-filter" id="all" value="all" autocomplete="off" checked>
+                <label class="btn btn-outline-primary" for="all">All Department</label>
+
+                <!-- Dynamic Department Buttons -->
+                @foreach (var department in Model)
+                {
+                    <input type="radio" class="btn-check" name="shuffle-filter" id="@department.departmentName" value="@department.departmentName.ToLower()" autocomplete="off">
+                    <label class="btn btn-outline-primary" for="@department.departmentName">@department.departmentName</label>
+                }
             </div>
         </div>
 
-        <div class="col-12 text-center  mb-5">
-            <div class="btn-group btn-group-toggle " data-toggle="buttons">
-                <label class="btn active ">
-                    <input type="radio" name="shuffle-filter" value="all" checked="checked" />All Department
-                </label>
-                <label class="btn ">
-                    <input type="radio" name="shuffle-filter" value="cat1" />Cardiology
-                </label>
-                <label class="btn">
-                    <input type="radio" name="shuffle-filter" value="cat2" />Dental
-                </label>
-                <label class="btn">
-                    <input type="radio" name="shuffle-filter" value="cat3" />Neurology
-                </label>
-                <label class="btn">
-                    <input type="radio" name="shuffle-filter" value="cat4" />Medicine
-                </label>
-                <label class="btn">
-                    <input type="radio" name="shuffle-filter" value="cat5" />Pediatric
-                </label>
-                <label class="btn">
-                    <input type="radio" name="shuffle-filter" value="cat6" />Traumatology
-                </label>
-            </div>
-        </div>
-
-        <div class="row shuffle-wrapper portfolio-gallery">
-            @foreach (var item in Model)
+        <!-- Doctors Listing -->
+        <div class="row mt-4">
+            <!-- Dynamic Doctor Items -->
+            @foreach (var doctor in Model)
             {
-                    <div class="col-lg-3 col-sm-6 col-md-6 mb-4 shuffle-item" data-groups="[&quot;cat1&quot;,&quot;cat2&quot;]">
-                          <div class="position-relative doctor-inner-box">
-                              <div class="doctor-profile">
-                                  <div class="doctor-img">
-                                         <img src="~/images/team/1.jpg" alt="doctor-image" class="img-fluid w-100">
-                                  </div>
-                                </div>
-                              <div class="content mt-3">
-                                    <h4 class="mb-0"><a href="doctor-single.html">@item.name</a></h4>
-                                    <p>@item.departmentName</p>
-                              </div>
-                            </div>
-                    </div>
+                <div class="col-md-4 doctor-item" data-department="@doctor.departmentName.ToLower()">
+                    <img src="~/images/team/1.jpg" alt="@doctor.id" class="img-fluid">
+                    <h4>@doctor.name</h4>
+                    <p>@doctor.departmentName</p>
+                </div>
             }
         </div>
+    </div>
+</section>
+        @section scripts {
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const filters = document.querySelectorAll('input[name="shuffle-filter"]');
+            const doctorItems = document.querySelectorAll('.doctor-item');
+
+            filters.forEach(filter => {
+                filter.addEventListener('change', function () {
+                    const selectedDepartment = this.value.toLowerCase();
+                    doctorItems.forEach(item => {
+                        if (selectedDepartment === 'all' || item.dataset.department === selectedDepartment) {
+                            item.style.display = 'block';
+                        } else {
+                            item.style.display = 'none';
+                        }
+                    });
+                });
+            });
+        });
+    </script>
+
+        }
     </div>
 </section>
 <!-- /portfolio -->
