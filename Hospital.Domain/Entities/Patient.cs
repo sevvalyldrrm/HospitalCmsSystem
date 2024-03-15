@@ -10,7 +10,8 @@ namespace HospitalCmsSystem.Domain.Entities
 {
 	public class Patient : BaseEntitiy
 	{
-		public string Diagnosis {  get; set; }
+        public string Name { get; set; }
+        public string Diagnosis {  get; set; }
 
 		public bool IsDischarged { get; set; }
 

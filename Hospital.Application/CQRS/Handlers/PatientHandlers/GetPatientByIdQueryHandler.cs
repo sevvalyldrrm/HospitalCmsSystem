@@ -29,6 +29,7 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.PatientHandlers
                 Diagnosis = values.Diagnosis,
                 IsDischarged = values.IsDischarged,
                 RoleId = values.RoleId,
+				Name = values.Name,
             };
 
 		}

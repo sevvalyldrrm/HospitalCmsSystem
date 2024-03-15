@@ -25,6 +25,7 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.AdminHandlers
         {
             var values = await _repository.GetByIdAsync(request.Id);
             values.GitHubAcc = request.GitHubAcc;
+            values.Name = request.Name;
             await _repository.UpdateAsync(values);
         }
     }

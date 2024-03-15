@@ -26,6 +26,7 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.AdminHandlers
 			return new GetAdminByIdQueryResult
 			{
 				Id = values.Id,
+				Name = values.Name,
                 GitHubAcc = values.GitHubAcc,
             };
 

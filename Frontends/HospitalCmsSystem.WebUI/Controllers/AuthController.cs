@@ -1,6 +1,6 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 
-namespace Cms.Web.Mvc.Controllers
+namespace HospitalCmsSystem.WebUI.Controllers
 {
 	public class AuthController : Controller
 	{

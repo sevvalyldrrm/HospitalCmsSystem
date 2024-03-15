@@ -25,6 +25,7 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.DoctorHandlers
 			var values = await _repository.GetAllAsync();
 			return values.Select(x => new GetDoctorQueryResult
             {
+				Name = x.Name,
                 Speacialty = x.Speacialty,
                 DepartmentId = x.DepartmentId,
                 RoleId = x.RoleId,
