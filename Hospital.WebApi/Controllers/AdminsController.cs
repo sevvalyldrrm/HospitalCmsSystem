@@ -1,5 +1,6 @@
 ﻿using HospitalCmsSystem.Application.CQRS.Commands.AdminCommands;
 using HospitalCmsSystem.Application.CQRS.Queries.AdminQueries;
+using HospitalCmsSystem.Application.Validators.AdminValidators;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -30,6 +31,12 @@ namespace HospitalCmsSystem.WebApi.Controllers
         [HttpPost]
         public async Task<IActionResult> CreateAdmin(CreateAdminCommand command)
         {
+            CreateAdminValidator validator= new CreateAdminValidator();
+            var validationResult=validator.Validate(command);
+            if(!validationResult.IsValid)
+            {
+                return BadRequest(validationResult.Errors);
+            }
             await _mediator.Send(command);
             return Ok("Admin başarıyla eklendi");
         }
