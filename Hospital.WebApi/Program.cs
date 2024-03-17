@@ -9,31 +9,59 @@ using HospitalCmsSystem.Application.Interfaces.DoctorInterfaces;
 using HospitalCmsSystem.Persistence.Repositories.Doctor;
 using FluentValidation.AspNetCore;
 using System.Reflection;
+using MediatR;
+using FluentValidation;
+using HospitalCmsSystem.Application.Behaviors.HospitalCmsSystem.Application.Behaviors;
+using HospitalCmsSystem.Application.Behaviors;
+using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
+// MediatR servislerini ve Behaviour'larý ekleyin
+//builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
+builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
+builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>));
+
+// FluentValidation validatörlerini kaydedin
+builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+
+builder.Services.AddControllers().AddFluentValidation(fv => {
+    fv.AutomaticValidationEnabled = true; // Eðer otomatik doðrulama istiyorsanýz
+});
+
+// Uygulama servislerini ekleyin
 builder.Services.AddApplicationService(builder.Configuration);
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IDoctorRepository, DoctorRepository>();
 builder.Services.AddScoped<AppDbContext>();
 
-builder.Services.AddControllers().AddFluentValidation(x =>
-{
-    x.RegisterValidatorsFromAssembly(Assembly.GetExecutingAssembly());
-});
-// Add services to the container.
+// Logger servisini ekleyin
+builder.Services.AddLogging();
 
-// Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
+// Swagger'ý ekleyin
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
+// Serilog yapýlandýrmasý
+Log.Logger = new LoggerConfiguration()
+    .ReadFrom.Configuration(builder.Configuration)
+    .Enrich.FromLogContext()
+    .WriteTo.Console()
+    .WriteTo.File("logs/myapp.txt", rollingInterval: RollingInterval.Day)
+    .CreateLogger();
+
+builder.Logging.ClearProviders();
+builder.Logging.AddSerilog();
+
+
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Geliþtirme ortamý için Swagger UI'ý etkinleþtirin
 if (app.Environment.IsDevelopment())
 {
-	app.UseSwagger();
-	app.UseSwaggerUI();
+    app.UseSwagger();
+    app.UseSwaggerUI();
 }
 
 app.UseHttpsRedirection();
