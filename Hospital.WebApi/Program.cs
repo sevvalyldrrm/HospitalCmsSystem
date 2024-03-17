@@ -17,17 +17,17 @@ using Serilog;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// MediatR servislerini ve Behaviour'larý ekleyin
+// MediatR servislerini ve Behaviour'larÄ± ekleyin
 //builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>));
 
-// FluentValidation validatörlerini kaydedin
+// FluentValidation validatÃ¶rlerini kaydedin
 builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
 
 builder.Services.AddControllers().AddFluentValidation(fv => {
-    fv.AutomaticValidationEnabled = true; // Eðer otomatik doðrulama istiyorsanýz
+    fv.AutomaticValidationEnabled = true; // EÄŸer otomatik doÄŸrulama istiyorsanÄ±z
 });
 
 // Uygulama servislerini ekleyin
@@ -39,11 +39,11 @@ builder.Services.AddScoped<AppDbContext>();
 // Logger servisini ekleyin
 builder.Services.AddLogging();
 
-// Swagger'ý ekleyin
+// Swagger'Ä± ekleyin
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
 
-// Serilog yapýlandýrmasý
+// Serilog yapÄ±landÄ±rmasÄ±
 Log.Logger = new LoggerConfiguration()
     .ReadFrom.Configuration(builder.Configuration)
     .Enrich.FromLogContext()
@@ -57,7 +57,7 @@ builder.Logging.AddSerilog();
 
 var app = builder.Build();
 
-// Geliþtirme ortamý için Swagger UI'ý etkinleþtirin
+// GeliÅŸtirme ortamÄ± iÃ§in Swagger UI'Ä± etkinleÅŸtirin
 if (app.Environment.IsDevelopment())
 {
     app.UseSwagger();

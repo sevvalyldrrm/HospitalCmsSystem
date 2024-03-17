@@ -4,6 +4,7 @@ using HospitalCmsSystem.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -11,9 +12,11 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace HospitalCmsSystem.Persistence.Migrations
 {
     [DbContext(typeof(AppDbContext))]
-    partial class AppDbContextModelSnapshot : ModelSnapshot
+    [Migration("20240316183135_1003")]
+    partial class _1003
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        /// <inheritdoc />
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -100,32 +103,32 @@ namespace HospitalCmsSystem.Persistence.Migrations
                         new
                         {
                             Id = 1,
-                            CreatedAt = new DateTime(2024, 3, 17, 13, 57, 27, 945, DateTimeKind.Utc).AddTicks(8007),
-                            UpdatedAt = new DateTime(2024, 3, 17, 13, 57, 27, 945, DateTimeKind.Utc).AddTicks(8008)
+                            CreatedAt = new DateTime(2024, 3, 16, 18, 31, 34, 941, DateTimeKind.Utc).AddTicks(7949),
+                            UpdatedAt = new DateTime(2024, 3, 16, 18, 31, 34, 941, DateTimeKind.Utc).AddTicks(7951)
                         },
                         new
                         {
                             Id = 2,
-                            CreatedAt = new DateTime(2024, 3, 17, 13, 57, 27, 945, DateTimeKind.Utc).AddTicks(8008),
-                            UpdatedAt = new DateTime(2024, 3, 17, 13, 57, 27, 945, DateTimeKind.Utc).AddTicks(8009)
+                            CreatedAt = new DateTime(2024, 3, 16, 18, 31, 34, 941, DateTimeKind.Utc).AddTicks(7952),
+                            UpdatedAt = new DateTime(2024, 3, 16, 18, 31, 34, 941, DateTimeKind.Utc).AddTicks(7953)
                         },
                         new
                         {
                             Id = 3,
-                            CreatedAt = new DateTime(2024, 3, 17, 13, 57, 27, 945, DateTimeKind.Utc).AddTicks(8009),
-                            UpdatedAt = new DateTime(2024, 3, 17, 13, 57, 27, 945, DateTimeKind.Utc).AddTicks(8010)
+                            CreatedAt = new DateTime(2024, 3, 16, 18, 31, 34, 941, DateTimeKind.Utc).AddTicks(7953),
+                            UpdatedAt = new DateTime(2024, 3, 16, 18, 31, 34, 941, DateTimeKind.Utc).AddTicks(7954)
                         },
                         new
                         {
                             Id = 4,
-                            CreatedAt = new DateTime(2024, 3, 17, 13, 57, 27, 945, DateTimeKind.Utc).AddTicks(8010),
-                            UpdatedAt = new DateTime(2024, 3, 17, 13, 57, 27, 945, DateTimeKind.Utc).AddTicks(8011)
+                            CreatedAt = new DateTime(2024, 3, 16, 18, 31, 34, 941, DateTimeKind.Utc).AddTicks(7954),
+                            UpdatedAt = new DateTime(2024, 3, 16, 18, 31, 34, 941, DateTimeKind.Utc).AddTicks(7955)
                         },
                         new
                         {
                             Id = 5,
-                            CreatedAt = new DateTime(2024, 3, 17, 13, 57, 27, 945, DateTimeKind.Utc).AddTicks(8011),
-                            UpdatedAt = new DateTime(2024, 3, 17, 13, 57, 27, 945, DateTimeKind.Utc).AddTicks(8012)
+                            CreatedAt = new DateTime(2024, 3, 16, 18, 31, 34, 941, DateTimeKind.Utc).AddTicks(7955),
+                            UpdatedAt = new DateTime(2024, 3, 16, 18, 31, 34, 941, DateTimeKind.Utc).AddTicks(7956)
                         });
                 });
 
@@ -147,9 +150,6 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     b.Property<DateTime?>("DeletedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Email")
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("FullName")
                         .HasMaxLength(100)
                         .HasColumnType("nvarchar(100)");
@@ -160,97 +160,63 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     b.Property<bool>("IsActive")
                         .HasColumnType("bit");
 
-                    b.Property<string>("Password")
-                        .IsRequired()
-                        .HasMaxLength(100)
-                        .HasColumnType("nvarchar(100)");
-
-                    b.Property<string>("Phone")
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
                     b.Property<DateTime>("UpdatedAt")
                         .HasColumnType("datetime2");
 
-                    b.Property<string>("Username")
-                        .IsRequired()
-                        .HasMaxLength(50)
-                        .HasColumnType("nvarchar(50)");
-
                     b.HasKey("Id");
 
-                    b.ToTable("AppUsers");
+                    b.ToTable("AppUser");
 
                     b.HasData(
                         new
                         {
                             Id = 1,
-                            City = "New York",
-                            CreatedAt = new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "john.doe@example.com",
-                            FullName = "John Doe",
-                            ImagePath = "path/to/image1.jpg",
+                            City = "CityOne",
+                            CreatedAt = new DateTime(2024, 3, 16, 18, 31, 34, 941, DateTimeKind.Utc).AddTicks(7979),
+                            FullName = "User One",
+                            ImagePath = "path/to/user1.jpg",
                             IsActive = true,
-                            Password = "password123",
-                            Phone = "123-456-7890",
-                            UpdatedAt = new DateTime(2020, 1, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Username = "johndoe"
+                            UpdatedAt = new DateTime(2024, 3, 16, 18, 31, 34, 941, DateTimeKind.Utc).AddTicks(7980)
                         },
                         new
                         {
                             Id = 2,
-                            City = "Los Angeles",
-                            CreatedAt = new DateTime(2020, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "jane.smith@example.com",
-                            FullName = "Jane Smith",
-                            ImagePath = "path/to/image2.jpg",
+                            City = "CityTwo",
+                            CreatedAt = new DateTime(2024, 3, 16, 18, 31, 34, 941, DateTimeKind.Utc).AddTicks(7981),
+                            FullName = "User Two",
+                            ImagePath = "path/to/user2.jpg",
                             IsActive = true,
-                            Password = "password456",
-                            Phone = "098-765-4321",
-                            UpdatedAt = new DateTime(2020, 2, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Username = "janesmith"
+                            UpdatedAt = new DateTime(2024, 3, 16, 18, 31, 34, 941, DateTimeKind.Utc).AddTicks(7981)
                         },
                         new
                         {
                             Id = 3,
-                            City = "Chicago",
-                            CreatedAt = new DateTime(2020, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "alice.johnson@example.com",
-                            FullName = "Alice Johnson",
-                            ImagePath = "path/to/image3.jpg",
+                            City = "CityThree",
+                            CreatedAt = new DateTime(2024, 3, 16, 18, 31, 34, 941, DateTimeKind.Utc).AddTicks(7982),
+                            FullName = "User Three",
+                            ImagePath = "path/to/user3.jpg",
                             IsActive = true,
-                            Password = "password789",
-                            Phone = "555-666-7777",
-                            UpdatedAt = new DateTime(2020, 3, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Username = "alicejohnson"
+                            UpdatedAt = new DateTime(2024, 3, 16, 18, 31, 34, 941, DateTimeKind.Utc).AddTicks(7982)
                         },
                         new
                         {
                             Id = 4,
-                            City = "Houston",
-                            CreatedAt = new DateTime(2020, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "bob.brown@example.com",
-                            FullName = "Bob Brown",
-                            ImagePath = "path/to/image4.jpg",
+                            City = "CityFour",
+                            CreatedAt = new DateTime(2024, 3, 16, 18, 31, 34, 941, DateTimeKind.Utc).AddTicks(7983),
+                            FullName = "User Four",
+                            ImagePath = "path/to/user4.jpg",
                             IsActive = true,
-                            Password = "password101",
-                            Phone = "222-333-4444",
-                            UpdatedAt = new DateTime(2020, 4, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Username = "bobbrown"
+                            UpdatedAt = new DateTime(2024, 3, 16, 18, 31, 34, 941, DateTimeKind.Utc).AddTicks(7983)
                         },
                         new
                         {
                             Id = 5,
-                            City = "Phoenix",
-                            CreatedAt = new DateTime(2020, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Email = "charlie.davis@example.com",
-                            FullName = "Charlie Davis",
-                            ImagePath = "path/to/image5.jpg",
+                            City = "CityFive",
+                            CreatedAt = new DateTime(2024, 3, 16, 18, 31, 34, 941, DateTimeKind.Utc).AddTicks(7984),
+                            FullName = "User Five",
+                            ImagePath = "path/to/user5.jpg",
                             IsActive = true,
-                            Password = "password202",
-                            Phone = "999-888-7777",
-                            UpdatedAt = new DateTime(2020, 5, 1, 0, 0, 0, 0, DateTimeKind.Unspecified),
-                            Username = "charliedavis"
+                            UpdatedAt = new DateTime(2024, 3, 16, 18, 31, 34, 941, DateTimeKind.Utc).AddTicks(7984)
                         });
                 });
 
@@ -518,10 +484,6 @@ namespace HospitalCmsSystem.Persistence.Migrations
                     b.Property<int>("AppUserId")
                         .HasColumnType("int");
 
-                    b.Property<string>("Categories")
-                        .IsRequired()
-                        .HasColumnType("nvarchar(max)");
-
                     b.Property<string>("Content")
                         .IsRequired()
                         .HasColumnType("nvarchar(max)");
@@ -546,46 +508,41 @@ namespace HospitalCmsSystem.Persistence.Migrations
                         {
                             Id = 1,
                             AppUserId = 1,
-                            Categories = "[\"Health\",\"Cardiology\",\"Wellness\"]",
-                            Content = "An introductory guide to maintaining a healthy heart.",
-                            Tag = "Health",
-                            Title = "Heart Health 101"
+                            Content = "This is the content of the first blog post.",
+                            Tag = "General",
+                            Title = "First Blog Title"
                         },
                         new
                         {
                             Id = 2,
                             AppUserId = 2,
-                            Categories = "[\"Science\",\"Neurology\",\"Research\"]",
-                            Content = "Exploring recent breakthroughs in neuroscientific research.",
-                            Tag = "Science",
-                            Title = "Advancements in Neurology"
+                            Content = "This is the content of the second blog post.",
+                            Tag = "Health",
+                            Title = "Second Blog Title"
                         },
                         new
                         {
                             Id = 3,
                             AppUserId = 3,
-                            Categories = "[\"Nutrition\",\"Gastroenterology\",\"Diet\"]",
-                            Content = "Dietary habits to support your gastrointestinal system.",
-                            Tag = "Nutrition",
-                            Title = "Nutrition for Digestive Health"
+                            Content = "This is the content of the third blog post.",
+                            Tag = "Update",
+                            Title = "Third Blog Title"
                         },
                         new
                         {
                             Id = 4,
                             AppUserId = 4,
-                            Categories = "[\"Orthopedics\",\"Innovation\",\"Care\"]",
-                            Content = "The future of musculoskeletal treatments and patient care.",
-                            Tag = "Orthopedics",
-                            Title = "Orthopedic Innovations"
+                            Content = "This is the content of the fourth blog post.",
+                            Tag = "News",
+                            Title = "Fourth Blog Title"
                         },
                         new
                         {
                             Id = 5,
                             AppUserId = 5,
-                            Categories = "[\"Dermatology\",\"Skincare\",\"Lifestyle\"]",
-                            Content = "Personalized skincare approaches for every stage of life.",
-                            Tag = "Dermatology",
-                            Title = "Skincare Routines for All Ages"
+                            Content = "This is the content of the fifth blog post.",
+                            Tag = "General",
+                            Title = "Fifth Blog Title"
                         });
                 });
 

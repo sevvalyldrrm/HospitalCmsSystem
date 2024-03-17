@@ -1,5 +1,6 @@
 ﻿using HospitalCmsSystem.Dto.Blog;
 using HospitalCmsSystem.Dto.Department;
+using HospitalCmsSystem.Dto.Doctor;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 using System.Net.Http;
@@ -28,9 +29,17 @@ namespace HospitalCmsSystem.WebUI.Controllers
 			return View();
 		}
 
-		public IActionResult DepartmanSingle(int id)
+		public async Task<IActionResult> DepartmentSingle(int id)
 		{
-			return View();	
-		}
+            var client = _httpClientFactory.CreateClient();
+            var responseMessage = await client.GetAsync($"https://localhost:7038/api/Departments/GetDepartmentWithDetails/{id}");
+            if (responseMessage.IsSuccessStatusCode)
+            {
+                var jsonData = await responseMessage.Content.ReadAsStringAsync();
+                var values = JsonConvert.DeserializeObject<ResultDepartmentWithDetails>(jsonData);
+                return View(values);
+            }
+            return View();
+        }
 	}
 }

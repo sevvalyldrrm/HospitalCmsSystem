@@ -19,12 +19,9 @@ namespace HospitalCmsSystem.Domain.Entities
         [NotMapped]
         public virtual ICollection<string> DepartmentFeatures { get; set; }
 
-
         [ForeignKey(nameof(Department.Id))]
         public int DepartmentId { get; set; }
-
         public Department Departments { get; set; }
-
 
     }
 }
