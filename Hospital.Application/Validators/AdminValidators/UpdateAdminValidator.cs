@@ -8,11 +8,11 @@ using System.Threading.Tasks;
 
 namespace HospitalCmsSystem.Application.Validators.AdminValidators
 {
-    public class CreateAdminValidator:AbstractValidator<CreateAdminCommand>
+    public class UpdateAdminValidator:AbstractValidator<UpdateAdminCommand>
     {
-        public CreateAdminValidator()
+        public UpdateAdminValidator()
         {
-            RuleFor(x => x.Name).NotEmpty().WithMessage("İsim boş geçilemez").MinimumLength(2).WithMessage("İsim çok kısa").MaximumLength(50).WithMessage("İsim çok uzun");
+            RuleFor(x=>x.Name).NotEmpty().WithMessage("İsim boş geçilemez").MinimumLength(2).WithMessage("İsim çok kısa").MaximumLength(50).WithMessage("İsim çok uzun");
             RuleFor(x=>x.GitHubAcc).NotEmpty().WithMessage("Github Hesabı boş geçilemez").MinimumLength(2).WithMessage("Github Hesabı çok kısa").MaximumLength(50).WithMessage("Github Hesabı çok uzun"); ;
         }
     }
