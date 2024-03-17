@@ -9,12 +9,18 @@ using HospitalCmsSystem.Application.Interfaces.DoctorInterfaces;
 using HospitalCmsSystem.Persistence.Repositories.Doctor;
 using FluentValidation.AspNetCore;
 using System.Reflection;
+using HospitalCmsSystem.Application.Interfaces.DepartmentInterfaces;
+using HospitalCmsSystem.Persistence.Repositories.Department;
+using HospitalCmsSystem.Application.Interfaces.BlogInterfaces;
+using HospitalCmsSystem.Persistence.Repositories.Blog;
 
 var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddApplicationService(builder.Configuration);
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IDoctorRepository, DoctorRepository>();
+builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+builder.Services.AddScoped<IBlogRepository ,BlogRepository>();
 builder.Services.AddScoped<AppDbContext>();
 
 builder.Services.AddControllers().AddFluentValidation(x =>
