@@ -36,7 +36,7 @@
 						<div class="content">
 							<h4 class="mt-4 mb-2 title-color">@item.name</h4>
 							<p class="mb-4">@item.description</p>
-							<a href="department-single.html" class="read-more">Learn More <i class="icofont-simple-right ml-2"></i></a>
+							<a asp-controller="Department" asp-action="DepartmentSingle" asp-route-id="@item.departmentDetailsId" class="read-more">Learn More <i class="icofont-simple-right ml-2"></i></a>
 						</div>
 					</div>
 				</div>

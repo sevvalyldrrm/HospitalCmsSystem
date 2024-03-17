@@ -1,5 +1,6 @@
 ﻿using HospitalCmsSystem.Application.CQRS.Commands.BlogCommands;
 using HospitalCmsSystem.Application.CQRS.Queries.BlogQueries;
+using HospitalCmsSystem.Application.CQRS.Queries.DepartmentQueries;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -44,6 +45,13 @@ namespace HospitalCmsSystem.WebApi.Controllers
         {
             await _mediator.Send(command);
             return Ok("Blog başarıyla güncellendi");
+        }
+
+        [HttpGet("GetBlogWithIncludeQuery")]
+        public async Task<IActionResult> GetBlogWithInclude()
+        {
+            var value = await _mediator.Send(new GetBlogWithIncludeQuery());
+            return Ok(value);
         }
     }
 }

@@ -32,6 +32,8 @@ namespace HospitalCmsSystem.Domain.Entities
 		public ICollection<DepartmentBlog> DepartmentBlogs { get; set; }
 		public ICollection<BlogImage> BlogImages { get; set; }
 		public ICollection<BlogComment> BlogComments { get; set; }
+
+		public List<string> Categories { get; set; }
 		
 	}
 }
