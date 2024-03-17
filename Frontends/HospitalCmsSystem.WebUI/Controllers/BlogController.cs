@@ -25,13 +25,10 @@ namespace HospitalCmsSystem.WebUI.Controllers
 			}
 			return View();
 		}
-		public IActionResult Details(int id)
+		public IActionResult BlogSingle(int id)
 		{
 			return View();
 		}
-		public IActionResult Search(string quey, int id)
-		{
-			return View();
-		}
+		
 	}
 }

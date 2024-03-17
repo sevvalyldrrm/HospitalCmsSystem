@@ -1,5 +1,6 @@
 ﻿using HospitalCmsSystem.Application.CQRS.Commands.DepartmentCommands;
 using HospitalCmsSystem.Application.CQRS.Queries.DepartmentQueries;
+using HospitalCmsSystem.Application.CQRS.Queries.DoctorQueries;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
@@ -44,6 +45,13 @@ namespace HospitalCmsSystem.WebApi.Controllers
         {
             await _mediator.Send(command);
             return Ok("Department başarıyla güncellendi");
+        }
+
+        [HttpGet("GetDepartmentWithDetails/{id}")]
+        public async Task<IActionResult> GetDepartmentWithDetails(int id)
+        {
+            var value = await _mediator.Send(new GetDepartmentWithDetailsByIdQuery(id));
+            return Ok(value);
         }
     }
 }
