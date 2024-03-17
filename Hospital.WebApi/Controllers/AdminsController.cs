@@ -1,4 +1,5 @@
-﻿using HospitalCmsSystem.Application.CQRS.Commands.AdminCommands;
+﻿using FluentValidation;
+using HospitalCmsSystem.Application.CQRS.Commands.AdminCommands;
 using HospitalCmsSystem.Application.CQRS.Queries.AdminQueries;
 using HospitalCmsSystem.Application.Validators.AdminValidators;
 using MediatR;
@@ -49,6 +50,12 @@ namespace HospitalCmsSystem.WebApi.Controllers
         [HttpPut]
         public async Task<IActionResult> UpdateAdmin(UpdateAdminCommand command)
         {
+            UpdateAdminValidator validator= new UpdateAdminValidator();
+            var validationResult = validator.Validate(command); 
+            if(!validationResult.IsValid)
+            {
+                return BadRequest(validationResult.Errors);
+            }
             await _mediator.Send(command);
             return Ok("Admin başarıyla güncellendi");
         }
