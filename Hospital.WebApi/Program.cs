@@ -14,6 +14,10 @@ using FluentValidation;
 using HospitalCmsSystem.Application.Behaviors.HospitalCmsSystem.Application.Behaviors;
 using HospitalCmsSystem.Application.Behaviors;
 using Serilog;
+using HospitalCmsSystem.Application.Interfaces.BlogInterfaces;
+using HospitalCmsSystem.Application.Interfaces.DepartmentInterfaces;
+using HospitalCmsSystem.Persistence.Repositories.Blog;
+using HospitalCmsSystem.Persistence.Repositories.Department;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -34,6 +38,8 @@ builder.Services.AddControllers().AddFluentValidation(fv => {
 builder.Services.AddApplicationService(builder.Configuration);
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IDoctorRepository, DoctorRepository>();
+builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+builder.Services.AddScoped<IBlogRepository, BlogRepository>();
 builder.Services.AddScoped<AppDbContext>();
 
 // Logger servisini ekleyin
