@@ -16,11 +16,11 @@ namespace HospitalCmsSystem.WebUI.Controllers
 		public async Task<IActionResult> Index()
 		{
 			var client = _httpClientFactory.CreateClient();
-			var responseMessage = await client.GetAsync("https://localhost:7038/api/Blogs");
+			var responseMessage = await client.GetAsync("https://localhost:7038/api/Blogs/GetBlogWithIncludeQuery");
 			if (responseMessage.IsSuccessStatusCode)
 			{
 				var jsonData = await responseMessage.Content.ReadAsStringAsync();
-				var values = JsonConvert.DeserializeObject<List<ResultBlogDto>>(jsonData);
+				var values = JsonConvert.DeserializeObject<List<ResultBlogWithIncludeDto>>(jsonData);
 				return View(values);
 			}
 			return View();

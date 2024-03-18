@@ -8,9 +8,8 @@ frontend düzenlenecek ++
 
 Doctor u departmaný ile çek +
 
-SCRUTOR NEDÝR? HOCAYA SOR KULLANMAK MANTIKLI MI
----> GetBlogWithInclude methodundaki seed verilerindeki id'leri hocaya sor.
+---> GetBlogWithInclude methodundaki seed verilerindeki id'leri hocaya sor. YAPTIKKKK
 
 
-User güncellendiðinde blog içindeki methodu düzelt -> getblogwithinclude
+User güncellendiðinde blog içindeki methodu düzelt -> getblogwithinclude 
 

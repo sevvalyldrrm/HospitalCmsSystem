@@ -14,9 +14,9 @@ namespace HospitalCmsSystem.Persistence.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
-            //optionsBuilder.UseSqlServer("Data Source=DESKTOP-0LP7T25\\SQL2022;Initial Catalog=HospitalCmsSystem;Persist Security Info=True;User ID=sa;Password=123;Trusted_Connection=True; TrustServerCertificate=Yes");//pc sevval
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-0LP7T25\\SQL2022;Initial Catalog=HospitalCmsSystem;Persist Security Info=True;User ID=sa;Password=123;Trusted_Connection=True; TrustServerCertificate=Yes");//pc sevval
 
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-U5FQ7NA\\SQL2022;Initial Catalog=HospitalCmsSystem;Persist Security Info=True;User ID=sa;Password=123;Trusted_Connection=True; TrustServerCertificate=Yes");//pc ugur
+            //optionsBuilder.UseSqlServer("Data Source=DESKTOP-U5FQ7NA\\SQL2022;Initial Catalog=HospitalCmsSystem;Persist Security Info=True;User ID=sa;Password=123;Trusted_Connection=True; TrustServerCertificate=Yes");//pc ugur
         }
         public AppDbContext() { }
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
@@ -194,7 +194,9 @@ namespace HospitalCmsSystem.Persistence.Context
                      Title = "Heart Health 101",
                      Content = "An introductory guide to maintaining a healthy heart.",
                      Tags = new List<string> { "Health" }, 
-                     Categories = new List<string> { "Health", "Cardiology", "Wellness" }
+                     Categories = new List<string> { "Health", "Cardiology", "Wellness" },
+                     CreatedAt = DateTime.Now,
+                      
                  },
                  new Blog
                  {
@@ -203,8 +205,9 @@ namespace HospitalCmsSystem.Persistence.Context
                      Title = "Advancements in Neurology",
                      Content = "Exploring recent breakthroughs in neuroscientific research.",
                      Tags = new List<string> { "Science" },
-                     Categories = new List<string> { "Science", "Neurology", "Research" }
-                 },
+                     Categories = new List<string> { "Science", "Neurology", "Research" },
+					 CreatedAt = DateTime.Now,
+				 },
                  new Blog
                  {
                      Id = 3,
@@ -212,8 +215,9 @@ namespace HospitalCmsSystem.Persistence.Context
                      Title = "Nutrition for Digestive Health",
                      Content = "Dietary habits to support your gastrointestinal system.",
                      Tags = new List<string> { "Nutrition" },
-                     Categories = new List<string> { "Nutrition", "Gastroenterology", "Diet" }
-                 },
+                     Categories = new List<string> { "Nutrition", "Health", "Diet" },
+					 CreatedAt = DateTime.Now,
+				 },
                  new Blog
                  {
                      Id = 4,
@@ -221,8 +225,9 @@ namespace HospitalCmsSystem.Persistence.Context
                      Title = "Orthopedic Innovations",
                      Content = "The future of musculoskeletal treatments and patient care.",
                      Tags = new List<string> { "Orthopedics" },
-                     Categories = new List<string> { "Orthopedics", "Innovation", "Care" }
-                 },
+                     Categories = new List<string> { "Orthopedics", "Innovation", "Health" },
+					 CreatedAt = DateTime.Now,
+				 },
                  new Blog
                  {
                      Id = 5,
@@ -230,8 +235,9 @@ namespace HospitalCmsSystem.Persistence.Context
                      Title = "Skincare Routines for All Ages",
                      Content = "Personalized skincare approaches for every stage of life.",
                      Tags = new List<string> { "Dermatology" },
-                     Categories = new List<string> { "Dermatology", "Skincare", "Lifestyle" }
-                 }
+                     Categories = new List<string> { "Dermatology", "Skincare", "Lifestyle" },
+					 CreatedAt = DateTime.Now,
+				 }
              );
 
 

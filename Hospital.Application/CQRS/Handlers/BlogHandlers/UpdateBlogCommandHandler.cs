@@ -27,6 +27,7 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.BlogHandlers
             values.Title = request.Title;
             values.Content = request.Content;
            values.Tags = request.Tags;
+            values.Categories = request.Categories;
             await _repository.UpdateAsync(values);
         }
     }

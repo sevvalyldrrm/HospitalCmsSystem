@@ -32,6 +32,8 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.BlogHandlers
                 Tags = b.Tags.ToList(),
                 Title=b.Title,
                 Content=b.Content,
+                CreatedAt=b.CreatedAt,
+
                 Comment = b.BlogComments.Select(c => new GetBlogCommentByIncludeQueryResult
                 {
                    IsActive=c.IsActive,

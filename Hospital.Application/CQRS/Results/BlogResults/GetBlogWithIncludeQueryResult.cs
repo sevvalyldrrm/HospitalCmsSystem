@@ -34,10 +34,12 @@ namespace HospitalCmsSystem.Application.CQRS.Results.BlogResults
         //public int BlogImageId {  get; set; }
         public List<GetBlogImageByIncludeQueryResult> ImagePath { get; set; }
 
-        
+		public DateTime CreatedAt { get; set; }
 
-        
 
-    }
+
+
+
+	}
 
 }

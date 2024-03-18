@@ -30,6 +30,8 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.BlogHandlers
                 Title = values.Title,
                 Content = values.Content,
                 Tags = values.Tags,
+				CreatedAt = values.CreatedAt,
+				Categories = values.Categories,
 
             };
 

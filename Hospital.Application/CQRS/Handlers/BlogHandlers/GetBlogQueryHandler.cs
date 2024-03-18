@@ -29,7 +29,9 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.BlogHandlers
                 Title = x.Title,
                 Content = x.Content,
                Tags = x.Tags,
-                Id = x.Id
+                Id = x.Id,
+				Categories = x.Categories,
+				CreatedAt = x.CreatedAt,
 			}).ToList();
 		}
 	}

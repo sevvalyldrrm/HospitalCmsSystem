@@ -27,6 +27,9 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.BlogHandlers
 				Title= request.Title,
 				Content= request.Content,
 				Tags= request.Tags,
+				Categories= request.Categories,
+				CreatedAt= DateTime.Now,
+
 			});
 		}
 	}
