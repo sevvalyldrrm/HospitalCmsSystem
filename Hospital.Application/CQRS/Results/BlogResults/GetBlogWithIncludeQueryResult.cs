@@ -12,41 +12,29 @@ using HospitalCmsSystem.Application.CQRS.Results.BlogImageResults;
 
 namespace HospitalCmsSystem.Application.CQRS.Results.BlogResults
 {
-    public class GetBlogWithIncludeQueryResult : BaseResult
+    public class GetBlogWithIncludeQueryResult 
     {
+        //blogcomment
+        public List<GetBlogCommentByIncludeQueryResult> Comment { get; set; }
 
-        public int AppUserId { get; set; }
+        //public int BlogCommentId {  get; set; }
 
+        //public bool IsActive {  get; set; }
+
+        //blog
+        public int BlogId {  get; set; }
+        public List<string> Categories { get; set; }
         public string Title { get; set; }
 
         public string Content { get; set; }
-        public string Tag { get; set; }
+        public List<string> Tags { get; set; }
 
-        public List<string> Categories { get; set; }
+       //blogimage
 
-        //
+        //public int BlogImageId {  get; set; }
+        public List<GetBlogImageByIncludeQueryResult> ImagePath { get; set; }
 
-        //public int BlogId { get; set; }
-
-        public List<GetBlogCommentQueryResult> Comment { get; set; }
-
-        public bool IsActive { get; set; }
-
-        //
-
-        public List<GetBlogImageQueryResult> ImagePath { get; set; }
-
-        //
-       // public int DepartmentId { get; set; }
-
-        //
-
-       // public string Name { get; set; }
-
-       // public string Description { get; set; } 
-       // public int DepartmentDetailsId { get; set; }
-        //
-        //public List<GetAppUserQueryResult>
+        
 
         
 

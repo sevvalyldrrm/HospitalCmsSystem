@@ -11,25 +11,24 @@ using System.Threading.Tasks;
 
 namespace HospitalCmsSystem.Application.CQRS.Handlers.BlogCommentHandlers
 {
-	public class GetBlogCommentQueryHandler : IRequestHandler<GetBlogCommentQuery, List<GetBlogCommentQueryResult>>
+	public class GetBlogCommentByIncludeQueryHandler : IRequestHandler<GetBlogCommentByIncludeQuery, List<GetBlogCommentByIncludeQueryResult>>
 	{
 		private readonly IRepository<BlogComment> _repository;
 
-		public GetBlogCommentQueryHandler(IRepository<BlogComment> repository)
+		public GetBlogCommentByIncludeQueryHandler(IRepository<BlogComment> repository)
 		{
 			_repository = repository;
 		}
 
-		public async Task<List<GetBlogCommentQueryResult>> Handle(GetBlogCommentQuery request, CancellationToken cancellationToken)
+		public async Task<List<GetBlogCommentByIncludeQueryResult>> Handle(GetBlogCommentByIncludeQuery request, CancellationToken cancellationToken)
 		{
 			var values = await _repository.GetAllAsync();
-			return values.Select(x => new GetBlogCommentQueryResult
-			{
-                BlogId = x.BlogId,
-                Comment = x.Comment,
-                IsActive = x.IsActive,
-                AppUserId = x.AppUserId,
-                Id = x.Id
+			return values.Select(x => new GetBlogCommentByIncludeQueryResult
+            {
+              BlogCommentId=x.Id,
+			  Comment=x.Comment,
+			  IsActive=x.IsActive,
+			
 			}).ToList();
 		}
 	}

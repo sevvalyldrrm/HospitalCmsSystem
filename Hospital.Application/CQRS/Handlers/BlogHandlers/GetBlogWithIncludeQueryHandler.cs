@@ -27,31 +27,29 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.BlogHandlers
             var values = await _repository.GetBlogWithInclude();
             var results = values.Select(b => new GetBlogWithIncludeQueryResult
             {
-                Id = b.Id,  
-                BlogId =  b.Id,
-                Title = b.Title,
-                Content = b.Content,
-                Tag = b.Tag,
-                AppUserId = b.AppUserId,
+                BlogId=b.Id,
                 Categories = b.Categories.ToList(),
-                Comment = b.BlogComments.Select(c => new GetBlogCommentQueryResult
+                Tags = b.Tags.ToList(),
+                Title=b.Title,
+                Content=b.Content,
+                Comment = b.BlogComments.Select(c => new GetBlogCommentByIncludeQueryResult
                 {
-                    BlogId=c.Id,
-                    Id =c.Id,
-                    Comment = c.Comment,
-                    AppUserId = c.AppUserId,
-                    IsActive = c.IsActive,
+                   IsActive=c.IsActive,
+                   BlogCommentId = c.Id,
+                   Comment = c.Comment,
                 }).ToList(),
 
-                ImagePath = b.BlogImages.Select(c => new GetBlogImageQueryResult{
+                ImagePath = b.BlogImages.Select(c => new GetBlogImageByIncludeQueryResult
+                {
+                    BlogImageId = c.Id,
                     ImagePath = c.ImagePath,
-                    BlogId = c.Id,
-                    Id =c.Id,   
                 }).ToList(),
             }).ToList();
-           
-            return results;
 
+            return results;
         }
     }
+
 }
+    
+

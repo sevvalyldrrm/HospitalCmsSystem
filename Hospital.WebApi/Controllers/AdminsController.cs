@@ -13,10 +13,12 @@ namespace HospitalCmsSystem.WebApi.Controllers
     public class AdminsController : ControllerBase
     {
         private readonly IMediator _mediator;
+
         public AdminsController(IMediator mediator)
         {
             _mediator = mediator;
         }
+
         [HttpGet]
         public async Task<IActionResult> AdminList()
         {
@@ -29,18 +31,15 @@ namespace HospitalCmsSystem.WebApi.Controllers
             var value = await _mediator.Send(new GetAdminByIdQuery(id));
             return Ok(value);
         }
+
         [HttpPost]
         public async Task<IActionResult> CreateAdmin(CreateAdminCommand command)
         {
-            CreateAdminValidator validator= new CreateAdminValidator();
-            var validationResult=validator.Validate(command);
-            if(!validationResult.IsValid)
-            {
-                return BadRequest(validationResult.Errors);
-            }
+            // Doğrulama `ValidationBehaviour` tarafından yapılır, manuel çağrıya gerek yok
             await _mediator.Send(command);
             return Ok("Admin başarıyla eklendi");
         }
+
         [HttpDelete]
         public async Task<IActionResult> RemoveAdmin(int id)
         {
@@ -50,12 +49,7 @@ namespace HospitalCmsSystem.WebApi.Controllers
         [HttpPut]
         public async Task<IActionResult> UpdateAdmin(UpdateAdminCommand command)
         {
-            UpdateAdminValidator validator= new UpdateAdminValidator();
-            var validationResult = validator.Validate(command); 
-            if(!validationResult.IsValid)
-            {
-                return BadRequest(validationResult.Errors);
-            }
+            // Doğrulama `ValidationBehaviour` tarafından yapılır, manuel çağrıya gerek yok
             await _mediator.Send(command);
             return Ok("Admin başarıyla güncellendi");
         }

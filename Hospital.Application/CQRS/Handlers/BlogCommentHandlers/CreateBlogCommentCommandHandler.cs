@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace HospitalCmsSystem.Application.CQRS.Handlers.BlogCommentHandlers
 {
-	public class CreateAppointmentManagerCommandHandler : IRequestHandler<CreateBlogCommentCommand>
+	public class CreateBlogCommentCommandHandler : IRequestHandler<CreateBlogCommentCommand>
 	{
 		private readonly IRepository<BlogComment> _repository;
 
-		public CreateAppointmentManagerCommandHandler(IRepository<BlogComment> repository)
+		public CreateBlogCommentCommandHandler(IRepository<BlogComment> repository)
 		{
 			_repository = repository;
 		}

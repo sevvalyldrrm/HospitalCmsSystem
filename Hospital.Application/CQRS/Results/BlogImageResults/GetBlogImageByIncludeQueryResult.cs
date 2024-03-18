@@ -6,10 +6,9 @@ using System.Threading.Tasks;
 
 namespace HospitalCmsSystem.Application.CQRS.Results.BlogImageResults
 {
-    public class GetBlogImageQueryResult:BaseResult
+    public class GetBlogImageByIncludeQueryResult 
     {
-        public int BlogImageId { get; set; } 
-
+        public int BlogImageId { get; set; }    
         public string ImagePath { get; set; }
     }
 }

@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 
 namespace HospitalCmsSystem.Application.CQRS.Handlers.BlogHandlers
 {
-    public class UpdateAppointmentManagerCommandHandler : IRequestHandler<UpdateBlogCommand>
+    public class UpdateBlogCommandHandler : IRequestHandler<UpdateBlogCommand>
     {
         private readonly IRepository<Blog> _repository;
 
-        public UpdateAppointmentManagerCommandHandler(IRepository<Blog> repository)
+        public UpdateBlogCommandHandler(IRepository<Blog> repository)
         {
             _repository = repository;
         }
@@ -26,7 +26,7 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.BlogHandlers
             values.AppUserId = request.AppUserId;
             values.Title = request.Title;
             values.Content = request.Content;
-            values.Tag = request.Tag;
+           values.Tags = request.Tags;
             await _repository.UpdateAsync(values);
         }
     }
