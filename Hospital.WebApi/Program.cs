@@ -18,6 +18,7 @@ using HospitalCmsSystem.Application.Interfaces.BlogInterfaces;
 using HospitalCmsSystem.Application.Interfaces.DepartmentInterfaces;
 using HospitalCmsSystem.Persistence.Repositories.Blog;
 using HospitalCmsSystem.Persistence.Repositories.Department;
+using HospitalCmsSystem.Application.Validators.AdminValidators;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -28,7 +29,14 @@ builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBeh
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>));
 
 // FluentValidation validatörlerini kaydedin
-builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());
+
+builder.Services.AddValidatorsFromAssembly(typeof(CreateAdminValidator).Assembly);//createadminin dizinindekileri otomatik esler
+builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());//Bu satır mevcut assembly'deki (genellikle Web API projenizdeki) tüm validatörleri tarar ve kaydeder.
+
+//builder.Services.AddValidatorsFromAssemblyContaining<CreateAdminValidator>();
+//builder.Services.AddValidatorsFromAssemblyContaining<UpdateAdminValidator>();
+//builder.Services.AddScoped<ICreateAdminValidator, CreateAdminValidator>();
+//builder.Services.AddScoped<IUpdateAdminValidator, UpdateAdminValidator>();
 
 builder.Services.AddControllers().AddFluentValidation(fv => {
     fv.AutomaticValidationEnabled = true; // Eğer otomatik doğrulama istiyorsanız

@@ -2,3 +2,4 @@
 approle-appuser-appuserrole atlandi daha sonra bak!
 blog create ve update ine tags listesi ekle
 resim yukleme yapilacak!
+jwt ve mail gonderme yapilacak!
