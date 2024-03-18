@@ -1,4 +1,4 @@
-AppointmentController kontrol edilemedi(foreign key yuzunden)daha sonra kontrol et
-AppointmentManagersController kontrol edilemedi(foreign key yuzunden)daha sonra kontrol et
+
 approle-appuser-appuserrole atlandi daha sonra bak!
-asdasd
+blog create ve update ine tags listesi ekle
+resim yukleme yapilacak!

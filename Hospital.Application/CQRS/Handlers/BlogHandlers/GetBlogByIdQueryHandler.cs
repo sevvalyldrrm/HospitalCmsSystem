@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 
 namespace HospitalCmsSystem.Application.CQRS.Handlers.BlogHandlers
 {
-	public class GetAppointmentManagerByIdQueryHandler : IRequestHandler<GetBlogByIdQuery, GetBlogByIdQueryResult>
+	public class GetBlogByIdQueryHandler : IRequestHandler<GetBlogByIdQuery, GetBlogByIdQueryResult>
 	{
 		private readonly IRepository<Blog> _repository;
 
-		public GetAppointmentManagerByIdQueryHandler(IRepository<Blog> repository)
+		public GetBlogByIdQueryHandler(IRepository<Blog> repository)
 		{
 			_repository = repository;
 		}
@@ -29,7 +29,8 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.BlogHandlers
                 AppUserId = values.AppUserId,
                 Title = values.Title,
                 Content = values.Content,
-                Tag = values.Tag,
+                Tags = values.Tags,
+
             };
 
 		}

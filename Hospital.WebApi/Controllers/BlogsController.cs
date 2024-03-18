@@ -52,6 +52,7 @@ namespace HospitalCmsSystem.WebApi.Controllers
         {
             var value = await _mediator.Send(new GetBlogWithIncludeQuery());
             return Ok(value);
+
         }
     }
 }

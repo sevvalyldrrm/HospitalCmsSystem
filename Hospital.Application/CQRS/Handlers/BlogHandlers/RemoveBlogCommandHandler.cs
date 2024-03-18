@@ -11,11 +11,11 @@ using System.Threading.Tasks;
 
 namespace HospitalCmsSystem.Application.CQRS.Handlers.BlogHandlers
 {
-	public class RemoveAppointmentManagerCommandHandler : IRequestHandler<RemoveBlogCommand>
+	public class RemoveBlogCommandHandler : IRequestHandler<RemoveBlogCommand>
 	{
 		private readonly IRepository<Blog> _repository;
 
-		public RemoveAppointmentManagerCommandHandler(IRepository<Blog> repository)
+		public RemoveBlogCommandHandler(IRepository<Blog> repository)
 		{
 			_repository = repository;
 		}

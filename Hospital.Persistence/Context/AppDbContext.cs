@@ -14,9 +14,9 @@ namespace HospitalCmsSystem.Persistence.Context
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
 
-            optionsBuilder.UseSqlServer("Data Source=DESKTOP-0LP7T25\\SQL2022;Initial Catalog=HospitalCmsSystem;Persist Security Info=True;User ID=sa;Password=123;Trusted_Connection=True; TrustServerCertificate=Yes");
+            //optionsBuilder.UseSqlServer("Data Source=DESKTOP-0LP7T25\\SQL2022;Initial Catalog=HospitalCmsSystem;Persist Security Info=True;User ID=sa;Password=123;Trusted_Connection=True; TrustServerCertificate=Yes");//pc sevval
 
-            //optionsBuilder.UseSqlServer("Data Source=DESKTOP-U5FQ7NA\\SQL2022;Initial Catalog=HospitalCmsSystem;Persist Security Info=True;User ID=sa;Password=123;Trusted_Connection=True; TrustServerCertificate=Yes");
+            optionsBuilder.UseSqlServer("Data Source=DESKTOP-U5FQ7NA\\SQL2022;Initial Catalog=HospitalCmsSystem;Persist Security Info=True;User ID=sa;Password=123;Trusted_Connection=True; TrustServerCertificate=Yes");//pc ugur
         }
         public AppDbContext() { }
         public AppDbContext(DbContextOptions<AppDbContext> options) : base(options)
@@ -193,7 +193,7 @@ namespace HospitalCmsSystem.Persistence.Context
                      AppUserId = 1,
                      Title = "Heart Health 101",
                      Content = "An introductory guide to maintaining a healthy heart.",
-                     Tag = "Health",
+                     Tags = new List<string> { "Health" }, 
                      Categories = new List<string> { "Health", "Cardiology", "Wellness" }
                  },
                  new Blog
@@ -202,7 +202,7 @@ namespace HospitalCmsSystem.Persistence.Context
                      AppUserId = 2,
                      Title = "Advancements in Neurology",
                      Content = "Exploring recent breakthroughs in neuroscientific research.",
-                     Tag = "Science",
+                     Tags = new List<string> { "Science" },
                      Categories = new List<string> { "Science", "Neurology", "Research" }
                  },
                  new Blog
@@ -211,7 +211,7 @@ namespace HospitalCmsSystem.Persistence.Context
                      AppUserId = 3,
                      Title = "Nutrition for Digestive Health",
                      Content = "Dietary habits to support your gastrointestinal system.",
-                     Tag = "Nutrition",
+                     Tags = new List<string> { "Nutrition" },
                      Categories = new List<string> { "Nutrition", "Gastroenterology", "Diet" }
                  },
                  new Blog
@@ -220,7 +220,7 @@ namespace HospitalCmsSystem.Persistence.Context
                      AppUserId = 4,
                      Title = "Orthopedic Innovations",
                      Content = "The future of musculoskeletal treatments and patient care.",
-                     Tag = "Orthopedics",
+                     Tags = new List<string> { "Orthopedics" },
                      Categories = new List<string> { "Orthopedics", "Innovation", "Care" }
                  },
                  new Blog
@@ -229,7 +229,7 @@ namespace HospitalCmsSystem.Persistence.Context
                      AppUserId = 5,
                      Title = "Skincare Routines for All Ages",
                      Content = "Personalized skincare approaches for every stage of life.",
-                     Tag = "Dermatology",
+                     Tags = new List<string> { "Dermatology" },
                      Categories = new List<string> { "Dermatology", "Skincare", "Lifestyle" }
                  }
              );

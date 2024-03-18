@@ -13,6 +13,6 @@ namespace HospitalCmsSystem.Application.CQRS.Commands.BlogCommands
         public int AppUserId { get; set; }
         public string Title { get; set; }
         public string Content { get; set; }
-        public string Tag { get; set; }
+        public List<string> Tags { get; set; } = new List<string>();
     }
 }

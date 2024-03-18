@@ -25,9 +25,10 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.BlogImageHandlers
 			var values = await _repository.GetAllAsync();
 			return values.Select(x => new GetBlogImageQueryResult
             {
-                BlogId = x.BlogId,
+                Id = x.Id,
                 ImagePath = x.ImagePath,
-                Id = x.Id
+                BlogImageId = x.Id,
+				
 			}).ToList();
 		}
 	}

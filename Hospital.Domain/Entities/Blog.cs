@@ -27,13 +27,14 @@ namespace HospitalCmsSystem.Domain.Entities
 		[Required(ErrorMessage = "{0} boş geçilemez")]
 		[DisplayName("İçerik")]
 		public string Content { get; set; }
-		public string Tag { get; set; }
+		
 
 		public ICollection<DepartmentBlog> DepartmentBlogs { get; set; }
 		public ICollection<BlogImage> BlogImages { get; set; }
 		public ICollection<BlogComment> BlogComments { get; set; }
 
 		public List<string> Categories { get; set; }
+		public List<string> Tags { get; set; }
 		
 	}
 }

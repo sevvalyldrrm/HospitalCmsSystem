@@ -10,11 +10,11 @@ using System.Threading.Tasks;
 
 namespace HospitalCmsSystem.Application.CQRS.Handlers.BlogHandlers
 {
-	public class CreateAppointmentManagerCommandHandler : IRequestHandler<CreateBlogCommand>
+	public class CreateBlogCommandHandler : IRequestHandler<CreateBlogCommand>
 	{
 		private readonly IRepository<Blog> _repository;
 
-		public CreateAppointmentManagerCommandHandler(IRepository<Blog> repository)
+		public CreateBlogCommandHandler(IRepository<Blog> repository)
 		{
 			_repository = repository;
 		}
@@ -26,7 +26,7 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.BlogHandlers
 				AppUserId= request.AppUserId,
 				Title= request.Title,
 				Content= request.Content,
-				Tag= request.Tag,
+				Tags= request.Tags,
 			});
 		}
 	}
