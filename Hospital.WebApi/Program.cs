@@ -19,6 +19,10 @@ using HospitalCmsSystem.Application.Interfaces.DepartmentInterfaces;
 using HospitalCmsSystem.Persistence.Repositories.Blog;
 using HospitalCmsSystem.Persistence.Repositories.Department;
 using HospitalCmsSystem.Application.Validators.AdminValidators;
+using Microsoft.EntityFrameworkCore;
+using HospitalCmsSystem.Domain.Entities;
+using Microsoft.AspNetCore.Identity;
+using HospitalCmsSystem.Insfrastructre;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -48,8 +52,12 @@ builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IDoctorRepository, DoctorRepository>();
 builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
 builder.Services.AddScoped<IBlogRepository, BlogRepository>();
-builder.Services.AddScoped<AppDbContext>();
-
+//builder.Services.AddScoped<AppDbContext>();
+builder.Services.AddDbContext<AppDbContext>(options =>
+{
+    options.UseSqlServer(builder.Configuration.GetConnectionString("DBConStr"));
+});
+builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
 // Logger servisini ekleyin
 builder.Services.AddLogging();
 
@@ -83,5 +91,22 @@ app.UseHttpsRedirection();
 app.UseAuthorization();
 
 app.MapControllers();
+// Rol seed işlemi
+using (var scope = app.Services.CreateScope())
+{
+    var services = scope.ServiceProvider;
+    try
+    {
+        var roleManager = services.GetRequiredService<RoleManager<AppRole>>();
+
+        await ApplicationDbInitializer.SeedRoles(roleManager);
+    }
+    catch (Exception ex)
+    {
+        // Rol seed işlemi sırasında bir hata oluşursa loglayabilirsiniz.
+        var logger = services.GetRequiredService<ILogger<Program>>();
+        logger.LogError(ex, "An error occurred seeding the DB.");
+    }
+}
 
 app.Run();

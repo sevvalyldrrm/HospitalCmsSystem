@@ -27,7 +27,7 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.DoctorHandlers
             return values.Select(x => new GetDoctorsWithDepartmentQueryResult
             {
                 Name = x.Name,
-                Speacialty = x.Speacialty,
+                Specialty = x.Specialty,
                 DepartmentId = x.DepartmentId,
                 DepartmentDescription = x.Department.Description,
                 DepartmentName = x.Department.Name,
@@ -37,7 +37,6 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.DoctorHandlers
                 DocPinterest = x.DocPinterest,
                 DocSkype = x.DocSkype,
                 DocTitle = x.DocTitle,
-                RoleId = x.RoleId,
                 DocX = x.DocX,
                 IntroductionId = x.IntroductionId,
                 DepartmentImagePath = x.Department.ImagePath,

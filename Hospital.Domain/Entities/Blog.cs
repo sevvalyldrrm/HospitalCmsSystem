@@ -10,12 +10,13 @@ using HospitalCmsSystem.Domain.Entities.BaseEntities;
 
 namespace HospitalCmsSystem.Domain.Entities
 {
-    public class Blog : BaseEntitiy
+    public class Blog : BaseEntity
 	{
 		//Blog Single
 		[Required(ErrorMessage = "{0} boş geçilemez")]
-		[ForeignKey("AppUser")]
-		public int AppUserId { get; set; }
+
+        [ForeignKey(nameof(AppUser.Id))]
+        public int AppUserId { get; set; }
 
 		public AppUser AppUser { get; set; }
 
@@ -28,13 +29,12 @@ namespace HospitalCmsSystem.Domain.Entities
 		[DisplayName("İçerik")]
 		public string Content { get; set; }
 
-		public DateTime CreatedAt { get; set; }
-		public ICollection<DepartmentBlog> DepartmentBlogs { get; set; }
-		public ICollection<BlogImage> BlogImages { get; set; }
-		public ICollection<BlogComment> BlogComments { get; set; }
+		public ICollection<DepartmentBlog> DepartmentBlogs { get; set; } = new List<DepartmentBlog>();
+        public ICollection<BlogImage> BlogImages { get; set; } = new List<BlogImage>();
+        public ICollection<BlogComment> BlogComments { get; set; } = new List<BlogComment>();
 
-		public List<string> Categories { get; set; }
-		public List<string> Tags { get; set; }
+        public List<string> Categories { get; set; }=new List<string>();
+		public List<string> Tags { get; set; }= new List<string>();
 		
 	}
 }

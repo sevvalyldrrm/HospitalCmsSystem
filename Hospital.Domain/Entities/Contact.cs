@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace HospitalCmsSystem.Domain.Entities
 {
-	public class Contact : BaseEntitiy
+	public class Contact : BaseEntity
 	{
 		//Contact Us Sayfası
 		public string FullName { get; set; }

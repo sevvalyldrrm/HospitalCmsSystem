@@ -24,9 +24,8 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.DoctorHandlers
         public async Task Handle(UpdateDoctorCommand request, CancellationToken cancellationToken)
         {
             var values = await _repository.GetByIdAsync(request.Id);
-            values.Speacialty = request.Speacialty;
+            values.Specialty = request.Specialty;
             values.DepartmentId = request.DepartmentId;
-            values.RoleId = request.RoleId;
             values.IntroductionId = request.IntroductionId;
             values.DocFacebook = request.DocFacebook;
             values.DocX = request.DocX;

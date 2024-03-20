@@ -11,9 +11,8 @@ namespace HospitalCmsSystem.Application.CQRS.Results.DoctorResults
     public class GetDoctorByIdQueryResult : BaseResult
     {
         public string Name { get; set; }
-        public string Speacialty { get; set; }
+        public string Specialty { get; set; }
         public int DepartmentId { get; set; }
-        public int RoleId { get; set; }
         public int IntroductionId { get; set; }
         public string DocFacebook { get; set; }
         public string DocX { get; set; }

@@ -8,20 +8,21 @@ using System.Threading.Tasks;
 
 namespace HospitalCmsSystem.Domain.Entities
 {
-	public class Patient : BaseEntitiy
+	public class Patient : BaseEntity
 	{
         public string Name { get; set; }
         public string Diagnosis {  get; set; }
 
 		public bool IsDischarged { get; set; }
 
-        [ForeignKey("AppRole")]
-        public int RoleId {  get; set; }
-		public AppRole Role { get; set; }
+        [ForeignKey(nameof(AppUser.Id))]
+        public int AppUserId { get; set; }
 
-        public ICollection<DoctorPatient> DoctorPatients { get; set; }
-        public ICollection<Appointment> Appointments { get; set; }
-        public ICollection<Surgery> Surgeries { get; set; }
+        public AppUser AppUser { get; set; }
+
+        public ICollection<DoctorPatient> DoctorPatients { get; set; }=new List<DoctorPatient>();
+        public ICollection<Appointment> Appointments { get; set; }= new List<Appointment>();
+        public ICollection<Surgery> Surgeries { get; set; }=new List<Surgery>();
 
     }
 }

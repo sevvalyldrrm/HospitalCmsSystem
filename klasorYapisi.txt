@@ -1,0 +1,1731 @@
+Folder PATH listing
+Volume serial number is 9E12-D4A1
+C:.
+|   .gitattributes
+|   .gitignore
+|   HospitalCmsSystem.sln
+|   HospitalCmsSystem.slnLaunch.user
+|   klasorYapisi.txt
+|   klcuur.txt
+|   syld.txt
+|   
++---.github
+|   \---workflows
++---Frontends
+|   +---HospitalCmsSystem.Dto
+|   |   |   HospitalCmsSystem.Dto.csproj
+|   |   |   
+|   |   +---bin
+|   |   |   +---Debug
+|   |   |   |   \---net8.0
+|   |   |   |           HospitalCmsSystem.Dto.deps.json
+|   |   |   |           HospitalCmsSystem.Dto.dll
+|   |   |   |           HospitalCmsSystem.Dto.pdb
+|   |   |   |           
+|   |   |   \---Release
+|   |   |       \---net8.0
+|   |   +---Blog
+|   |   |       ResultBlogDto.cs
+|   |   |       ResultBlogWithIncludeDto.cs
+|   |   |       
+|   |   +---Department
+|   |   |       ResultDepartmentDto.cs
+|   |   |       ResultDepartmentWithDetails.cs
+|   |   |       
+|   |   +---Doctor
+|   |   |       ResultDoctorsWithDepartmentDto.cs
+|   |   |       
+|   |   \---obj
+|   |       |   HospitalCmsSystem.Dto.csproj.nuget.dgspec.json
+|   |       |   HospitalCmsSystem.Dto.csproj.nuget.g.props
+|   |       |   HospitalCmsSystem.Dto.csproj.nuget.g.targets
+|   |       |   project.assets.json
+|   |       |   project.nuget.cache
+|   |       |   
+|   |       +---Debug
+|   |       |   \---net8.0
+|   |       |       |   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+|   |       |       |   HospitalCmsSystem.Dto.AssemblyInfo.cs
+|   |       |       |   HospitalCmsSystem.Dto.AssemblyInfoInputs.cache
+|   |       |       |   HospitalCmsSystem.Dto.assets.cache
+|   |       |       |   HospitalCmsSystem.Dto.csproj.BuildWithSkipAnalyzers
+|   |       |       |   HospitalCmsSystem.Dto.csproj.CoreCompileInputs.cache
+|   |       |       |   HospitalCmsSystem.Dto.csproj.FileListAbsolute.txt
+|   |       |       |   HospitalCmsSystem.Dto.dll
+|   |       |       |   HospitalCmsSystem.Dto.GeneratedMSBuildEditorConfig.editorconfig
+|   |       |       |   HospitalCmsSystem.Dto.GlobalUsings.g.cs
+|   |       |       |   HospitalCmsSystem.Dto.pdb
+|   |       |       |   HospitalCmsSystem.Dto.sourcelink.json
+|   |       |       |   
+|   |       |       +---ref
+|   |       |       |       HospitalCmsSystem.Dto.dll
+|   |       |       |       
+|   |       |       \---refint
+|   |       |               HospitalCmsSystem.Dto.dll
+|   |       |               
+|   |       \---Release
+|   |           \---net8.0
+|   |               |   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+|   |               |   HospitalCmsSystem.Dto.AssemblyInfo.cs
+|   |               |   HospitalCmsSystem.Dto.AssemblyInfoInputs.cache
+|   |               |   HospitalCmsSystem.Dto.assets.cache
+|   |               |   HospitalCmsSystem.Dto.GeneratedMSBuildEditorConfig.editorconfig
+|   |               |   HospitalCmsSystem.Dto.GlobalUsings.g.cs
+|   |               |   
+|   |               +---ref
+|   |               \---refint
+|   \---HospitalCmsSystem.WebUI
+|       |   appsettings.Development.json
+|       |   appsettings.json
+|       |   HospitalCmsSystem.WebUI.csproj
+|       |   HospitalCmsSystem.WebUI.csproj.user
+|       |   Program.cs
+|       |   
+|       +---bin
+|       |   +---Debug
+|       |   |   \---net8.0
+|       |   |       |   appsettings.Development.json
+|       |   |       |   appsettings.json
+|       |   |       |   dotnet-aspnet-codegenerator-design.dll
+|       |   |       |   FluentValidation.AspNetCore.dll
+|       |   |       |   FluentValidation.DependencyInjectionExtensions.dll
+|       |   |       |   FluentValidation.dll
+|       |   |       |   HospitalCmsSystem.Dto.dll
+|       |   |       |   HospitalCmsSystem.Dto.pdb
+|       |   |       |   HospitalCmsSystem.WebUI.deps.json
+|       |   |       |   HospitalCmsSystem.WebUI.dll
+|       |   |       |   HospitalCmsSystem.WebUI.exe
+|       |   |       |   HospitalCmsSystem.WebUI.pdb
+|       |   |       |   HospitalCmsSystem.WebUI.runtimeconfig.json
+|       |   |       |   HospitalCmsSystem.WebUI.staticwebassets.runtime.json
+|       |   |       |   Humanizer.dll
+|       |   |       |   MediatR.Contracts.dll
+|       |   |       |   MediatR.dll
+|       |   |       |   MediatR.Extensions.Microsoft.DependencyInjection.dll
+|       |   |       |   Microsoft.AspNetCore.Authentication.JwtBearer.dll
+|       |   |       |   Microsoft.AspNetCore.Authorization.dll
+|       |   |       |   Microsoft.AspNetCore.Components.dll
+|       |   |       |   Microsoft.AspNetCore.Components.Forms.dll
+|       |   |       |   Microsoft.AspNetCore.Components.QuickGrid.dll
+|       |   |       |   Microsoft.AspNetCore.Components.QuickGrid.EntityFrameworkAdapter.dll
+|       |   |       |   Microsoft.AspNetCore.Components.Web.dll
+|       |   |       |   Microsoft.AspNetCore.Metadata.dll
+|       |   |       |   Microsoft.AspNetCore.Razor.Language.dll
+|       |   |       |   Microsoft.Bcl.AsyncInterfaces.dll
+|       |   |       |   Microsoft.Build.dll
+|       |   |       |   Microsoft.Build.Framework.dll
+|       |   |       |   Microsoft.CodeAnalysis.AnalyzerUtilities.dll
+|       |   |       |   Microsoft.CodeAnalysis.CSharp.dll
+|       |   |       |   Microsoft.CodeAnalysis.CSharp.Features.dll
+|       |   |       |   Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+|       |   |       |   Microsoft.CodeAnalysis.dll
+|       |   |       |   Microsoft.CodeAnalysis.Elfie.dll
+|       |   |       |   Microsoft.CodeAnalysis.Features.dll
+|       |   |       |   Microsoft.CodeAnalysis.Razor.dll
+|       |   |       |   Microsoft.CodeAnalysis.Scripting.dll
+|       |   |       |   Microsoft.CodeAnalysis.Workspaces.dll
+|       |   |       |   Microsoft.DiaSymReader.dll
+|       |   |       |   Microsoft.DotNet.Scaffolding.Shared.dll
+|       |   |       |   Microsoft.EntityFrameworkCore.Abstractions.dll
+|       |   |       |   Microsoft.EntityFrameworkCore.dll
+|       |   |       |   Microsoft.Extensions.DependencyInjection.Abstractions.dll
+|       |   |       |   Microsoft.Extensions.DependencyModel.dll
+|       |   |       |   Microsoft.Extensions.Logging.Abstractions.dll
+|       |   |       |   Microsoft.Extensions.Options.dll
+|       |   |       |   Microsoft.IdentityModel.Abstractions.dll
+|       |   |       |   Microsoft.IdentityModel.JsonWebTokens.dll
+|       |   |       |   Microsoft.IdentityModel.Logging.dll
+|       |   |       |   Microsoft.IdentityModel.Protocols.dll
+|       |   |       |   Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+|       |   |       |   Microsoft.IdentityModel.Tokens.dll
+|       |   |       |   Microsoft.JSInterop.dll
+|       |   |       |   Microsoft.NET.StringTools.dll
+|       |   |       |   Microsoft.VisualStudio.Web.CodeGeneration.Core.dll
+|       |   |       |   Microsoft.VisualStudio.Web.CodeGeneration.dll
+|       |   |       |   Microsoft.VisualStudio.Web.CodeGeneration.EntityFrameworkCore.dll
+|       |   |       |   Microsoft.VisualStudio.Web.CodeGeneration.Templating.dll
+|       |   |       |   Microsoft.VisualStudio.Web.CodeGeneration.Utils.dll
+|       |   |       |   Microsoft.VisualStudio.Web.CodeGenerators.Mvc.dll
+|       |   |       |   Microsoft.Win32.SystemEvents.dll
+|       |   |       |   Mono.TextTemplating.dll
+|       |   |       |   Newtonsoft.Json.dll
+|       |   |       |   NuGet.Common.dll
+|       |   |       |   NuGet.Configuration.dll
+|       |   |       |   NuGet.DependencyResolver.Core.dll
+|       |   |       |   NuGet.Frameworks.dll
+|       |   |       |   NuGet.LibraryModel.dll
+|       |   |       |   NuGet.Packaging.dll
+|       |   |       |   NuGet.ProjectModel.dll
+|       |   |       |   NuGet.Protocol.dll
+|       |   |       |   NuGet.Versioning.dll
+|       |   |       |   Serilog.AspNetCore.dll
+|       |   |       |   Serilog.dll
+|       |   |       |   Serilog.Extensions.Hosting.dll
+|       |   |       |   Serilog.Extensions.Logging.dll
+|       |   |       |   Serilog.Formatting.Compact.dll
+|       |   |       |   Serilog.Settings.Configuration.dll
+|       |   |       |   Serilog.Sinks.Console.dll
+|       |   |       |   Serilog.Sinks.Debug.dll
+|       |   |       |   Serilog.Sinks.File.dll
+|       |   |       |   System.CodeDom.dll
+|       |   |       |   System.Composition.AttributedModel.dll
+|       |   |       |   System.Composition.Convention.dll
+|       |   |       |   System.Composition.Hosting.dll
+|       |   |       |   System.Composition.Runtime.dll
+|       |   |       |   System.Composition.TypedParts.dll
+|       |   |       |   System.Configuration.ConfigurationManager.dll
+|       |   |       |   System.Drawing.Common.dll
+|       |   |       |   System.IdentityModel.Tokens.Jwt.dll
+|       |   |       |   System.Reflection.MetadataLoadContext.dll
+|       |   |       |   System.Security.Cryptography.ProtectedData.dll
+|       |   |       |   System.Security.Permissions.dll
+|       |   |       |   System.Windows.Extensions.dll
+|       |   |       |   
+|       |   |       +---af
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---ar
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---az
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---bg
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---bn-BD
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---cs
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Scripting.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+|       |   |       |       
+|       |   |       +---da
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---de
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Scripting.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+|       |   |       |       
+|       |   |       +---el
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---es
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Scripting.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+|       |   |       |       
+|       |   |       +---fa
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---fi-FI
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---fr
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Scripting.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+|       |   |       |       
+|       |   |       +---fr-BE
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---he
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---hr
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---hu
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---hy
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---id
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---is
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---it
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Scripting.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+|       |   |       |       
+|       |   |       +---ja
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Scripting.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+|       |   |       |       
+|       |   |       +---ko
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Scripting.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+|       |   |       |       
+|       |   |       +---ko-KR
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---ku
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---lv
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---ms-MY
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---mt
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---nb
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---nb-NO
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---nl
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---pl
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Scripting.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+|       |   |       |       
+|       |   |       +---pt
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---pt-BR
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Scripting.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+|       |   |       |       
+|       |   |       +---ro
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---ru
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Scripting.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+|       |   |       |       
+|       |   |       +---runtimes
+|       |   |       |   \---win
+|       |   |       |       \---lib
+|       |   |       |           \---net7.0
+|       |   |       |                   Microsoft.Win32.SystemEvents.dll
+|       |   |       |                   System.Drawing.Common.dll
+|       |   |       |                   System.Security.Cryptography.ProtectedData.dll
+|       |   |       |                   System.Windows.Extensions.dll
+|       |   |       |                   
+|       |   |       +---sk
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---sl
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---sr
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---sr-Latn
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---sv
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---th-TH
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---tr
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Scripting.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+|       |   |       |       
+|       |   |       +---uk
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---uz-Cyrl-UZ
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---uz-Latn-UZ
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---vi
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---zh-CN
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       
+|       |   |       +---zh-Hans
+|       |   |       |       Humanizer.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Features.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Scripting.resources.dll
+|       |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+|       |   |       |       
+|       |   |       \---zh-Hant
+|       |   |               Humanizer.resources.dll
+|       |   |               Microsoft.CodeAnalysis.CSharp.Features.resources.dll
+|       |   |               Microsoft.CodeAnalysis.CSharp.resources.dll
+|       |   |               Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+|       |   |               Microsoft.CodeAnalysis.Features.resources.dll
+|       |   |               Microsoft.CodeAnalysis.resources.dll
+|       |   |               Microsoft.CodeAnalysis.Scripting.resources.dll
+|       |   |               Microsoft.CodeAnalysis.Workspaces.resources.dll
+|       |   |               
+|       |   \---Release
+|       |       \---net8.0
+|       +---Controllers
+|       |       AuthController.cs
+|       |       BlogController.cs
+|       |       ContactController.cs
+|       |       DepartmentController.cs
+|       |       DoctorController.cs
+|       |       HomeController.cs
+|       |       
+|       +---Logs
+|       |       myapp20240317.txt
+|       |       myapp20240317_001.txt
+|       |       myapp20240318.txt
+|       |       myapp20240318_001.txt
+|       |       myapp20240318_002.txt
+|       |       myapp20240318_003.txt
+|       |       myapp20240318_004.txt
+|       |       myapp20240318_005.txt
+|       |       myapp20240318_006.txt
+|       |       myapp20240318_007.txt
+|       |       myapp20240318_008.txt
+|       |       myapp20240318_009.txt
+|       |       myapp20240318_010.txt
+|       |       myapp20240318_011.txt
+|       |       myapp20240318_012.txt
+|       |       myapp20240318_013.txt
+|       |       myapp20240318_014.txt
+|       |       myapp20240318_015.txt
+|       |       myapp20240318_016.txt
+|       |       myapp20240318_017.txt
+|       |       myapp20240318_018.txt
+|       |       myapp20240318_019.txt
+|       |       myapp20240318_020.txt
+|       |       myapp20240318_021.txt
+|       |       myapp20240318_022.txt
+|       |       myapp20240319.txt
+|       |       myapp20240319_001.txt
+|       |       myapp20240319_002.txt
+|       |       
+|       +---Models
+|       |       ErrorViewModel.cs
+|       |       
+|       +---obj
+|       |   |   HospitalCmsSystem.WebUI.csproj.nuget.dgspec.json
+|       |   |   HospitalCmsSystem.WebUI.csproj.nuget.g.props
+|       |   |   HospitalCmsSystem.WebUI.csproj.nuget.g.targets
+|       |   |   project.assets.json
+|       |   |   project.nuget.cache
+|       |   |   
+|       |   +---Debug
+|       |   |   \---net8.0
+|       |   |       |   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+|       |   |       |   ApiEndpoints.json
+|       |   |       |   apphost.exe
+|       |   |       |   Hospital.A3F05871.Up2Date
+|       |   |       |   HospitalCmsSystem.WebUI.AssemblyInfo.cs
+|       |   |       |   HospitalCmsSystem.WebUI.AssemblyInfoInputs.cache
+|       |   |       |   HospitalCmsSystem.WebUI.assets.cache
+|       |   |       |   HospitalCmsSystem.WebUI.csproj.AssemblyReference.cache
+|       |   |       |   HospitalCmsSystem.WebUI.csproj.BuildWithSkipAnalyzers
+|       |   |       |   HospitalCmsSystem.WebUI.csproj.CoreCompileInputs.cache
+|       |   |       |   HospitalCmsSystem.WebUI.csproj.FileListAbsolute.txt
+|       |   |       |   HospitalCmsSystem.WebUI.dll
+|       |   |       |   HospitalCmsSystem.WebUI.GeneratedMSBuildEditorConfig.editorconfig
+|       |   |       |   HospitalCmsSystem.WebUI.genruntimeconfig.cache
+|       |   |       |   HospitalCmsSystem.WebUI.GlobalUsings.g.cs
+|       |   |       |   HospitalCmsSystem.WebUI.MvcApplicationPartsAssemblyInfo.cache
+|       |   |       |   HospitalCmsSystem.WebUI.MvcApplicationPartsAssemblyInfo.cs
+|       |   |       |   HospitalCmsSystem.WebUI.pdb
+|       |   |       |   HospitalCmsSystem.WebUI.RazorAssemblyInfo.cache
+|       |   |       |   HospitalCmsSystem.WebUI.RazorAssemblyInfo.cs
+|       |   |       |   HospitalCmsSystem.WebUI.sourcelink.json
+|       |   |       |   project.razor.vs.bin
+|       |   |       |   staticwebassets.build.json
+|       |   |       |   staticwebassets.development.json
+|       |   |       |   staticwebassets.pack.json
+|       |   |       |   
+|       |   |       +---ref
+|       |   |       |       HospitalCmsSystem.WebUI.dll
+|       |   |       |       
+|       |   |       +---refint
+|       |   |       |       HospitalCmsSystem.WebUI.dll
+|       |   |       |       
+|       |   |       +---scopedcss
+|       |   |       |   +---bundle
+|       |   |       |   |       HospitalCmsSystem.WebUI.styles.css
+|       |   |       |   |       
+|       |   |       |   +---projectbundle
+|       |   |       |   |       HospitalCmsSystem.WebUI.bundle.scp.css
+|       |   |       |   |       
+|       |   |       |   \---Views
+|       |   |       |       \---Shared
+|       |   |       |               _Layout.cshtml.rz.scp.css
+|       |   |       |               
+|       |   |       \---staticwebassets
+|       |   |               msbuild.build.HospitalCmsSystem.WebUI.props
+|       |   |               msbuild.buildMultiTargeting.HospitalCmsSystem.WebUI.props
+|       |   |               msbuild.buildTransitive.HospitalCmsSystem.WebUI.props
+|       |   |               msbuild.HospitalCmsSystem.WebUI.Microsoft.AspNetCore.StaticWebAssets.props
+|       |   |               
+|       |   \---Release
+|       |       \---net8.0
+|       |           |   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+|       |           |   HospitalCmsSystem.WebUI.AssemblyInfo.cs
+|       |           |   HospitalCmsSystem.WebUI.AssemblyInfoInputs.cache
+|       |           |   HospitalCmsSystem.WebUI.assets.cache
+|       |           |   HospitalCmsSystem.WebUI.csproj.AssemblyReference.cache
+|       |           |   HospitalCmsSystem.WebUI.GeneratedMSBuildEditorConfig.editorconfig
+|       |           |   HospitalCmsSystem.WebUI.GlobalUsings.g.cs
+|       |           |   HospitalCmsSystem.WebUI.RazorAssemblyInfo.cache
+|       |           |   HospitalCmsSystem.WebUI.RazorAssemblyInfo.cs
+|       |           |   
+|       |           +---ref
+|       |           \---refint
+|       +---Properties
+|       |       launchSettings.json
+|       |       
+|       +---Views
+|       |   |   _ViewImports.cshtml
+|       |   |   _ViewStart.cshtml
+|       |   |   
+|       |   +---Auth
+|       |   |       ForgotPassword.cshtml
+|       |   |       Login.cshtml
+|       |   |       Register.cshtml
+|       |   |       
+|       |   +---Blog
+|       |   |       BlogSingle.cshtml
+|       |   |       Index.cshtml
+|       |   |       
+|       |   +---Contact
+|       |   |       Index.cshtml
+|       |   |       
+|       |   +---Department
+|       |   |       DepartmentSingle.cshtml
+|       |   |       Index.cshtml
+|       |   |       
+|       |   +---Doctor
+|       |   |       Appointment.cshtml
+|       |   |       Doctors.cshtml
+|       |   |       DoctorSingle.cshtml
+|       |   |       
+|       |   +---Home
+|       |   |       Index.cshtml
+|       |   |       Privacy.cshtml
+|       |   |       
+|       |   +---Page
+|       |   |       Detail.cshtml
+|       |   |       
+|       |   \---Shared
+|       |           Error.cshtml
+|       |           _ContactForm.cshtml
+|       |           _CustomerReviews.cshtml
+|       |           _FeaturedColumns.cshtml
+|       |           _FeaturedContent.cshtml
+|       |           _Footer.cshtml
+|       |           _Header.cshtml
+|       |           _Layout.cshtml
+|       |           _Layout.cshtml.css
+|       |           _Partners.cshtml
+|       |           _Services.cshtml
+|       |           _Slider.cshtml
+|       |           _Statistics.cshtml
+|       |           _TopBar.cshtml
+|       |           _ValidationScriptsPartial.cshtml
+|       |           
+|       \---wwwroot
+|           |   favicon.ico
+|           |   
+|           +---css
+|           |       site.css
+|           |       style.css
+|           |       style.css.map
+|           |       
+|           +---images
+|           |   |   favicon.png
+|           |   |   logo.png
+|           |   |   marker.png
+|           |   |   
+|           |   +---about
+|           |   |       05.png
+|           |   |       1.png
+|           |   |       2.png
+|           |   |       3.png
+|           |   |       4.png
+|           |   |       5.png
+|           |   |       6.png
+|           |   |       about-1.jpg
+|           |   |       about-2.jpg
+|           |   |       about-3.jpg
+|           |   |       about-4.jpg
+|           |   |       img-1.jpg
+|           |   |       img-2.jpg
+|           |   |       img-3.jpg
+|           |   |       sign.png
+|           |   |       
+|           |   +---bg
+|           |   |       22.jpg
+|           |   |       banner.jpg
+|           |   |       bg-2.jpg
+|           |   |       bg-4.jpg
+|           |   |       slider-bg-1.jpg
+|           |   |       
+|           |   +---blog
+|           |   |       blog-1.jpg
+|           |   |       blog-2.jpg
+|           |   |       blog-4.jpg
+|           |   |       blog-6.jpg
+|           |   |       blog-7.jpg
+|           |   |       blog-8.jpg
+|           |   |       testimonial1.jpg
+|           |   |       testimonial2.jpg
+|           |   |       
+|           |   +---service
+|           |   |       bg-1.jpg
+|           |   |       service-1.jpg
+|           |   |       service-2.jpg
+|           |   |       service-3.jpg
+|           |   |       service-4.jpg
+|           |   |       service-6.jpg
+|           |   |       service-8.jpg
+|           |   |       
+|           |   \---team
+|           |           1.jpg
+|           |           2.jpg
+|           |           3.jpg
+|           |           4.jpg
+|           |           test-thumb1.jpg
+|           |           test-thumb2.jpg
+|           |           test-thumb3.jpg
+|           |           test-thumb4.jpg
+|           |           
+|           +---js
+|           |       script.js
+|           |       site.js
+|           |       
+|           +---lib
+|           |   +---bootstrap
+|           |   |   |   LICENSE
+|           |   |   |   
+|           |   |   \---dist
+|           |   |       +---css
+|           |   |       |       bootstrap-grid.css
+|           |   |       |       bootstrap-grid.css.map
+|           |   |       |       bootstrap-grid.min.css
+|           |   |       |       bootstrap-grid.min.css.map
+|           |   |       |       bootstrap-grid.rtl.css
+|           |   |       |       bootstrap-grid.rtl.css.map
+|           |   |       |       bootstrap-grid.rtl.min.css
+|           |   |       |       bootstrap-grid.rtl.min.css.map
+|           |   |       |       bootstrap-reboot.css
+|           |   |       |       bootstrap-reboot.css.map
+|           |   |       |       bootstrap-reboot.min.css
+|           |   |       |       bootstrap-reboot.min.css.map
+|           |   |       |       bootstrap-reboot.rtl.css
+|           |   |       |       bootstrap-reboot.rtl.css.map
+|           |   |       |       bootstrap-reboot.rtl.min.css
+|           |   |       |       bootstrap-reboot.rtl.min.css.map
+|           |   |       |       bootstrap-utilities.css
+|           |   |       |       bootstrap-utilities.css.map
+|           |   |       |       bootstrap-utilities.min.css
+|           |   |       |       bootstrap-utilities.min.css.map
+|           |   |       |       bootstrap-utilities.rtl.css
+|           |   |       |       bootstrap-utilities.rtl.css.map
+|           |   |       |       bootstrap-utilities.rtl.min.css
+|           |   |       |       bootstrap-utilities.rtl.min.css.map
+|           |   |       |       bootstrap.css
+|           |   |       |       bootstrap.css.map
+|           |   |       |       bootstrap.min.css
+|           |   |       |       bootstrap.min.css.map
+|           |   |       |       bootstrap.rtl.css
+|           |   |       |       bootstrap.rtl.css.map
+|           |   |       |       bootstrap.rtl.min.css
+|           |   |       |       bootstrap.rtl.min.css.map
+|           |   |       |       
+|           |   |       \---js
+|           |   |               bootstrap.bundle.js
+|           |   |               bootstrap.bundle.js.map
+|           |   |               bootstrap.bundle.min.js
+|           |   |               bootstrap.bundle.min.js.map
+|           |   |               bootstrap.esm.js
+|           |   |               bootstrap.esm.js.map
+|           |   |               bootstrap.esm.min.js
+|           |   |               bootstrap.esm.min.js.map
+|           |   |               bootstrap.js
+|           |   |               bootstrap.js.map
+|           |   |               bootstrap.min.js
+|           |   |               bootstrap.min.js.map
+|           |   |               
+|           |   +---jquery
+|           |   |   |   LICENSE.txt
+|           |   |   |   
+|           |   |   \---dist
+|           |   |           jquery.js
+|           |   |           jquery.min.js
+|           |   |           jquery.min.map
+|           |   |           
+|           |   +---jquery-validation
+|           |   |   |   LICENSE.md
+|           |   |   |   
+|           |   |   \---dist
+|           |   |           additional-methods.js
+|           |   |           additional-methods.min.js
+|           |   |           jquery.validate.js
+|           |   |           jquery.validate.min.js
+|           |   |           
+|           |   \---jquery-validation-unobtrusive
+|           |           jquery.validate.unobtrusive.js
+|           |           jquery.validate.unobtrusive.min.js
+|           |           LICENSE.txt
+|           |           
+|           \---plugins
+|               +---bootstrap
+|               |       bootstrap.min.css
+|               |       bootstrap.min.js
+|               |       
+|               +---google-map
+|               |       gmap.js
+|               |       
+|               +---icofont
+|               |   |   demo.html
+|               |   |   icofont.css
+|               |   |   icofont.min.css
+|               |   |   
+|               |   \---fonts
+|               |           icofont.eot
+|               |           icofont.ttf
+|               |           icofont.woff
+|               |           icofont.woff2
+|               |           
+|               +---jquery
+|               |       jquery.js
+|               |       
+|               +---shuffle
+|               |       shuffle.min.js
+|               |       
+|               \---slick-carousel
+|                   \---slick
+|                       |   ajax-loader.gif
+|                       |   config.rb
+|                       |   slick-theme.css
+|                       |   slick-theme.less
+|                       |   slick-theme.scss
+|                       |   slick.css
+|                       |   slick.js
+|                       |   slick.less
+|                       |   slick.min.js
+|                       |   slick.scss
+|                       |   
+|                       \---fonts
+|                               slick.eot
+|                               slick.svg
+|                               slick.ttf
+|                               slick.woff
+|                               
++---Hospital.Application
+|   |   HospitalCmsSystem.Application.csproj
+|   |   
+|   +---Behaviors
+|   |       LoggingBehaviour.cs
+|   |       ValidationBehaviour.cs
+|   |       
+|   +---bin
+|   |   +---Debug
+|   |   |   \---net8.0
+|   |   |           HospitalCmsSystem.Application.deps.json
+|   |   |           HospitalCmsSystem.Application.dll
+|   |   |           HospitalCmsSystem.Application.pdb
+|   |   |           HospitalCmsSystem.Domain.dll
+|   |   |           HospitalCmsSystem.Domain.pdb
+|   |   |           
+|   |   \---Release
+|   |       \---net8.0
+|   +---CQRS
+|   |   +---Commands
+|   |   |   +---AdminCommands
+|   |   |   |       CreateAdminCommand.cs
+|   |   |   |       RemoveAdminCommand.cs
+|   |   |   |       UpdateAdminCommand.cs
+|   |   |   |       
+|   |   |   +---AppointmentCommands
+|   |   |   |       CreateAppointmentCommand.cs
+|   |   |   |       RemoveAppointmentCommand.cs
+|   |   |   |       UpdateAppointmentCommand.cs
+|   |   |   |       
+|   |   |   +---AppointmentManagerCommands
+|   |   |   |       CreateAppointmentManagerCommand.cs
+|   |   |   |       RemoveAppointmentManagerCommand.cs
+|   |   |   |       UpdateAppointmentManagerCommand.cs
+|   |   |   |       
+|   |   |   +---BlogCommands
+|   |   |   |       CreateBlogCommand.cs
+|   |   |   |       RemoveBlogCommand.cs
+|   |   |   |       UpdateBlogCommand.cs
+|   |   |   |       
+|   |   |   +---BlogCommentCommands
+|   |   |   |       CreateBlogCommentCommand.cs
+|   |   |   |       RemoveBlogCommentCommand.cs
+|   |   |   |       UpdateBlogCommentCommand.cs
+|   |   |   |       
+|   |   |   +---BlogImageCommands
+|   |   |   |       CreateBlogImageCommand.cs
+|   |   |   |       RemoveBlogImageCommand.cs
+|   |   |   |       UpdateBlogImageCommand.cs
+|   |   |   |       
+|   |   |   +---ContactCommands
+|   |   |   |       CreateContactCommand.cs
+|   |   |   |       RemoveContactCommand.cs
+|   |   |   |       UpdateContactCommand.cs
+|   |   |   |       
+|   |   |   +---DepartmenBlogCommands
+|   |   |   |       CreateDepartmentBlogCommand.cs
+|   |   |   |       RemoveDepartmentBlogCommand.cs
+|   |   |   |       UpdateDepartmentBlogCommand.cs
+|   |   |   |       
+|   |   |   +---DepartmentCommands
+|   |   |   |       CreateDepartmentCommand.cs
+|   |   |   |       RemoveDepartmentCommand.cs
+|   |   |   |       UpdateDepartmentCommand.cs
+|   |   |   |       
+|   |   |   +---DepartmentDetailCommands
+|   |   |   |       CreateDepartmentDetailCommand.cs
+|   |   |   |       RemoveDepartmentDetailCommand.cs
+|   |   |   |       UpdateDepartmentDetailCommand.cs
+|   |   |   |       
+|   |   |   +---DoctorCommands
+|   |   |   |       CreateDoctorCommand.cs
+|   |   |   |       RemoveDoctorCommand.cs
+|   |   |   |       UpdateDoctorCommand.cs
+|   |   |   |       
+|   |   |   +---DoctorPatientCommands
+|   |   |   |       CreateDoctorPatientCommand.cs
+|   |   |   |       RemoveDoctorPatientCommand.cs
+|   |   |   |       UpdateDoctorPatientCommand.cs
+|   |   |   |       
+|   |   |   +---EducationCommands
+|   |   |   |       CreateEducationCommand.cs
+|   |   |   |       RemoveEducationCommand.cs
+|   |   |   |       UpdateEducationCommand.cs
+|   |   |   |       
+|   |   |   +---IntroductionCommands
+|   |   |   |       CreateIntroductionCommand.cs
+|   |   |   |       RemoveIntroductionCommand.cs
+|   |   |   |       UpdateIntroductionCommand.cs
+|   |   |   |       
+|   |   |   +---PatientCommands
+|   |   |   |       CreatePatientCommand.cs
+|   |   |   |       RemovePatientCommand.cs
+|   |   |   |       UpdatePatientCommand.cs
+|   |   |   |       
+|   |   |   +---SurgeryCommands
+|   |   |   |       CreateSurgeryCommand.cs
+|   |   |   |       RemoveSurgeryCommand.cs
+|   |   |   |       UpdateSurgeryCommand.cs
+|   |   |   |       
+|   |   |   +---SurgeryDoctorCommands
+|   |   |   |       CreateSurgeryDoctorCommand.cs
+|   |   |   |       RemoveSurgeryDoctorCommand.cs
+|   |   |   |       UpdateSurgeryDoctorCommand.cs
+|   |   |   |       
+|   |   |   \---WorkingHourCommands
+|   |   |           CreateWorkingHourCommand.cs
+|   |   |           RemoveWorkingHourCommand.cs
+|   |   |           UpdateWorkingHourCommand.cs
+|   |   |           
+|   |   +---Handlers
+|   |   |   +---AdminHandlers
+|   |   |   |       CreateAdminCommandHandler.cs
+|   |   |   |       GetAdminByIdQueryHandler.cs
+|   |   |   |       GetAdminQueryHandler.cs
+|   |   |   |       RemoveAdminCommandHandler.cs
+|   |   |   |       UpdateAdminCommandHandler.cs
+|   |   |   |       
+|   |   |   +---AppointmentHandlers
+|   |   |   |       CreateAppointmentCommandHandler.cs
+|   |   |   |       GetAppointmentByIdQueryHandler.cs
+|   |   |   |       GetAppointmentQueryHandler.cs
+|   |   |   |       RemoveAppointmentCommandHandler.cs
+|   |   |   |       UpdateAppointmentCommandHandler.cs
+|   |   |   |       
+|   |   |   +---AppointmentManagerHandlers
+|   |   |   |       CreateAppointmentManagerCommandHandler.cs
+|   |   |   |       GetAppointmentManagerByIdQueryHandler.cs
+|   |   |   |       GetAppointmentManagerQueryHandler.cs
+|   |   |   |       RemoveAppointmentManagerCommandHandler.cs
+|   |   |   |       UpdateAppointmentManagerCommandHandler.cs
+|   |   |   |       
+|   |   |   +---BlogCommentHandlers
+|   |   |   |       CreateBlogCommentCommandHandler.cs
+|   |   |   |       GetBlogCommentByIdQueryHandler.cs
+|   |   |   |       GetBlogCommentByIncludeQueryHandler.cs
+|   |   |   |       GetBlogCommentQueryHandler.cs
+|   |   |   |       RemoveBlogCommentCommandHandler.cs
+|   |   |   |       UpdateBlogCommentCommandHandler.cs
+|   |   |   |       
+|   |   |   +---BlogHandlers
+|   |   |   |       CreateBlogCommandHandler.cs
+|   |   |   |       GetBlogByIdQueryHandler.cs
+|   |   |   |       GetBlogQueryHandler.cs
+|   |   |   |       GetBlogWithIncludeQueryHandler.cs
+|   |   |   |       RemoveBlogCommandHandler.cs
+|   |   |   |       UpdateBlogCommandHandler.cs
+|   |   |   |       
+|   |   |   +---BlogImageHandlers
+|   |   |   |       CreateBlogImageCommandHandler.cs
+|   |   |   |       GetBlogImageByIdQueryHandler.cs
+|   |   |   |       GetBlogImageByIncludeQueryHandler.cs
+|   |   |   |       GetBlogImageQueryHandler.cs
+|   |   |   |       RemoveBlogImageCommandHandler.cs
+|   |   |   |       UpdateBlogImageCommandHandler.cs
+|   |   |   |       
+|   |   |   +---ContactHandlers
+|   |   |   |       CreateContactCommandHandler.cs
+|   |   |   |       GetContactByIdQueryHandler.cs
+|   |   |   |       GetContactQueryHandler.cs
+|   |   |   |       RemoveContactCommandHandler.cs
+|   |   |   |       UpdateAdminCommandHandler.cs
+|   |   |   |       
+|   |   |   +---DepartmentBlogHandlers
+|   |   |   |       CreateDepartmentBlogCommandHandler.cs
+|   |   |   |       GetDepartmentBlogByIdQueryHandler.cs
+|   |   |   |       GetDepartmentBlogQueryHandler.cs
+|   |   |   |       RemoveDepartmentBlogCommandHandler.cs
+|   |   |   |       UpdateDepartmentBlogCommandHandler.cs
+|   |   |   |       
+|   |   |   +---DepartmentDetailHandlers
+|   |   |   |       CreateDepartmentDetailCommandHandler.cs
+|   |   |   |       GetDepartmentDetailByIdQueryHandler.cs
+|   |   |   |       GetDepartmentDetailQueryHandler.cs
+|   |   |   |       RemoveDepartmentDetailCommandHandler.cs
+|   |   |   |       UpdateDepartmentDetailCommandHandler.cs
+|   |   |   |       
+|   |   |   +---DepartmentHandlers
+|   |   |   |       CreateDepartmentCommandHandler.cs
+|   |   |   |       GetDepartmentByIdQueryHandler.cs
+|   |   |   |       GetDepartmentQueryHandler.cs
+|   |   |   |       GetDepartmentWithDetailsByIdQueryHandler.cs
+|   |   |   |       RemoveDepartmentCommandHandler.cs
+|   |   |   |       UpdateDepartmentCommandHandler.cs
+|   |   |   |       
+|   |   |   +---DoctorHandlers
+|   |   |   |       CreateDoctorCommandHandler.cs
+|   |   |   |       GetDoctorByIdQueryHandler.cs
+|   |   |   |       GetDoctorQueryHandler.cs
+|   |   |   |       GetDoctorsWithDepartmentQueryHandler.cs
+|   |   |   |       RemoveDoctorCommandHandler.cs
+|   |   |   |       UpdateDoctorCommandHandler.cs
+|   |   |   |       
+|   |   |   +---DoctorPatientHandlers
+|   |   |   |       CreateDoctorPatientCommandHandler.cs
+|   |   |   |       GetDoctorPatientByIdQueryHandler.cs
+|   |   |   |       GetDoctorPatientQueryHandler.cs
+|   |   |   |       RemoveDoctorPatientCommandHandler.cs
+|   |   |   |       UpdateDoctorPatientCommandHandler.cs
+|   |   |   |       
+|   |   |   +---EducationHandlers
+|   |   |   |       CreateEducationCommandHandler.cs
+|   |   |   |       GetEducationByIdQueryHandler.cs
+|   |   |   |       GetEducationQueryHandler.cs
+|   |   |   |       RemoveEducationCommandHandler.cs
+|   |   |   |       UpdateEducationCommandHandler.cs
+|   |   |   |       
+|   |   |   +---IntroductionHandlers
+|   |   |   |       CreateIntroductionCommandHandler.cs
+|   |   |   |       GetIntroductionByIdQueryHandler.cs
+|   |   |   |       GetIntroductionQueryHandler.cs
+|   |   |   |       RemoveIntroductionCommandHandler.cs
+|   |   |   |       UpdateIntroductionCommandHandler.cs
+|   |   |   |       
+|   |   |   +---PatientHandlers
+|   |   |   |       CreatePatientCommandHandler.cs
+|   |   |   |       GetPatientByIdQueryHandler.cs
+|   |   |   |       GetPatientQueryHandler.cs
+|   |   |   |       RemovePatientCommandHandler.cs
+|   |   |   |       UpdatePatientCommandHandler.cs
+|   |   |   |       
+|   |   |   +---SurgeryDoctorHandlers
+|   |   |   |       CreateSurgeryDoctorCommandHandler.cs
+|   |   |   |       GetSurgeryDoctorByIdQueryHandler.cs
+|   |   |   |       GetSurgeryDoctorQueryHandler.cs
+|   |   |   |       RemoveSurgeryDoctorCommandHandler.cs
+|   |   |   |       UpdateSurgeryDoctorCommandHandler.cs
+|   |   |   |       
+|   |   |   +---SurgeryHandlers
+|   |   |   |       CreateSurgeryCommandHandler.cs
+|   |   |   |       GetSurgeryByIdQueryHandler.cs
+|   |   |   |       GetSurgeryQueryHandler.cs
+|   |   |   |       RemoveSurgeryCommandHandler.cs
+|   |   |   |       UpdateSurgeryCommandHandler.cs
+|   |   |   |       
+|   |   |   \---WorkingHourHandlers
+|   |   |           CreateWorkingHourCommandHandler.cs
+|   |   |           GetWorkingHourByIdQueryHandler.cs
+|   |   |           GetWorkingHourQueryHandler.cs
+|   |   |           RemoveWorkingHourCommandHandler.cs
+|   |   |           UpdateWorkingHourCommandHandler.cs
+|   |   |           
+|   |   +---Queries
+|   |   |   +---AdminQueries
+|   |   |   |       GetAdminByIdQuery.cs
+|   |   |   |       GetAdminQuery.cs
+|   |   |   |       
+|   |   |   +---AppointmentManagerQueries
+|   |   |   |       GetAppointmentManagerByIdQuery.cs
+|   |   |   |       GetAppointmentManagerQuery.cs
+|   |   |   |       
+|   |   |   +---AppointmentQueries
+|   |   |   |       GetAppointmentByIdQuery.cs
+|   |   |   |       GetAppointmentQuery.cs
+|   |   |   |       
+|   |   |   +---AppUserQueries
+|   |   |   |       GetAppUserByIdQuery.cs
+|   |   |   |       GetAppUserQuery.cs
+|   |   |   |       
+|   |   |   +---BlogCommentQueries
+|   |   |   |       GetBlogCommentByIdQuery.cs
+|   |   |   |       GetBlogCommentByIncludeQuery.cs
+|   |   |   |       GetBlogCommentQuery.cs
+|   |   |   |       
+|   |   |   +---BlogImageQueries
+|   |   |   |       GetBlogImageByIdQueries.cs
+|   |   |   |       GetBlogImageByIncludeQuery.cs
+|   |   |   |       GetBlogImageQueries.cs
+|   |   |   |       
+|   |   |   +---BlogQueries
+|   |   |   |       GetBlogByIdQuery.cs
+|   |   |   |       GetBlogQuery.cs
+|   |   |   |       GetBlogWithIncludeQuery.cs
+|   |   |   |       
+|   |   |   +---ContactQueries
+|   |   |   |       GetContactByIdQuery.cs
+|   |   |   |       GetContactQuery.cs
+|   |   |   |       
+|   |   |   +---DepartmentBlogQueries
+|   |   |   |       GetDepartmentBlogByIdQuery.cs
+|   |   |   |       GetDepartmentBlogQuery.cs
+|   |   |   |       
+|   |   |   +---DepartmentDetailQueries
+|   |   |   |       GetDepartmentDetailByIdQuery.cs
+|   |   |   |       GetDepartmentDetailQuery.cs
+|   |   |   |       
+|   |   |   +---DepartmentQueries
+|   |   |   |       GetDepartmentByIdQuery.cs
+|   |   |   |       GetDepartmentQuery.cs
+|   |   |   |       GetDepartmentWithDetailsByIdQuery.cs
+|   |   |   |       
+|   |   |   +---DoctorPatientQueries
+|   |   |   |       GetDoctorPatientByIdQuery.cs
+|   |   |   |       GetDoctorPatientQuery.cs
+|   |   |   |       
+|   |   |   +---DoctorQueries
+|   |   |   |       GetDoctorByIdQuery.cs
+|   |   |   |       GetDoctorQuery.cs
+|   |   |   |       GetDoctorsWithDepartmentQuery.cs
+|   |   |   |       
+|   |   |   +---EducationQueries
+|   |   |   |       GetEducationByIdQuery.cs
+|   |   |   |       GetEducationQuery.cs
+|   |   |   |       
+|   |   |   +---IntroductionQueries
+|   |   |   |       GetIntroductionByIdQuery.cs
+|   |   |   |       GetIntroductionQuery.cs
+|   |   |   |       
+|   |   |   +---PatientQueries
+|   |   |   |       GetPatientByIdQuery.cs
+|   |   |   |       GetPatientQuery.cs
+|   |   |   |       
+|   |   |   +---SurgeryDoctorQueries
+|   |   |   |       GetSurgeryDoctorByIdQuery.cs
+|   |   |   |       GetSurgeryDoctorQuery.cs
+|   |   |   |       
+|   |   |   +---SurgeryQueries
+|   |   |   |       GetSurgeryByIdQuery.cs
+|   |   |   |       GetSurgeryQuery.cs
+|   |   |   |       
+|   |   |   \---WorkingHourQueries
+|   |   |           GetWorkingHourByIdQuery.cs
+|   |   |           GetWorkingHourQuery.cs
+|   |   |           
+|   |   \---Results
+|   |       |   BaseResult.cs
+|   |       |   
+|   |       +---AdminResults
+|   |       |       GetAdminByIdQueryResult.cs
+|   |       |       GetAdminQueryResult.cs
+|   |       |       
+|   |       +---AppointmentManagerResults
+|   |       |       GetAppointmentManagerByIdQueryResult.cs
+|   |       |       GetAppointmentManagerQueryResult.cs
+|   |       |       
+|   |       +---AppointmentResults
+|   |       |       GetAppointmentByIdQueryResult.cs
+|   |       |       GetAppointmentQueryResult.cs
+|   |       |       
+|   |       +---AppUserResults
+|   |       |       GetAppUserByIdQueryResult.cs
+|   |       |       GetAppUserQueryResult.cs
+|   |       |       
+|   |       +---BlogCommentResults
+|   |       |       GetBlogCommentByIdQueryResult.cs
+|   |       |       GetBlogCommentByIncludeQueryResult.cs
+|   |       |       GetBlogCommentQueryResult.cs
+|   |       |       
+|   |       +---BlogImageResults
+|   |       |       GetBlogImageByIdQueryResult.cs
+|   |       |       GetBlogImageByIncludeQueryResult.cs
+|   |       |       GetBlogImageQueryResult.cs
+|   |       |       
+|   |       +---BlogResults
+|   |       |       GetBlogByIdQueryResult.cs
+|   |       |       GetBlogQueryResult.cs
+|   |       |       GetBlogWithIncludeQueryResult.cs
+|   |       |       
+|   |       +---ContactResults
+|   |       |       GetContactByIdQueryResult.cs
+|   |       |       GetContactQueryResult.cs
+|   |       |       
+|   |       +---DepartmentBlogResults
+|   |       |       GetDepartmentBlogByIdQueryResult.cs
+|   |       |       GetDepartmentBlogQueryResult.cs
+|   |       |       
+|   |       +---DepartmentDetailResults
+|   |       |       GetDepartmentDetailByIdQueryResult.cs
+|   |       |       GetDepartmentDetailQueryResult.cs
+|   |       |       
+|   |       +---DepartmentResults
+|   |       |       GetDepartmentByIdQueryResult.cs
+|   |       |       GetDepartmentQueryResult.cs
+|   |       |       GetDepartmentWithDetailsByIdQueryResult.cs
+|   |       |       
+|   |       +---DoctorPatientResults
+|   |       |       GetDoctorPatientByIdQueryResult.cs
+|   |       |       GetDoctorPatientQueryResult.cs
+|   |       |       
+|   |       +---DoctorResults
+|   |       |       GetDoctorByIdQueryResult.cs
+|   |       |       GetDoctorQueryResult.cs
+|   |       |       GetDoctorsWithDepartmentQueryResult.cs
+|   |       |       
+|   |       +---EducationResults
+|   |       |       GetEducationByIdQueryResult.cs
+|   |       |       GetEducationQueryResult.cs
+|   |       |       
+|   |       +---IntroductionResults
+|   |       |       GetIntroductionByIdQueryResult.cs
+|   |       |       GetIntroductionQueryResult.cs
+|   |       |       
+|   |       +---PatientResults
+|   |       |       GetPatientByIdQueryResult.cs
+|   |       |       GetPatientQueryResult.cs
+|   |       |       
+|   |       +---SurgeryDoctorResults
+|   |       |       GetSurgeryDoctorByIdQueryResult.cs
+|   |       |       GetSurgeryDoctorQueryResult.cs
+|   |       |       
+|   |       +---SurgeryResults
+|   |       |       GetSurgeryByIdQueryResult.cs
+|   |       |       GetSurgeryQueryResult.cs
+|   |       |       
+|   |       \---WorkingHourResults
+|   |               GetWorkingHourByIdQueryResult.cs
+|   |               GetWorkingHourQueryResult.cs
+|   |               
+|   +---Interfaces
+|   |   |   IRepository.cs
+|   |   |   
+|   |   +---BlogInterfaces
+|   |   |       IBlogRepository.cs
+|   |   |       
+|   |   +---DepartmentInterfaces
+|   |   |       IDepartmentRepository.cs
+|   |   |       
+|   |   \---DoctorInterfaces
+|   |           IDoctorRepository.cs
+|   |           
+|   +---obj
+|   |   |   HospitalCmsSystem.Application.csproj.nuget.dgspec.json
+|   |   |   HospitalCmsSystem.Application.csproj.nuget.g.props
+|   |   |   HospitalCmsSystem.Application.csproj.nuget.g.targets
+|   |   |   project.assets.json
+|   |   |   project.nuget.cache
+|   |   |   
+|   |   +---Debug
+|   |   |   \---net8.0
+|   |   |       |   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+|   |   |       |   Hospital.9B036C4E.Up2Date
+|   |   |       |   HospitalCmsSystem.Application.AssemblyInfo.cs
+|   |   |       |   HospitalCmsSystem.Application.AssemblyInfoInputs.cache
+|   |   |       |   HospitalCmsSystem.Application.assets.cache
+|   |   |       |   HospitalCmsSystem.Application.csproj.AssemblyReference.cache
+|   |   |       |   HospitalCmsSystem.Application.csproj.BuildWithSkipAnalyzers
+|   |   |       |   HospitalCmsSystem.Application.csproj.CoreCompileInputs.cache
+|   |   |       |   HospitalCmsSystem.Application.csproj.FileListAbsolute.txt
+|   |   |       |   HospitalCmsSystem.Application.dll
+|   |   |       |   HospitalCmsSystem.Application.GeneratedMSBuildEditorConfig.editorconfig
+|   |   |       |   HospitalCmsSystem.Application.GlobalUsings.g.cs
+|   |   |       |   HospitalCmsSystem.Application.pdb
+|   |   |       |   HospitalCmsSystem.Application.sourcelink.json
+|   |   |       |   
+|   |   |       +---ref
+|   |   |       |       HospitalCmsSystem.Application.dll
+|   |   |       |       
+|   |   |       \---refint
+|   |   |               HospitalCmsSystem.Application.dll
+|   |   |               
+|   |   \---Release
+|   |       \---net8.0
+|   |           |   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+|   |           |   HospitalCmsSystem.Application.AssemblyInfo.cs
+|   |           |   HospitalCmsSystem.Application.AssemblyInfoInputs.cache
+|   |           |   HospitalCmsSystem.Application.assets.cache
+|   |           |   HospitalCmsSystem.Application.csproj.AssemblyReference.cache
+|   |           |   HospitalCmsSystem.Application.GeneratedMSBuildEditorConfig.editorconfig
+|   |           |   HospitalCmsSystem.Application.GlobalUsings.g.cs
+|   |           |   
+|   |           +---ref
+|   |           \---refint
+|   +---Services
+|   |       ServiceRegistiration.cs
+|   |       
+|   \---Validators
+|       +---AdminValidators
+|       |       CreateAdminValidator.cs
+|       |       UpdateAdminValidator.cs
+|       |       
+|       \---CarValidators
++---Hospital.Domain
+|   |   HospitalCmsSystem.Domain.csproj
+|   |   
+|   +---bin
+|   |   +---Debug
+|   |   |   \---net8.0
+|   |   |           HospitalCmsSystem.Domain.deps.json
+|   |   |           HospitalCmsSystem.Domain.dll
+|   |   |           HospitalCmsSystem.Domain.pdb
+|   |   |           
+|   |   \---Release
+|   |       \---net8.0
+|   +---Entities
+|   |   |   Admin.cs
+|   |   |   Appointment.cs
+|   |   |   AppointmentManager.cs
+|   |   |   AppRole.cs
+|   |   |   AppUser.cs
+|   |   |   AppUserRole.cs
+|   |   |   Blog.cs
+|   |   |   BlogComment.cs
+|   |   |   BlogImage.cs
+|   |   |   Contact.cs
+|   |   |   Department.cs
+|   |   |   DepartmentBlog.cs
+|   |   |   DepartmentDetail.cs
+|   |   |   Doctor.cs
+|   |   |   DoctorPatient.cs
+|   |   |   Education.cs
+|   |   |   Introduction.cs
+|   |   |   Patient.cs
+|   |   |   Surgery.cs
+|   |   |   SurgeryDoctor.cs
+|   |   |   WorkingHour.cs
+|   |   |   
+|   |   \---BaseEntities
+|   |           BaseEntity.cs
+|   |           
+|   \---obj
+|       |   HospitalCmsSystem.Domain.csproj.nuget.dgspec.json
+|       |   HospitalCmsSystem.Domain.csproj.nuget.g.props
+|       |   HospitalCmsSystem.Domain.csproj.nuget.g.targets
+|       |   project.assets.json
+|       |   project.nuget.cache
+|       |   
+|       +---Debug
+|       |   \---net8.0
+|       |       |   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+|       |       |   HospitalCmsSystem.Domain.AssemblyInfo.cs
+|       |       |   HospitalCmsSystem.Domain.AssemblyInfoInputs.cache
+|       |       |   HospitalCmsSystem.Domain.assets.cache
+|       |       |   HospitalCmsSystem.Domain.csproj.AssemblyReference.cache
+|       |       |   HospitalCmsSystem.Domain.csproj.BuildWithSkipAnalyzers
+|       |       |   HospitalCmsSystem.Domain.csproj.CoreCompileInputs.cache
+|       |       |   HospitalCmsSystem.Domain.csproj.FileListAbsolute.txt
+|       |       |   HospitalCmsSystem.Domain.dll
+|       |       |   HospitalCmsSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+|       |       |   HospitalCmsSystem.Domain.GlobalUsings.g.cs
+|       |       |   HospitalCmsSystem.Domain.pdb
+|       |       |   HospitalCmsSystem.Domain.sourcelink.json
+|       |       |   
+|       |       +---ref
+|       |       |       HospitalCmsSystem.Domain.dll
+|       |       |       
+|       |       \---refint
+|       |               HospitalCmsSystem.Domain.dll
+|       |               
+|       \---Release
+|           \---net8.0
+|               |   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+|               |   HospitalCmsSystem.Domain.AssemblyInfo.cs
+|               |   HospitalCmsSystem.Domain.AssemblyInfoInputs.cache
+|               |   HospitalCmsSystem.Domain.assets.cache
+|               |   HospitalCmsSystem.Domain.GeneratedMSBuildEditorConfig.editorconfig
+|               |   HospitalCmsSystem.Domain.GlobalUsings.g.cs
+|               |   
+|               +---ref
+|               \---refint
++---Hospital.Persistence
+|   |   HospitalCmsSystem.Persistence.csproj
+|   |   
+|   +---bin
+|   |   +---Debug
+|   |   |   \---net8.0
+|   |   |           HospitalCmsSystem.Application.dll
+|   |   |           HospitalCmsSystem.Application.pdb
+|   |   |           HospitalCmsSystem.Domain.dll
+|   |   |           HospitalCmsSystem.Domain.pdb
+|   |   |           HospitalCmsSystem.Persistence.deps.json
+|   |   |           HospitalCmsSystem.Persistence.dll
+|   |   |           HospitalCmsSystem.Persistence.pdb
+|   |   |           HospitalCmsSystem.Persistence.runtimeconfig.json
+|   |   |           
+|   |   \---Release
+|   |       \---net8.0
+|   +---Context
+|   |       AppDbContext.cs
+|   |       
+|   +---Migrations
+|   |       20240314183327_1001_first.cs
+|   |       20240314183327_1001_first.Designer.cs
+|   |       20240314200435_1002.cs
+|   |       20240314200435_1002.Designer.cs
+|   |       20240316183135_1003.cs
+|   |       20240316183135_1003.Designer.cs
+|   |       20240317135728_viewcheck.cs
+|   |       20240317135728_viewcheck.Designer.cs
+|   |       20240317231952_1004.cs
+|   |       20240317231952_1004.Designer.cs
+|   |       20240318215824_datetime.cs
+|   |       20240318215824_datetime.Designer.cs
+|   |       AppDbContextModelSnapshot.cs
+|   |       
+|   +---obj
+|   |   |   HospitalCmsSystem.Persistence.csproj.nuget.dgspec.json
+|   |   |   HospitalCmsSystem.Persistence.csproj.nuget.g.props
+|   |   |   HospitalCmsSystem.Persistence.csproj.nuget.g.targets
+|   |   |   project.assets.json
+|   |   |   project.nuget.cache
+|   |   |   
+|   |   +---Debug
+|   |   |   \---net8.0
+|   |   |       |   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+|   |   |       |   Hospital.B146E434.Up2Date
+|   |   |       |   HospitalCmsSystem.Persistence.AssemblyInfo.cs
+|   |   |       |   HospitalCmsSystem.Persistence.AssemblyInfoInputs.cache
+|   |   |       |   HospitalCmsSystem.Persistence.assets.cache
+|   |   |       |   HospitalCmsSystem.Persistence.csproj.AssemblyReference.cache
+|   |   |       |   HospitalCmsSystem.Persistence.csproj.BuildWithSkipAnalyzers
+|   |   |       |   HospitalCmsSystem.Persistence.csproj.CoreCompileInputs.cache
+|   |   |       |   HospitalCmsSystem.Persistence.csproj.FileListAbsolute.txt
+|   |   |       |   HospitalCmsSystem.Persistence.dll
+|   |   |       |   HospitalCmsSystem.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+|   |   |       |   HospitalCmsSystem.Persistence.genruntimeconfig.cache
+|   |   |       |   HospitalCmsSystem.Persistence.GlobalUsings.g.cs
+|   |   |       |   HospitalCmsSystem.Persistence.pdb
+|   |   |       |   HospitalCmsSystem.Persistence.sourcelink.json
+|   |   |       |   
+|   |   |       +---ref
+|   |   |       |       HospitalCmsSystem.Persistence.dll
+|   |   |       |       
+|   |   |       \---refint
+|   |   |               HospitalCmsSystem.Persistence.dll
+|   |   |               
+|   |   \---Release
+|   |       \---net8.0
+|   |           |   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+|   |           |   HospitalCmsSystem.Persistence.AssemblyInfo.cs
+|   |           |   HospitalCmsSystem.Persistence.AssemblyInfoInputs.cache
+|   |           |   HospitalCmsSystem.Persistence.assets.cache
+|   |           |   HospitalCmsSystem.Persistence.csproj.AssemblyReference.cache
+|   |           |   HospitalCmsSystem.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+|   |           |   HospitalCmsSystem.Persistence.GlobalUsings.g.cs
+|   |           |   
+|   |           +---ref
+|   |           \---refint
+|   \---Repositories
+|       |   Repository.cs
+|       |   
+|       +---Blog
+|       |       BlogRepository.cs
+|       |       
+|       +---Department
+|       |       DepartmentRepository.cs
+|       |       
+|       \---Doctor
+|               DoctorRepository.cs
+|               
+\---Hospital.WebApi
+    |   appsettings.Development.json
+    |   appsettings.json
+    |   HospitalCmsSystem.WebApi.csproj
+    |   HospitalCmsSystem.WebApi.csproj.user
+    |   HospitalCmsSystem.WebApi.http
+    |   Program.cs
+    |   
+    +---bin
+    |   +---Debug
+    |   |   \---net8.0
+    |   |       |   appsettings.Development.json
+    |   |       |   appsettings.json
+    |   |       |   Azure.Core.dll
+    |   |       |   Azure.Identity.dll
+    |   |       |   FluentValidation.AspNetCore.dll
+    |   |       |   FluentValidation.DependencyInjectionExtensions.dll
+    |   |       |   FluentValidation.dll
+    |   |       |   HospitalCmsSystem.Application.dll
+    |   |       |   HospitalCmsSystem.Application.pdb
+    |   |       |   HospitalCmsSystem.Domain.dll
+    |   |       |   HospitalCmsSystem.Domain.pdb
+    |   |       |   HospitalCmsSystem.Persistence.dll
+    |   |       |   HospitalCmsSystem.Persistence.pdb
+    |   |       |   HospitalCmsSystem.WebApi.deps.json
+    |   |       |   HospitalCmsSystem.WebApi.dll
+    |   |       |   HospitalCmsSystem.WebApi.exe
+    |   |       |   HospitalCmsSystem.WebApi.pdb
+    |   |       |   HospitalCmsSystem.WebApi.runtimeconfig.json
+    |   |       |   Humanizer.dll
+    |   |       |   MediatR.Contracts.dll
+    |   |       |   MediatR.dll
+    |   |       |   MediatR.Extensions.Microsoft.DependencyInjection.dll
+    |   |       |   Microsoft.AspNetCore.Authentication.JwtBearer.dll
+    |   |       |   Microsoft.Bcl.AsyncInterfaces.dll
+    |   |       |   Microsoft.CodeAnalysis.CSharp.dll
+    |   |       |   Microsoft.CodeAnalysis.CSharp.Workspaces.dll
+    |   |       |   Microsoft.CodeAnalysis.dll
+    |   |       |   Microsoft.CodeAnalysis.Workspaces.dll
+    |   |       |   Microsoft.Data.SqlClient.dll
+    |   |       |   Microsoft.EntityFrameworkCore.Abstractions.dll
+    |   |       |   Microsoft.EntityFrameworkCore.Design.dll
+    |   |       |   Microsoft.EntityFrameworkCore.dll
+    |   |       |   Microsoft.EntityFrameworkCore.Relational.dll
+    |   |       |   Microsoft.EntityFrameworkCore.SqlServer.dll
+    |   |       |   Microsoft.Extensions.DependencyModel.dll
+    |   |       |   Microsoft.Identity.Client.dll
+    |   |       |   Microsoft.Identity.Client.Extensions.Msal.dll
+    |   |       |   Microsoft.IdentityModel.Abstractions.dll
+    |   |       |   Microsoft.IdentityModel.JsonWebTokens.dll
+    |   |       |   Microsoft.IdentityModel.Logging.dll
+    |   |       |   Microsoft.IdentityModel.Protocols.dll
+    |   |       |   Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+    |   |       |   Microsoft.IdentityModel.Tokens.dll
+    |   |       |   Microsoft.OpenApi.dll
+    |   |       |   Microsoft.SqlServer.Server.dll
+    |   |       |   Microsoft.Win32.SystemEvents.dll
+    |   |       |   Mono.TextTemplating.dll
+    |   |       |   Serilog.AspNetCore.dll
+    |   |       |   Serilog.dll
+    |   |       |   Serilog.Extensions.Hosting.dll
+    |   |       |   Serilog.Extensions.Logging.dll
+    |   |       |   Serilog.Formatting.Compact.dll
+    |   |       |   Serilog.Settings.Configuration.dll
+    |   |       |   Serilog.Sinks.Console.dll
+    |   |       |   Serilog.Sinks.Debug.dll
+    |   |       |   Serilog.Sinks.File.dll
+    |   |       |   Swashbuckle.AspNetCore.Swagger.dll
+    |   |       |   Swashbuckle.AspNetCore.SwaggerGen.dll
+    |   |       |   Swashbuckle.AspNetCore.SwaggerUI.dll
+    |   |       |   System.CodeDom.dll
+    |   |       |   System.Composition.AttributedModel.dll
+    |   |       |   System.Composition.Convention.dll
+    |   |       |   System.Composition.Hosting.dll
+    |   |       |   System.Composition.Runtime.dll
+    |   |       |   System.Composition.TypedParts.dll
+    |   |       |   System.Configuration.ConfigurationManager.dll
+    |   |       |   System.Drawing.Common.dll
+    |   |       |   System.IdentityModel.Tokens.Jwt.dll
+    |   |       |   System.Memory.Data.dll
+    |   |       |   System.Runtime.Caching.dll
+    |   |       |   System.Security.Cryptography.ProtectedData.dll
+    |   |       |   System.Security.Permissions.dll
+    |   |       |   System.Windows.Extensions.dll
+    |   |       |   
+    |   |       +---cs
+    |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+    |   |       |       
+    |   |       +---de
+    |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+    |   |       |       
+    |   |       +---es
+    |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+    |   |       |       
+    |   |       +---fr
+    |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+    |   |       |       
+    |   |       +---it
+    |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+    |   |       |       
+    |   |       +---ja
+    |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+    |   |       |       
+    |   |       +---ko
+    |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+    |   |       |       
+    |   |       +---pl
+    |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+    |   |       |       
+    |   |       +---pt-BR
+    |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+    |   |       |       
+    |   |       +---ru
+    |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+    |   |       |       
+    |   |       +---runtimes
+    |   |       |   +---unix
+    |   |       |   |   \---lib
+    |   |       |   |       \---net6.0
+    |   |       |   |               Microsoft.Data.SqlClient.dll
+    |   |       |   |               System.Drawing.Common.dll
+    |   |       |   |               
+    |   |       |   +---win
+    |   |       |   |   \---lib
+    |   |       |   |       \---net6.0
+    |   |       |   |               Microsoft.Data.SqlClient.dll
+    |   |       |   |               Microsoft.Win32.SystemEvents.dll
+    |   |       |   |               System.Drawing.Common.dll
+    |   |       |   |               System.Runtime.Caching.dll
+    |   |       |   |               System.Security.Cryptography.ProtectedData.dll
+    |   |       |   |               System.Windows.Extensions.dll
+    |   |       |   |               
+    |   |       |   +---win-arm
+    |   |       |   |   \---native
+    |   |       |   |           Microsoft.Data.SqlClient.SNI.dll
+    |   |       |   |           
+    |   |       |   +---win-arm64
+    |   |       |   |   \---native
+    |   |       |   |           Microsoft.Data.SqlClient.SNI.dll
+    |   |       |   |           
+    |   |       |   +---win-x64
+    |   |       |   |   \---native
+    |   |       |   |           Microsoft.Data.SqlClient.SNI.dll
+    |   |       |   |           
+    |   |       |   \---win-x86
+    |   |       |       \---native
+    |   |       |               Microsoft.Data.SqlClient.SNI.dll
+    |   |       |               
+    |   |       +---tr
+    |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+    |   |       |       
+    |   |       +---zh-Hans
+    |   |       |       Microsoft.CodeAnalysis.CSharp.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.resources.dll
+    |   |       |       Microsoft.CodeAnalysis.Workspaces.resources.dll
+    |   |       |       
+    |   |       \---zh-Hant
+    |   |               Microsoft.CodeAnalysis.CSharp.resources.dll
+    |   |               Microsoft.CodeAnalysis.CSharp.Workspaces.resources.dll
+    |   |               Microsoft.CodeAnalysis.resources.dll
+    |   |               Microsoft.CodeAnalysis.Workspaces.resources.dll
+    |   |               
+    |   \---Release
+    |       \---net8.0
+    +---Controllers
+    |       AdminsController.cs
+    |       AppointmentManagersController.cs
+    |       AppointmentsController.cs
+    |       BlogCommentsController.cs
+    |       BlogImagesController.cs
+    |       BlogsController.cs
+    |       ContactsController.cs
+    |       DepartmentBlogsController.cs
+    |       DepartmentDetailsController.cs
+    |       DepartmentsController.cs
+    |       DoctorPatientsController.cs
+    |       DoctorsController.cs
+    |       EducationsController.cs
+    |       IntroductionsController.cs
+    |       PatientsController.cs
+    |       SurgeriesController.cs
+    |       SurgeryDoctorsController.cs
+    |       WorkingHoursController.cs
+    |       
+    +---Logs
+    |       myapp20240317.txt
+    |       myapp20240317_001.txt
+    |       myapp20240318.txt
+    |       myapp20240318_001.txt
+    |       myapp20240318_002.txt
+    |       myapp20240318_003.txt
+    |       myapp20240318_004.txt
+    |       myapp20240318_005.txt
+    |       myapp20240318_006.txt
+    |       myapp20240318_007.txt
+    |       myapp20240318_008.txt
+    |       myapp20240318_009.txt
+    |       myapp20240318_010.txt
+    |       myapp20240318_011.txt
+    |       myapp20240318_012.txt
+    |       myapp20240318_013.txt
+    |       myapp20240318_014.txt
+    |       myapp20240318_015.txt
+    |       myapp20240318_016.txt
+    |       myapp20240318_017.txt
+    |       myapp20240318_018.txt
+    |       myapp20240318_019.txt
+    |       myapp20240318_020.txt
+    |       myapp20240318_021.txt
+    |       myapp20240318_022.txt
+    |       myapp20240319.txt
+    |       myapp20240319_001.txt
+    |       myapp20240319_002.txt
+    |       
+    +---obj
+    |   |   HospitalCmsSystem.WebApi.csproj.nuget.dgspec.json
+    |   |   HospitalCmsSystem.WebApi.csproj.nuget.g.props
+    |   |   HospitalCmsSystem.WebApi.csproj.nuget.g.targets
+    |   |   project.assets.json
+    |   |   project.nuget.cache
+    |   |   
+    |   +---Debug
+    |   |   \---net8.0
+    |   |       |   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+    |   |       |   ApiEndpoints.json
+    |   |       |   apphost.exe
+    |   |       |   Hospital.DC35CF0B.Up2Date
+    |   |       |   HospitalCmsSystem.WebApi.AssemblyInfo.cs
+    |   |       |   HospitalCmsSystem.WebApi.AssemblyInfoInputs.cache
+    |   |       |   HospitalCmsSystem.WebApi.assets.cache
+    |   |       |   HospitalCmsSystem.WebApi.csproj.AssemblyReference.cache
+    |   |       |   HospitalCmsSystem.WebApi.csproj.BuildWithSkipAnalyzers
+    |   |       |   HospitalCmsSystem.WebApi.csproj.CoreCompileInputs.cache
+    |   |       |   HospitalCmsSystem.WebApi.csproj.FileListAbsolute.txt
+    |   |       |   HospitalCmsSystem.WebApi.dll
+    |   |       |   HospitalCmsSystem.WebApi.GeneratedMSBuildEditorConfig.editorconfig
+    |   |       |   HospitalCmsSystem.WebApi.genruntimeconfig.cache
+    |   |       |   HospitalCmsSystem.WebApi.GlobalUsings.g.cs
+    |   |       |   HospitalCmsSystem.WebApi.MvcApplicationPartsAssemblyInfo.cache
+    |   |       |   HospitalCmsSystem.WebApi.MvcApplicationPartsAssemblyInfo.cs
+    |   |       |   HospitalCmsSystem.WebApi.pdb
+    |   |       |   HospitalCmsSystem.WebApi.sourcelink.json
+    |   |       |   project.razor.vs.bin
+    |   |       |   staticwebassets.build.json
+    |   |       |   
+    |   |       +---ref
+    |   |       |       HospitalCmsSystem.WebApi.dll
+    |   |       |       
+    |   |       +---refint
+    |   |       |       HospitalCmsSystem.WebApi.dll
+    |   |       |       
+    |   |       \---staticwebassets
+    |   |               msbuild.build.HospitalCmsSystem.WebApi.props
+    |   |               msbuild.buildMultiTargeting.HospitalCmsSystem.WebApi.props
+    |   |               msbuild.buildTransitive.HospitalCmsSystem.WebApi.props
+    |   |               
+    |   \---Release
+    |       \---net8.0
+    |           |   .NETCoreApp,Version=v8.0.AssemblyAttributes.cs
+    |           |   HospitalCmsSystem.WebApi.AssemblyInfo.cs
+    |           |   HospitalCmsSystem.WebApi.AssemblyInfoInputs.cache
+    |           |   HospitalCmsSystem.WebApi.assets.cache
+    |           |   HospitalCmsSystem.WebApi.csproj.AssemblyReference.cache
+    |           |   HospitalCmsSystem.WebApi.GeneratedMSBuildEditorConfig.editorconfig
+    |           |   HospitalCmsSystem.WebApi.GlobalUsings.g.cs
+    |           |   
+    |           +---ref
+    |           \---refint
+    \---Properties
+            launchSettings.json
+            
