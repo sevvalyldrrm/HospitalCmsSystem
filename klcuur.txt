@@ -3,3 +3,7 @@ approle-appuser-appuserrole atlandi daha sonra bak!
 blog create ve update ine tags listesi ekle
 resim yukleme yapilacak!
 jwt ve mail gonderme yapilacak!
+
+appointment tasarlanacak
+fileupload kismi yapilacak
+https://localhost:7038/Auth/ResetPassword web ui yazdiktan sonra denenecek

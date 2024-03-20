@@ -23,24 +23,27 @@ using Microsoft.EntityFrameworkCore;
 using HospitalCmsSystem.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
 using HospitalCmsSystem.Insfrastructre;
+using HospitalCmsSystem.Infrastructure;
+using Microsoft.OpenApi.Models;
+using Microsoft.AspNetCore.Hosting;
+using Microsoft.AspNetCore.Identity.UI.Services;
+using Microsoft.AspNetCore.Mvc.Infrastructure;
 
 var builder = WebApplication.CreateBuilder(args);
 
 // MediatR servislerini ve Behaviour'ları ekleyin
-//builder.Services.AddMediatR(Assembly.GetExecutingAssembly());
+
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>));
+builder.Services.AddScoped<ITokenService, TokenService>();
+builder.Services.AddSingleton<IEmailService, EmailService>();
 
 // FluentValidation validatörlerini kaydedin
 
 builder.Services.AddValidatorsFromAssembly(typeof(CreateAdminValidator).Assembly);//createadminin dizinindekileri otomatik esler
 builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());//Bu satır mevcut assembly'deki (genellikle Web API projenizdeki) tüm validatörleri tarar ve kaydeder.
 
-//builder.Services.AddValidatorsFromAssemblyContaining<CreateAdminValidator>();
-//builder.Services.AddValidatorsFromAssemblyContaining<UpdateAdminValidator>();
-//builder.Services.AddScoped<ICreateAdminValidator, CreateAdminValidator>();
-//builder.Services.AddScoped<IUpdateAdminValidator, UpdateAdminValidator>();
 
 builder.Services.AddControllers().AddFluentValidation(fv => {
     fv.AutomaticValidationEnabled = true; // Eğer otomatik doğrulama istiyorsanız
@@ -52,6 +55,7 @@ builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IDoctorRepository, DoctorRepository>();
 builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
 builder.Services.AddScoped<IBlogRepository, BlogRepository>();
+builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
 //builder.Services.AddScoped<AppDbContext>();
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
@@ -63,7 +67,7 @@ builder.Services.AddLogging();
 
 // Swagger'ı ekleyin
 builder.Services.AddEndpointsApiExplorer();
-builder.Services.AddSwaggerGen();
+
 
 // Serilog yapılandırması
 Log.Logger = new LoggerConfiguration()
@@ -75,8 +79,75 @@ Log.Logger = new LoggerConfiguration()
 
 builder.Logging.ClearProviders();
 builder.Logging.AddSerilog();
+builder.Services.Configure<IdentityOptions>(options =>
+{
+    options.Password.RequiredLength = 6;
+    options.Password.RequireNonAlphanumeric = false;
+    options.Password.RequireLowercase = false;
+    options.Password.RequireUppercase = false;
+    options.Password.RequireDigit = false;
+    options.User.RequireUniqueEmail = true;
+    options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
+    options.Lockout.MaxFailedAccessAttempts = 5;
 
+    options.SignIn.RequireConfirmedEmail = true;
 
+});
+builder.Services.AddAuthentication(options =>
+{
+    options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+    options.DefaultScheme = JwtBearerDefaults.AuthenticationScheme;
+}).AddJwtBearer(o =>
+{
+    o.TokenValidationParameters = new TokenValidationParameters
+    {
+        ValidIssuer = builder.Configuration["Jwt:Issuer"],
+        ValidAudience = builder.Configuration["Jwt:Audience"],
+        IssuerSigningKey = new SymmetricSecurityKey
+        (Encoding.UTF8.GetBytes(builder.Configuration["Jwt:Key"])),
+        ValidateIssuer = true,
+        ValidateAudience = true,
+        ValidateLifetime = false,
+        ValidateIssuerSigningKey = true
+    };
+});
+
+builder.Services.AddAuthorization();
+
+//swagger üzerine auth butonu eklendi
+builder.Services.AddSwaggerGen(c =>
+{
+    c.SwaggerDoc("v1", new OpenApiInfo { Title = "My API", Version = "v1" });
+
+    // JWT Token için Bearer şeması tanımlama
+    c.AddSecurityDefinition("Bearer", new OpenApiSecurityScheme
+    {
+        Description = "JWT Authorization header using the Bearer scheme. Example: \"Authorization: Bearer {token}\"",
+        Name = "Authorization",
+        In = ParameterLocation.Header,
+        Type = SecuritySchemeType.ApiKey,
+        Scheme = "Bearer"
+    });
+
+    c.AddSecurityRequirement(new OpenApiSecurityRequirement()
+    {
+        {
+            new OpenApiSecurityScheme
+            {
+                Reference = new OpenApiReference
+                {
+                    Type = ReferenceType.SecurityScheme,
+                    Id = "Bearer"
+                },
+                Scheme = "oauth2",
+                Name = "Bearer",
+                In = ParameterLocation.Header,
+            },
+            new List<string>()
+        }
+    });
+});
 var app = builder.Build();
 
 // Geliştirme ortamı için Swagger UI'ı etkinleştirin
@@ -88,6 +159,7 @@ if (app.Environment.IsDevelopment())
 
 app.UseHttpsRedirection();
 
+app.UseAuthentication();
 app.UseAuthorization();
 
 app.MapControllers();

@@ -27,6 +27,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Frontends\HospitalCmsSystem.Dto\HospitalCmsSystem.Dto.csproj" />
     <ProjectReference Include="..\Hospital.Persistence\HospitalCmsSystem.Persistence.csproj" />
     <ProjectReference Include="..\HospitalCmsSystem.Insfrastructre\HospitalCmsSystem.Insfrastructre.csproj" />
   </ItemGroup>
