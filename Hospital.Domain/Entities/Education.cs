@@ -8,14 +8,13 @@ using System.Threading.Tasks;
 
 namespace HospitalCmsSystem.Domain.Entities
 {
-    public class Education : BaseEntitiy
+    public class Education : BaseEntity
 	{
         //Doctor's Education
         public string Year { get; set; }
 
         public string University { get; set; }
-
-        public string Explanation { get; set; }
+        public string ?Explanation { get; set; }
 
         [ForeignKey(nameof(Doctor.Id))]
         public int DoctorId { get; set; }

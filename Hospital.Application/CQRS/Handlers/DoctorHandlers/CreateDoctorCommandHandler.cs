@@ -24,9 +24,8 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.DoctorHandlers
 			await _repository.CreateAsync( new Doctor()
 			{
 				Name = request.Name,
-				Speacialty=request.Speacialty,
+				Specialty=request.Specialty,
                 DepartmentId=request.DepartmentId,
-                RoleId=request.RoleId,
                 IntroductionId=request.IntroductionId,
                 DocFacebook=request.DocFacebook,
                 DocX=request.DocX,

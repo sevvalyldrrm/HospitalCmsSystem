@@ -11,19 +11,19 @@ using System.Threading.Tasks;
 
 namespace HospitalCmsSystem.Domain.Entities
 {
-	public class Appointment : BaseEntitiy
+	public class Appointment : BaseEntity
 	{
-		[ForeignKey("DepartmentId")]
-		public int DepartmentId { get; set; }
+        [ForeignKey(nameof(Department.Id))]
+        public int DepartmentId { get; set; }
 
 		public Department Department { get; set; }
 
-		[ForeignKey("DoctorId")]
-		public int DoctorId { get; set; }
+        [ForeignKey(nameof(Doctor.Id))]
+        public int DoctorId { get; set; }
 
 		public Doctor Doctor { get; set; }
 
-        [ForeignKey("PatientId")]
+        [ForeignKey(nameof(Patient.Id))]
         public int PatientId { get; set; }
 
         public Patient Patient { get; set; }

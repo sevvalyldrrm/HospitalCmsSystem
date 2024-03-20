@@ -9,9 +9,8 @@ namespace HospitalCmsSystem.Dto.Doctor
     public class ResultDoctorsWithDepartmentDto
     {
             public string name { get; set; }
-            public string speacialty { get; set; }
+            public string Specialty { get; set; }
             public int departmentId { get; set; }
-            public int roleId { get; set; }
             public int introductionId { get; set; }
             public string docFacebook { get; set; }
             public string docX { get; set; }

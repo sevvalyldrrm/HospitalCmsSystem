@@ -10,7 +10,7 @@ using HospitalCmsSystem.Domain.Entities.BaseEntities;
 
 namespace HospitalCmsSystem.Domain.Entities
 {
-	public class BlogComment : BaseEntitiy
+	public class BlogComment : BaseEntity
 	{
 		[Required(ErrorMessage = "{0} boş geçilemez")]
 		[ForeignKey("Blog")]
@@ -24,15 +24,9 @@ namespace HospitalCmsSystem.Domain.Entities
 
 		public bool IsActive { get; set; }
 
-		//[ForeignKey(nameof(Patient.Id))]
-		//public int PatientId { get; set; }
-
-		//public Patient Patient { get; set; }
-
-		public AppUser AppUser { get; set; }
-
 		[ForeignKey(nameof (AppUser.Id))]
 		public int AppUserId {  get; set; }
+        public AppUser AppUser { get; set; }
 
-	}
+    }
 }

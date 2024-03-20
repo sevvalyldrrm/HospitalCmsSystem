@@ -27,9 +27,8 @@ namespace HospitalCmsSystem.Application.CQRS.Handlers.DoctorHandlers
 			{
 				Id = values.Id,
 				Name = values.Name,
-                Speacialty = values.Speacialty,
+                Specialty = values.Specialty,
                 DepartmentId = values.DepartmentId,
-                RoleId = values.RoleId,
                 IntroductionId = values.IntroductionId,
                 DocFacebook = values.DocFacebook,
                 DocX = values.DocX,

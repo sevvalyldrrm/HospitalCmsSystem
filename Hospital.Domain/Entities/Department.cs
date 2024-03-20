@@ -10,7 +10,7 @@ using HospitalCmsSystem.Domain.Entities.BaseEntities;
 
 namespace HospitalCmsSystem.Domain.Entities
 {
-	public class Department : BaseEntitiy
+	public class Department : BaseEntity
 	{
 
 		[DisplayName("İsim")]
@@ -27,9 +27,9 @@ namespace HospitalCmsSystem.Domain.Entities
         public DepartmentDetail DepartmentDetails { get; set; }
         public string? ImagePath { get; set; }
 
-        public ICollection<DepartmentBlog> DepartmentBlogs { get; set; }
+        public ICollection<DepartmentBlog> DepartmentBlogs { get; set; }= new List<DepartmentBlog>();
 
-        public ICollection<Doctor> Doctors { get; set; }
+        public ICollection<Doctor> Doctors { get; set; }=new List<Doctor>();
 
       
     }

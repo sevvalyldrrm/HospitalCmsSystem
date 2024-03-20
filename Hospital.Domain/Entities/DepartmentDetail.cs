@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 
 namespace HospitalCmsSystem.Domain.Entities
 {
-    public class DepartmentDetail : BaseEntitiy
+    public class DepartmentDetail : BaseEntity
 	{
 
         //Department Single

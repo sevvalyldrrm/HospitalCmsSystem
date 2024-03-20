@@ -10,7 +10,7 @@ using System.Threading.Tasks;
 
 namespace HospitalCmsSystem.Domain.Entities
 {
-    public class AppointmentManager : BaseEntitiy
+    public class AppointmentManager : BaseEntity
 	{
         
         [ForeignKey(nameof(Doctor.Id))]
@@ -24,7 +24,7 @@ namespace HospitalCmsSystem.Domain.Entities
         public DateTime EndingTime { get; set; }
         public AppointmentStatus Status { get; set; }
 
-        public ICollection<WorkingHour> WorkingHours { get; set; }
+        public ICollection<WorkingHour> WorkingHours { get; set; }=new List<WorkingHour>();
     }
     public enum AppointmentStatus
     {

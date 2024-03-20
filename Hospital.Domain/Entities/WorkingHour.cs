@@ -9,13 +9,14 @@ using HospitalCmsSystem.Domain.Entities.BaseEntities;
 
 namespace HospitalCmsSystem.Domain.Entities
 {
-    public class WorkingHour : BaseEntitiy
+    public class WorkingHour : BaseEntity
 	{
         //Doktorun çalışma saatlerini belirleyen tablo
        
 
         [Required]
-        [ForeignKey("Doctor")]
+     
+        [ForeignKey(nameof(Doctor.Id))]
         public int DoctorId { get; set; }
 
         public Doctor Doctor { get; set; }
