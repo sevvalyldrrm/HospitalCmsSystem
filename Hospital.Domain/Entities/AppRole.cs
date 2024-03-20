@@ -11,6 +11,6 @@ namespace HospitalCmsSystem.Domain.Entities
 {
     public class AppRole : IdentityRole<int>
     {
-		
-	}
+        
+    }
 }
