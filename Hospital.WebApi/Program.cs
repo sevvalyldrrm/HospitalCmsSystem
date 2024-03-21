@@ -22,52 +22,59 @@ using HospitalCmsSystem.Application.Validators.AdminValidators;
 using Microsoft.EntityFrameworkCore;
 using HospitalCmsSystem.Domain.Entities;
 using Microsoft.AspNetCore.Identity;
-using HospitalCmsSystem.Insfrastructre;
 using HospitalCmsSystem.Infrastructure;
 using Microsoft.OpenApi.Models;
-using Microsoft.AspNetCore.Hosting;
-using Microsoft.AspNetCore.Identity.UI.Services;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
+using Microsoft.Extensions.FileProviders;
 
 var builder = WebApplication.CreateBuilder(args);
 
-// MediatR servislerini ve Behaviour'ları ekleyin
+// Cors politikasını ekleyin
+builder.Services.AddCors(options =>
+{
+    options.AddPolicy("AllowSpecificOrigin",
+        builder => builder.WithOrigins("https://localhost:7153")
+                          .AllowAnyHeader()
+                          .AllowAnyMethod());
+});
 
+// MediatR services and behaviors
 builder.Services.AddMediatR(cfg => cfg.RegisterServicesFromAssemblies(Assembly.GetExecutingAssembly()));
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(ValidationBehaviour<,>));
 builder.Services.AddTransient(typeof(IPipelineBehavior<,>), typeof(LoggingBehaviour<,>));
+
+builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddSingleton<IEmailService, EmailService>();
 
 // FluentValidation validatörlerini kaydedin
 
-builder.Services.AddValidatorsFromAssembly(typeof(CreateAdminValidator).Assembly);//createadminin dizinindekileri otomatik esler
+builder.Services.AddValidatorsFromAssembly(typeof(CreateAdminValidator).Assembly);//Bu satir CreateAdminValidator un dizinindeki tüm validatörleri tarar ve kaydeder.
 builder.Services.AddValidatorsFromAssembly(Assembly.GetExecutingAssembly());//Bu satır mevcut assembly'deki (genellikle Web API projenizdeki) tüm validatörleri tarar ve kaydeder.
+builder.Services.AddControllers().AddFluentValidation(fv => fv.AutomaticValidationEnabled = true);
 
-
-builder.Services.AddControllers().AddFluentValidation(fv => {
-    fv.AutomaticValidationEnabled = true; // Eğer otomatik doğrulama istiyorsanız
-});
-
-// Uygulama servislerini ekleyin
+// Application services
 builder.Services.AddApplicationService(builder.Configuration);
+
 builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IDoctorRepository, DoctorRepository>();
 builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
 builder.Services.AddScoped<IBlogRepository, BlogRepository>();
-builder.Services.AddSingleton<IActionContextAccessor, ActionContextAccessor>();
+
 //builder.Services.AddScoped<AppDbContext>();
 builder.Services.AddDbContext<AppDbContext>(options =>
 {
     options.UseSqlServer(builder.Configuration.GetConnectionString("DBConStr"));
 });
-builder.Services.AddIdentity<AppUser, AppRole>().AddEntityFrameworkStores<AppDbContext>().AddDefaultTokenProviders();
+builder.Services.AddIdentity<AppUser, AppRole>()
+    .AddEntityFrameworkStores<AppDbContext>()
+    .AddDefaultTokenProviders();
 // Logger servisini ekleyin
 builder.Services.AddLogging();
 
 // Swagger'ı ekleyin
 builder.Services.AddEndpointsApiExplorer();
-
+builder.Services.AddTransient<IFileStorageService, FileStorageService>();
 
 // Serilog yapılandırması
 Log.Logger = new LoggerConfiguration()
@@ -81,18 +88,18 @@ builder.Logging.ClearProviders();
 builder.Logging.AddSerilog();
 builder.Services.Configure<IdentityOptions>(options =>
 {
+    // Password requirements (can be adjusted based on your needs)
     options.Password.RequiredLength = 6;
     options.Password.RequireNonAlphanumeric = false;
-    options.Password.RequireLowercase = false;
-    options.Password.RequireUppercase = false;
-    options.Password.RequireDigit = false;
+    // ... other password options
+
     options.User.RequireUniqueEmail = true;
     options.Lockout.DefaultLockoutTimeSpan = TimeSpan.FromMinutes(5);
     options.Lockout.MaxFailedAccessAttempts = 5;
 
     options.SignIn.RequireConfirmedEmail = true;
-
 });
+
 builder.Services.AddAuthentication(options =>
 {
     options.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
@@ -149,6 +156,7 @@ builder.Services.AddSwaggerGen(c =>
     });
 });
 var app = builder.Build();
+var environment = app.Environment;
 
 // Geliştirme ortamı için Swagger UI'ı etkinleştirin
 if (app.Environment.IsDevelopment())
@@ -156,6 +164,28 @@ if (app.Environment.IsDevelopment())
     app.UseSwagger();
     app.UseSwaggerUI();
 }
+if (!app.Environment.IsDevelopment())
+{
+    app.UseExceptionHandler("/Error");
+    app.UseHsts();
+}
+app.UseStaticFiles();
+
+// 'uploads' klasörü için statik dosya hizmetini yapılandırın
+var uploadsFolderPath = Path.Combine(environment.ContentRootPath, "HospitalCmsSystem.Infrastructure", "Uploads");
+if (!Directory.Exists(uploadsFolderPath))
+{
+    Directory.CreateDirectory(uploadsFolderPath);
+}
+
+app.UseStaticFiles(new StaticFileOptions
+{
+    FileProvider = new PhysicalFileProvider(uploadsFolderPath),
+    RequestPath = "/uploads"
+});
+app.UseCors("AllowSpecificOrigin"); // Use the CORS policy
+
+app.UseRouting();
 
 app.UseHttpsRedirection();
 

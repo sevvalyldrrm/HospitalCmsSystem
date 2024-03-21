@@ -11,7 +11,7 @@ using System.Security.Claims;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HospitalCmsSystem.Insfrastructre
+namespace HospitalCmsSystem.Infrastructure
 {
     public class TokenService(IConfiguration configuration, UserManager<AppUser> userManager) : ITokenService
     {
