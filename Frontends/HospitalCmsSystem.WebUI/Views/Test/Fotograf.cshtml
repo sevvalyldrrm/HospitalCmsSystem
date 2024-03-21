@@ -1,0 +1,36 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dosya Yükleme Formu</title>
+</head>
+<body>
+    <h2>Dosya Yükleme Testi</h2>
+    <form id="fileUploadForm" action="https://localhost:7038/api/FileUpload/upload-photo" method="post" enctype="multipart/form-data">
+        <label for="file">Fotoğraf Seç:</label>
+        <input type="file" id="file" name="file" accept="image/png, image/jpeg" required>
+        <button type="submit">Yükle</button>
+    </form>
+
+    <script>
+        document.getElementById('fileUploadForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            var formData = new FormData(this);
+            fetch(this.action, {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.json())
+            .then(data => {
+                console.log('Dosya yüklendi:', data);
+                alert('Dosya başarıyla yüklendi! Dosya Yolu: ' + data.filePath);
+            })
+            .catch(error => {
+                console.error('Dosya yüklenirken bir hata oluştu:', error);
+                alert('Dosya yüklenirken bir hata oluştu.');
+            });
+        });
+    </script>
+</body>
+</html>

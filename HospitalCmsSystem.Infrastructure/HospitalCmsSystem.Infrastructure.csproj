@@ -17,4 +17,8 @@
     <ProjectReference Include="..\Hospital.Domain\HospitalCmsSystem.Domain.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Uploads\" />
+  </ItemGroup>
+
 </Project>

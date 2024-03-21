@@ -9,7 +9,7 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalCmsSystem.Applicati
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalCmsSystem.Domain", "Hospital.Domain\HospitalCmsSystem.Domain.csproj", "{E973C9CA-6373-405F-BFA3-949BC0D497AA}"
 EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Insfrastructre", "Insfrastructre", "{6CD4E5EF-5D9B-4C81-A204-6188F3F5BBCF}"
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Infrastructure", "Infrastructure", "{6CD4E5EF-5D9B-4C81-A204-6188F3F5BBCF}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalCmsSystem.Persistence", "Hospital.Persistence\HospitalCmsSystem.Persistence.csproj", "{4451DD57-D7CC-44EB-8FD2-C84BC8C56DB7}"
 EndProject
@@ -29,7 +29,7 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ToDoList", "ToDoList", "{17
 		syld.txt = syld.txt
 	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "HospitalCmsSystem.Insfrastructre", "HospitalCmsSystem.Insfrastructre\HospitalCmsSystem.Insfrastructre.csproj", "{9D5B00E3-6BFB-4F42-B9F0-09845383FE93}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "HospitalCmsSystem.Infrastructure", "HospitalCmsSystem.Infrastructure\HospitalCmsSystem.Infrastructure.csproj", "{77F64EF2-4D88-4646-8A4E-EFA0BEE71D69}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -61,10 +61,10 @@ Global
 		{B2DA4863-D67F-4A2D-AC0F-4C283AD4ED58}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B2DA4863-D67F-4A2D-AC0F-4C283AD4ED58}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B2DA4863-D67F-4A2D-AC0F-4C283AD4ED58}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9D5B00E3-6BFB-4F42-B9F0-09845383FE93}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9D5B00E3-6BFB-4F42-B9F0-09845383FE93}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9D5B00E3-6BFB-4F42-B9F0-09845383FE93}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9D5B00E3-6BFB-4F42-B9F0-09845383FE93}.Release|Any CPU.Build.0 = Release|Any CPU
+		{77F64EF2-4D88-4646-8A4E-EFA0BEE71D69}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{77F64EF2-4D88-4646-8A4E-EFA0BEE71D69}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{77F64EF2-4D88-4646-8A4E-EFA0BEE71D69}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{77F64EF2-4D88-4646-8A4E-EFA0BEE71D69}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -76,7 +76,7 @@ Global
 		{14252AF3-9E56-4B9F-8F03-8737B192F7EB} = {C45260A6-FA06-4E51-B043-4D616FC41059}
 		{6220AB16-45BE-4B8C-971B-C97E3B1E46C3} = {FF1C3CDC-17D2-42CE-9292-2E90831CC3FB}
 		{B2DA4863-D67F-4A2D-AC0F-4C283AD4ED58} = {FF1C3CDC-17D2-42CE-9292-2E90831CC3FB}
-		{9D5B00E3-6BFB-4F42-B9F0-09845383FE93} = {6CD4E5EF-5D9B-4C81-A204-6188F3F5BBCF}
+		{77F64EF2-4D88-4646-8A4E-EFA0BEE71D69} = {6CD4E5EF-5D9B-4C81-A204-6188F3F5BBCF}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {E6173374-B5F7-40E7-84D8-97CF1FD26D46}

@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace HospitalCmsSystem.Insfrastructre
+namespace HospitalCmsSystem.Infrastructure
 {
     public static class ApplicationDbInitializer
     {
