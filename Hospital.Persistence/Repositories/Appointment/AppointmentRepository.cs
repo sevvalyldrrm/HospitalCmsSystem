@@ -1,5 +1,4 @@
 ﻿using HospitalCmsSystem.Application.Interfaces.AppointmentInterfaces;
-using HospitalCmsSystem.Application.Interfaces.AppointmentInterfaces.HospitalCmsSystem.Persistence.Repositories;
 using HospitalCmsSystem.Persistence.Context;
 using Microsoft.EntityFrameworkCore;
 using System;
