@@ -26,6 +26,9 @@ using HospitalCmsSystem.Infrastructure;
 using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.Extensions.FileProviders;
+using HospitalCmsSystem.Application.Interfaces.DoctorInterfaces.HospitalCmsSystem.Persistence.Repositories;
+using HospitalCmsSystem.Application.Interfaces.AppointmentInterfaces.HospitalCmsSystem.Persistence.Repositories;
+using HospitalCmsSystem.Persistence.Repositories.Appointment;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -60,6 +63,7 @@ builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped<IDoctorRepository, DoctorRepository>();
 builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
 builder.Services.AddScoped<IBlogRepository, BlogRepository>();
+builder.Services.AddScoped<IAppointmentRepository, AppointmentRepository>();
 
 //builder.Services.AddScoped<AppDbContext>();
 builder.Services.AddDbContext<AppDbContext>(options =>

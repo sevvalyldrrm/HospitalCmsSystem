@@ -52,5 +52,12 @@ namespace HospitalCmsSystem.WebApi.Controllers
            var values =  await _mediator.Send(new GetDoctorsWithDepartmentQuery());
             return Ok(values);
         }
-    }
+
+		[HttpGet("GetQueryable")]
+		public async Task<IActionResult> GetQueryable(int id)
+		{
+			var values = await _mediator.Send(new GetDoctorsByDepartmentIdQuery(id));
+			return Ok(values);
+		}
+	}
 }

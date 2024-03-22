@@ -41,7 +41,7 @@ namespace HospitalCmsSystem.Persistence.Repositories
             return await _context.Set<T>().FindAsync(id);
         }
 
-        public async Task RemoveAsync(T entity)
+		public async Task RemoveAsync(T entity)
         {
             _context.Set<T>().Remove(entity);
             await _context.SaveChangesAsync();

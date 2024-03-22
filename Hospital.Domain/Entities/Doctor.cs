@@ -44,7 +44,7 @@ namespace HospitalCmsSystem.Domain.Entities
 
         public string ?DocTitle { get; set; }
 
-
+        
 
     }
 }
