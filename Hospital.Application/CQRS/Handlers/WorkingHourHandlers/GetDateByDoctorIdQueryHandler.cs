@@ -1,7 +1,6 @@
 ﻿using HospitalCmsSystem.Application.CQRS.Queries.WorkingHourQueries;
 using HospitalCmsSystem.Application.Interfaces;
 using HospitalCmsSystem.Application.Interfaces.AppointmentInterfaces;
-using HospitalCmsSystem.Application.Interfaces.AppointmentInterfaces.HospitalCmsSystem.Persistence.Repositories;
 using HospitalCmsSystem.Application.Interfaces.DoctorInterfaces;
 using HospitalCmsSystem.Application.Interfaces.DoctorInterfaces.HospitalCmsSystem.Persistence.Repositories;
 using HospitalCmsSystem.Domain.Entities;

@@ -7,11 +7,8 @@ using System.Threading.Tasks;
 
 namespace HospitalCmsSystem.Application.Interfaces.AppointmentInterfaces
 {
-	namespace HospitalCmsSystem.Persistence.Repositories
-	{
 		public interface IAppointmentRepository
 		{
 			Task<List<Appointment>> GetAppointmentsByDoctor(int doctorId, DateTime date);
 		}
-	}
 }

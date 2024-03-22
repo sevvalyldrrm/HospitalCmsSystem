@@ -27,8 +27,8 @@ using Microsoft.OpenApi.Models;
 using Microsoft.AspNetCore.Mvc.Infrastructure;
 using Microsoft.Extensions.FileProviders;
 using HospitalCmsSystem.Application.Interfaces.DoctorInterfaces.HospitalCmsSystem.Persistence.Repositories;
-using HospitalCmsSystem.Application.Interfaces.AppointmentInterfaces.HospitalCmsSystem.Persistence.Repositories;
 using HospitalCmsSystem.Persistence.Repositories.Appointment;
+using HospitalCmsSystem.Application.Interfaces.AppointmentInterfaces;
 
 var builder = WebApplication.CreateBuilder(args);
 

@@ -1,58 +1,84 @@
-﻿using HospitalCmsSystem.Application.CQRS.Queries.WorkingHourQueries;
-using HospitalCmsSystem.Application.Interfaces;
-using HospitalCmsSystem.Application.Interfaces.AppointmentInterfaces.HospitalCmsSystem.Persistence.Repositories;
-using HospitalCmsSystem.Application.Interfaces.DoctorInterfaces.HospitalCmsSystem.Persistence.Repositories;
-using HospitalCmsSystem.Domain.Entities;
-using MediatR;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
+using HospitalCmsSystem.Application.CQRS.Queries.WorkingHourQueries;
+using HospitalCmsSystem.Application.Interfaces;
+using HospitalCmsSystem.Application.Interfaces.AppointmentInterfaces;
+using HospitalCmsSystem.Application.Interfaces.DoctorInterfaces.HospitalCmsSystem.Persistence.Repositories;
+using MediatR;
 
 namespace HospitalCmsSystem.Application.CQRS.Handlers.WorkingHourHandlers
 {
-	public class GetTimeSlotByDoctorIdQueryHandler : IRequestHandler<GetTimeSlotByDoctorIdQuery, List<TimeSlotDto>>
-	{
-		private readonly IDoctorRepository _doctorRepository;
-		private readonly IAppointmentRepository _appointmentRepository;
+    public class GetTimeSlotByDoctorIdQueryHandler : IRequestHandler<GetTimeSlotByDoctorIdQuery, List<TimeSlotDto>>
+    {
+        private readonly IDoctorRepository _doctorRepository;
+        private readonly IAppointmentRepository _appointmentRepository;
 
-		public async Task<List<TimeSlotDto>> Handle(GetTimeSlotByDoctorIdQuery request, CancellationToken cancellationToken)
-		{
-			var workingHours = await _doctorRepository
-					.GetQueryable(request.DoctorId);
+        public GetTimeSlotByDoctorIdQueryHandler(IDoctorRepository doctorRepository, IAppointmentRepository appointmentRepository)
+        {
+            _doctorRepository = doctorRepository;
+            _appointmentRepository = appointmentRepository;
+        }
 
-			var workingHour = workingHours
-							  .SelectMany(d => d.WorkingHours)
-							  .FirstOrDefault(wh => wh.DayOfWeek == request.Date.DayOfWeek && !wh.IsOffDay);
+        public async Task<List<TimeSlotDto>> Handle(GetTimeSlotByDoctorIdQuery request, CancellationToken cancellationToken)
+        {
+            // Retrieve the doctor's working hours
+            var doctorWithWorkingHours = await _doctorRepository.GetDoctorWithWorkingHours(request.DoctorId);
+            if (doctorWithWorkingHours == null || doctorWithWorkingHours.WorkingHours == null)
+            {
+                // If there is no doctor or working hours information, return an empty list
+                return new List<TimeSlotDto>();
+            }
 
-			if (workingHour == null)
-			{
-				return new List<TimeSlotDto>();
-			}
+            // Retrieve the working hours for the given date
+            var workingHoursOfDay = doctorWithWorkingHours.WorkingHours
+                .Where(wh => wh.DayOfWeek == request.Date.DayOfWeek && !wh.IsOffDay)
+                .ToList();
 
-			var appointments = await _appointmentRepository
-									.GetAppointmentsByDoctor(request.DoctorId,request.Date);
+            if (!workingHoursOfDay.Any())
+            {
+                // If there are no working hours for the day, return an empty list
+                return new List<TimeSlotDto>();
+            }
 
-			var availableTimeSlots = new List<TimeSlotDto>();
+            // Retrieve existing appointments for the day
+            var appointments = await _appointmentRepository.GetAppointmentsByDoctor(request.DoctorId, request.Date);
 
-			var startTime = workingHour.StartTime;
-			while (startTime < workingHour.EndTime)
-			{
-				var endTime = startTime.Add(TimeSpan.FromMinutes(30));
-				var isAvailable = !appointments.Any(a => a.AppointmentDate.Date.TimeOfDay < endTime && a.AppointmentDate.Date.AddMinutes(30).TimeOfDay > startTime);
+            // Create a list to store the time slots
+            var timeSlots = new List<TimeSlotDto>();
 
-				availableTimeSlots.Add(new TimeSlotDto
-				{
-					StartTime = startTime,
-					EndTime = endTime,
-					IsAvailable = isAvailable
-				});
+            // Iterate over each working hour range for the day
+            foreach (var workingHour in workingHoursOfDay)
+            {
+                var startTime = workingHour.StartTime;
+                while (startTime < workingHour.EndTime)
+                {
+                    // Create time slots of 30 minutes duration each
+                    var endTime = startTime.Add(TimeSpan.FromMinutes(30));
 
-				startTime = endTime; 
-			}
+                    // Check if the time slot overlaps with any existing appointment
+                    var isTimeSlotTaken = appointments.Any(a =>
+                        a.AppointmentDate.TimeOfDay >= startTime && a.AppointmentDate.TimeOfDay < endTime);
 
-			return availableTimeSlots;
-		}
-	}
+                    // Only add time slot if it's not already taken
+                    if (!isTimeSlotTaken)
+                    {
+                        timeSlots.Add(new TimeSlotDto
+                        {
+                            StartTime = startTime,
+                            EndTime = endTime,
+                            IsAvailable = true
+                        });
+                    }
+
+                    // Move to the next time slot
+                    startTime = endTime;
+                }
+            }
+
+            return timeSlots;
+        }
+    }
 }
