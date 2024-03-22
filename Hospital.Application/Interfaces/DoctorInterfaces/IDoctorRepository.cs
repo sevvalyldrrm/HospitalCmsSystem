@@ -7,8 +7,17 @@ using System.Threading.Tasks;
 
 namespace HospitalCmsSystem.Application.Interfaces.DoctorInterfaces
 {
-    public interface IDoctorRepository
-    {
-       Task<List<Doctor>> GetDoctorsWithDepartments();
-    }
+	namespace HospitalCmsSystem.Persistence.Repositories
+	{
+		public interface IDoctorRepository
+		{
+			Task<Doctor> GetDoctorWithWorkingHours(int doctorId);
+			Task<List<Doctor>> GetDoctorsWithDepartments();
+			Task<List<Doctor>> GetQueryable(int doctorId);
+
+
+		}
+	}
+
+
 }

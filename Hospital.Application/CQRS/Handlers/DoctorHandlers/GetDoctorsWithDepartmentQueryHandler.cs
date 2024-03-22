@@ -2,6 +2,7 @@
 using HospitalCmsSystem.Application.CQRS.Results.DoctorResults;
 using HospitalCmsSystem.Application.Interfaces;
 using HospitalCmsSystem.Application.Interfaces.DoctorInterfaces;
+using HospitalCmsSystem.Application.Interfaces.DoctorInterfaces.HospitalCmsSystem.Persistence.Repositories;
 using HospitalCmsSystem.Domain.Entities;
 using MediatR;
 using System;

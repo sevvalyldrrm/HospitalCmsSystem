@@ -1,8 +1,11 @@
 ﻿using HospitalCmsSystem.Application.CQRS.Commands.WorkingHourCommands;
+using HospitalCmsSystem.Application.CQRS.Queries.DoctorQueries;
 using HospitalCmsSystem.Application.CQRS.Queries.WorkingHourQueries;
+using HospitalCmsSystem.Domain.Entities;
 using MediatR;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using static System.Runtime.InteropServices.JavaScript.JSType;
 
 namespace HospitalCmsSystem.WebApi.Controllers
 {
@@ -45,5 +48,20 @@ namespace HospitalCmsSystem.WebApi.Controllers
             await _mediator.Send(command);
             return Ok("WorkingHour başarıyla güncellendi");
         }
-    }
+
+		[HttpGet("GetDateByDoctor")]
+		public async Task<IActionResult> GetDateByDoctor(int id)
+		{
+			var values = await _mediator.Send(new GetDateByDoctorIdQuery(id));
+			return Ok(values);
+		}
+
+		[HttpGet("GetTimeSlotByDoctor")]
+		public async Task<IActionResult> GetTimeSlotByDoctor(int doctorId, DateTime date)
+		{
+			var values = await _mediator.Send(new GetTimeSlotByDoctorIdQuery(doctorId, date));
+			return Ok(values);
+		}
+
+	}
 }

@@ -45,5 +45,7 @@ namespace HospitalCmsSystem.WebApi.Controllers
             await _mediator.Send(command);
             return Ok("Randevu başarıyla güncellendi");
         }
+
+
     }
 }
