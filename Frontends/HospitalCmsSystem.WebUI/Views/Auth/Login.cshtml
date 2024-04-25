@@ -1,9 +1,5 @@
 ﻿@model HospitalCmsSystem.Application.CQRS.Commands.LoginCommands.LoginCommand
 
-@{
-    Layout = null;
-}
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -14,8 +10,8 @@
     <style>
         body {
             font-family: sans-serif; 
-            background: -webkit-linear-gradient(to right, #155799, #159957);  
-            background: linear-gradient(to right, #155799, #159957); 
+            background: -webkit-linear-gradient(to right, #155799, white);  
+            background: linear-gradient(to right, #155799, white); 
             color: whitesmoke;
         }
 
@@ -24,7 +20,7 @@
         }
 
         form {
-            width: 35rem;
+            width: 55rem;
             margin: auto;
             color: whitesmoke;
             backdrop-filter: blur(16px) saturate(180%);
@@ -44,7 +40,7 @@
         }
 
         button {
-            background-color: #030804;
+            background-color:white;
             color: white;
             padding: 14px 20px;
             border-radius: 5px;
@@ -135,19 +131,15 @@
                 <input asp-for="Email" class="form-control" />
                 <span asp-validation-for="Email" class="text-danger"></span>
             </div>
-            <br><br>
             <div class="form-group">
                 <label asp-for="Password"></label>
                 <input asp-for="Password" type="password" class="form-control" />
                 <span asp-validation-for="Password" class="text-danger"></span>
             </div>
             <div class="subcontainer">
-                <label>
-                  <input type="checkbox" checked="checked" name="remember"> Remember me
-                </label>
                 <p class="forgotpsd"><a href="#">Forgot Password?</a></p>
             </div>
-            <button type="submit">Login</button>
+            <button class="btn btn-outline-light" type="submit">Login</button>
             <p class="register">Not a member? <a asp-action="Register">Register here!</a></p>
         </div>
     </form>

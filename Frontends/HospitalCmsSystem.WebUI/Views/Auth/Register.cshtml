@@ -1,8 +1,5 @@
 ﻿@model HospitalCmsSystem.Application.CQRS.Commands.LoginCommands.RegisterCommand
 
-@{
-	Layout = null;
-}
 
 <!DOCTYPE html>
 <html lang="en">
@@ -14,8 +11,8 @@
 	<style>
 		body {
 			font-family: sans-serif;
-			background: -webkit-linear-gradient(to right, #155799, #159957);
-			background: linear-gradient(to right, #155799, #159957);
+			background: -webkit-linear-gradient(to right, #155799, white);
+			background: linear-gradient(to right, #155799, white);
 			color: whitesmoke;
 		}
 
@@ -24,7 +21,7 @@
 		}
 
 		form {
-			width: 35rem;
+			width: 55rem;
 			margin: auto;
 			color: whitesmoke;
 			backdrop-filter: blur(16px) saturate(180%);
@@ -135,7 +132,6 @@
 				<input asp-for="Email" class="form-control" />
 				<span asp-validation-for="Email" class="text-danger"></span>
 			</div>
-			<br><br>
 			<div class="form-group">
 				<label asp-for="Password"></label>
 				<input asp-for="Password" type="password" class="form-control" />
@@ -146,8 +142,8 @@
 				<input asp-for="ConfirmPassword" type="password" class="form-control" />
 				<span asp-validation-for="ConfirmPassword" class="text-danger"></span>
 			</div>
-			<button type="submit">Login</button>
-			<p class="register">Not a member? <a asp-action="Register">Register here!</a></p>
+			<button class="btn btn-outline-light"  type="submit">Register</button>
+			<p class="register">Not a member? <a asp-action="Login">Login</a></p>
 		</div>
 	</form>
 </body>
